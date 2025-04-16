@@ -18,12 +18,50 @@ Welcome to my personal portfolio project! This repository showcases my front-end
 ## 📁 Project Structure
 
 This project is built using an **Nx monorepo** layout and follows best practices for separation of concerns and code reuse.
+
+```bash
 apps/
-  portfolio/           # Main Angular app
+  portfolio/                  # Main Angular application
+    src/
+      app/
+        core/                # Core services and singleton providers
+        features/            # Feature modules and pages
+        shared/              # Shared components and modules
+        app.module.ts        # Root module
+        app.component.ts     # Root component
+      assets/                # Static assets like images, fonts, etc.
+      environments/          # Environment-specific configs
+
 libs/
-  ui/                  # Reusable UI components
-  utils/               # Shared utility functions
-  models/              # TypeScript interfaces and types
+  ui/                        # Reusable UI components (buttons, modals, inputs, etc.)
+    src/
+      lib/
+        components/          # Individual UI components
+        index.ts             # Export public API for this library
+
+  utils/                     # Shared utility functions, pipes, and directives
+    src/
+      lib/
+        functions/           # Generic utility functions
+        pipes/               # Custom pipes
+        directives/          # Custom directives
+        index.ts             # Export public API
+
+  models/                    # Shared TypeScript interfaces and types
+    src/
+      lib/
+        interfaces/          # Application-wide interfaces
+        enums/               # Shared enums
+        types/               # Custom types or aliases
+        index.ts             # Export public API
+
+  config/                    # Shared configuration (optional)
+    src/
+      lib/
+        tokens/              # Injection tokens for config
+        environment/         # Shared environment contracts
+        index.ts             # Export public API
+```
 
 ---
 
