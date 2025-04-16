@@ -1,82 +1,56 @@
-# Portfolio
+# 🚀 My Developer Portfolio
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+Welcome to my personal portfolio project! This repository showcases my front-end development skills using **Angular**, **Nx**, **TypeScript**, and other modern web technologies. The goal of this project is to demonstrate code quality, architecture decisions, and UI capabilities through a modular and scalable application setup.
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
+---
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
+## 🛠️ Tech Stack
 
-## Finish your CI setup
+- **Angular** – Framework for building dynamic front-end applications
+- **Nx** – Monorepo tool for scalable development and code sharing
+- **TypeScript** – Strongly-typed language for robust and maintainable code
+- **Tailwind CSS** _(optional)_ – Utility-first CSS framework for styling
+- **RxJS** – Reactive programming for managing asynchronous data
+- **Jest / Karma** – Testing setup for unit and integration tests
 
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/xjhwqUV9PW)
+---
 
+## 📁 Project Structure
 
-## Run tasks
+This project is built using an **Nx monorepo** layout and follows best practices for separation of concerns and code reuse.
+apps/ portfolio/ # Main Angular app libs/ ui/ # Reusable UI components utils/ # Shared utility functions models/ # TypeScript interfaces and types
 
-To run the dev server for your app, use:
+---
 
-```sh
-npx nx serve my-portfolio
+## ✨ Features
+
+- Clean and scalable project structure using Nx
+- Reusable UI components and design system
+- Lazy-loaded modules for performance optimization
+- Typed services and models for maintainability
+- Responsive design for desktop and mobile
+- Integrated unit testing for core functionality
+
+---
+
+## 🚧 In Progress
+
+This is an ongoing project. Some upcoming additions:
+
+- Full dark/light theme toggle
+- End-to-end testing setup
+- Detailed case studies for selected projects
+- Deployment via GitHub Pages / Vercel / Azure Blob Storage
+
+---
+
+## 📦 Setup
+
+To run the project locally:
+
+```bash
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
+npm install
+nx serve portfolio
 ```
-
-To create a production bundle:
-
-```sh
-npx nx build my-portfolio
-```
-
-To see all available targets to run for a project, run:
-
-```sh
-npx nx show project my-portfolio
-```
-
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
-
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Add new projects
-
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
-
-Use the plugin's generator to create new projects.
-
-To generate a new application, use:
-
-```sh
-npx nx g @nx/angular:app demo
-```
-
-To generate a new library, use:
-
-```sh
-npx nx g @nx/angular:lib mylib
-```
-
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
-
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Install Nx Console
-
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
-
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Useful links
-
-Learn more:
-
-- [Learn more about this workspace setup](https://nx.dev/getting-started/tutorials/angular-monorepo-tutorial?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
