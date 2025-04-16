@@ -18,7 +18,12 @@ Welcome to my personal portfolio project! This repository showcases my front-end
 ## 📁 Project Structure
 
 This project is built using an **Nx monorepo** layout and follows best practices for separation of concerns and code reuse.
-apps/ portfolio/ # Main Angular app libs/ ui/ # Reusable UI components utils/ # Shared utility functions models/ # TypeScript interfaces and types
+apps/
+  portfolio/           # Main Angular app
+libs/
+  ui/                  # Reusable UI components
+  utils/               # Shared utility functions
+  models/              # TypeScript interfaces and types
 
 ---
 
