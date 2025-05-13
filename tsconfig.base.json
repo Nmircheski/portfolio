@@ -15,9 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@portfolio/navbar": ["libs/shared/ui/navbar/src/index.ts"],
+      "@portfolio/shared/styles": ["libs/shared/styles/src/index.ts"],
       "@portfolio/ui/button": ["libs/shared/ui/button/src/index.ts"],
-      "@portfolio/ui/card": ["libs/shared/ui/card/src/index.ts"]
+      "@portfolio/ui/card": ["libs/shared/ui/card/src/index.ts"],
+      "@portfolio/ui/navbar": ["libs/shared/ui/navbar/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

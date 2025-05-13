@@ -1,8 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-card',
+  selector: 'portfolio-card',
   imports: [CommonModule],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',

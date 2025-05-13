@@ -1,0 +1,19 @@
+@use 'typography' as *;
+@use 'saas:map';
+
+@mixin typography() {
+  @each $heading, $value in $typography {
+    @each $device, $device-value in $value {
+      @each $weight, $weight-value in $device-value {
+        $font-size: map.get($weight-value, font-size);
+        $line-height: map.get($weight-value, line-height);
+        $font-weight: map.get($weight-value, font-weight);
+        #{$heading} {
+          font-size: $font-size;
+          line-height: $line-height;
+          font-weight: $font-weight;
+        }
+      }
+    }
+  }
+}

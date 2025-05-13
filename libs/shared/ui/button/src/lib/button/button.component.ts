@@ -1,8 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-button',
+  selector: 'portfolio-button',
   imports: [CommonModule],
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss',
