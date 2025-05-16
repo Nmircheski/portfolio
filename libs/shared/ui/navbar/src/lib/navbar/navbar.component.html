@@ -1,16 +1,27 @@
 <header class="navbar" [attr.sidenav-open]="sidenavOpen()">
   <h1>{{ logoText() }}</h1>
-  <nav class="main-nav">
-    <ul>
-      @for (navLink of navLinks(); track $index) {
-      <li>
-        <a [routerLink]="navLink.path">{{ navLink.label }}</a>
-      </li>
-      }
-    </ul>
-  </nav>
+  <div class="navbar-container">
+    <nav class="main-nav">
+      <ul class="nav-list">
+        @for (navLink of navLinks(); track $index) {
+        <li>
+          <a [routerLink]="navLink.path">{{ navLink.label }}</a>
+        </li>
+        }
+      </ul>
+    </nav>
+
+    <div class="navbar-actions">
+      <portfolio-icon
+        (onClick)="switchTheme()"
+        [iconType]="isDarkTheme() ? 'sun' : 'moon'"
+      ></portfolio-icon>
+      <portfolio-button> Download CV </portfolio-button>
+    </div>
+  </div>
 
   <portfolio-icon
+    class="mobile-menu-icon"
     [iconType]="'hamburger'"
     (onClick)="toggleMobileMenu()"
   ></portfolio-icon>

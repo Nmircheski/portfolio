@@ -11,4 +11,10 @@
       border-top: 1px solid $border-color;
     }
   }
+
+  @media (min-width: 768px) {
+    .main-nav {
+      border-right: 1px solid $border-color;
+    }
+  }
 }

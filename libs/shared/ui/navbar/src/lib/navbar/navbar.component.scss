@@ -11,10 +11,46 @@
     }
   }
 
-  .main-nav {
+  .navbar-container {
     display: none;
   }
+
+  @media (min-width: 768px) {
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 5rem;
+      gap: 1.5rem;
+    }
+    .mobile-menu-icon {
+      display: none;
+    }
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .main-nav {
+      display: block;
+      padding-right: 2rem;
+
+      .nav-list {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+
+    .navbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-left: 2rem;
+    }
+  }
 }
+
 .backdrop {
   position: fixed;
   top: 0;
