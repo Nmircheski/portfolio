@@ -1,4 +1,5 @@
 @use 'utils' as *;
+@use 'theme' as *;
 
 * {
   margin: 0;
@@ -14,4 +15,13 @@ body {
 
 @mixin base() {
   @include typography();
+  @include theme();
+}
+
+body.sidenav-open {
+  position: relative;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }

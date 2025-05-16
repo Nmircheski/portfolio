@@ -1,13 +1,53 @@
-<header class="navbar">
-  <nav>
+<header class="navbar" [attr.sidenav-open]="sidenavOpen()">
+  <h1>{{ logoText() }}</h1>
+  <nav class="main-nav">
     <ul>
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/about">About</a></li>
-      <li><a routerLink="/contact">Contact</a></li>
+      @for (navLink of navLinks(); track $index) {
+      <li>
+        <a [routerLink]="navLink.path">{{ navLink.label }}</a>
+      </li>
+      }
     </ul>
   </nav>
-  <div class="user-info">
-    <!-- <span *ngIf="user">{{ user.name }}</span>
-    <button (click)="logout()">Logout</button> -->
-  </div>
+
+  <portfolio-icon
+    [iconType]="'hamburger'"
+    (onClick)="toggleMobileMenu()"
+  ></portfolio-icon>
 </header>
+
+@if(sidenavOpen()) {
+<!-- <div class="backdrop" (click)="toggleMobileMenu()"></div> -->
+
+<div class="sidenav-container">
+  <header class="sidenav-header">
+    <h1>{{ logoText() }}</h1>
+    <portfolio-icon
+      [iconType]="'close'"
+      (onClick)="toggleMobileMenu()"
+    ></portfolio-icon>
+  </header>
+  <nav class="sidenav-nav body2">
+    <ul>
+      @for (navLink of navLinks(); track $index) {
+      <li>
+        <a [routerLink]="navLink.path" (click)="toggleMobileMenu()">{{
+          navLink.label
+        }}</a>
+      </li>
+      }
+    </ul>
+    <div></div>
+  </nav>
+  <div class="sidenav-footer">
+    <div class="sidenav-theme-container">
+      <span>Switch Theme</span>
+      <portfolio-icon
+        (onClick)="switchTheme()"
+        [iconType]="isDarkTheme() ? 'sun' : 'moon'"
+      ></portfolio-icon>
+    </div>
+    <portfolio-button> Download CV </portfolio-button>
+  </div>
+</div>
+}

@@ -10,7 +10,8 @@
         $font-size: map.get($weight-value, font-size);
         $line-height: map.get($weight-value, line-height);
         $font-weight: map.get($weight-value, font-weight);
-        #{$heading} {
+        #{$heading},
+        .#{$heading} {
           font-size: $font-size;
           line-height: $line-height;
           font-weight: $font-weight;

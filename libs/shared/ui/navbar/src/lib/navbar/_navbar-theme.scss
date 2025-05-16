@@ -1,0 +1,14 @@
+@use 'sass:map';
+
+@mixin navbar-theme($theme) {
+  $border-color: map.get($theme, 100);
+  $background-color: map.get($theme, default);
+  .sidenav-container {
+    background-color: $background-color;
+
+    .sidenav-nav {
+      border-bottom: 1px solid $border-color;
+      border-top: 1px solid $border-color;
+    }
+  }
+}

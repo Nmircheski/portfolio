@@ -1,0 +1,8 @@
+@use 'colors' as *;
+@use '../../../ui/navbar/src/lib/navbar/navbar-theme' as *;
+@use '../../../ui/button/src/lib/button/button-theme' as *;
+
+@mixin theme() {
+  @include navbar-theme($gray-light);
+  @include button-theme($gray-light);
+}
