@@ -1,0 +1,21 @@
+@use 'sass:map';
+
+@mixin button-theme($theme) {
+  $background-color: map.get($theme, 900);
+  $hover-color: map.get($theme, 700);
+  $active-color: map.get($theme, 800);
+  $text-color: map.get($theme, 50);
+
+  .btn {
+    background-color: $background-color;
+    color: $text-color;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+
+    &:active {
+      background-color: $active-color;
+    }
+  }
+}

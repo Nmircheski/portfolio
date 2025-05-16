@@ -1,0 +1,199 @@
+$h2-touch-device-base: (
+  normal: (
+    font-size: 18px,
+    line-height: 28px,
+    font-weight: 600,
+    letter-spacing: -2%,
+  ),
+);
+
+$typography: (
+  h1: (
+    desktop: (
+      normal: (
+        font-size: 60px,
+        line-height: 72px,
+        font-weight: 700,
+        letter-spacing: -2%,
+      ),
+    ),
+    tablet: (
+      normal: (
+        font-size: 48px,
+        line-height: 48px,
+        font-weight: 700,
+        letter-spacing: -2%,
+      ),
+    ),
+    mobile: (
+      normal: (
+        font-size: 36px,
+        line-height: 40px,
+        font-weight: 600,
+      ),
+    ),
+  ),
+  h2: (
+    desktop: (
+      normal: (
+        font-size: 36px,
+        line-height: 40px,
+        font-weight: 600,
+      ),
+    ),
+    tablet: $h2-touch-device-base,
+    mobile: $h2-touch-device-base,
+  ),
+  //TODO finish with the rest of the headings
+  h3:
+    (
+      desktop: (
+        normal: (
+          font-size: 24px,
+          line-height: 32px,
+          font-weight: 400,
+        ),
+        bold: (
+          font-size: 24px,
+          line-height: 32px,
+          font-weight: 700,
+        ),
+      ),
+      tablet: (
+        normal: (
+          font-size: 20px,
+          line-height: 28px,
+          font-weight: 400,
+        ),
+        bold: (
+          font-size: 20px,
+          line-height: 28px,
+          font-weight: 700,
+        ),
+      ),
+      mobile: (
+        normal: (
+          font-size: 18px,
+          line-height: 24px,
+          font-weight: 400,
+        ),
+      ),
+    ),
+  subtitle: (
+    desktop: (
+      normal: (
+        font-size: 20px,
+        line-height: 28px,
+        font-weight: 400,
+      ),
+      bold: (
+        font-size: 20px,
+        line-height: 28px,
+        font-weight: 700,
+      ),
+    ),
+    tablet: (
+      normal: (
+        font-size: 18px,
+        line-height: 24px,
+        font-weight: 400,
+      ),
+      bold: (
+        font-size: 18px,
+        line-height: 24px,
+        font-weight: 700,
+      ),
+    ),
+    mobile: (
+      normal: (
+        font-size: 16px,
+        line-height: 24px,
+        font-weight: 400,
+      ),
+    ),
+  ),
+  body1: (
+    desktop: (
+      normal: (
+        font-size: 16px,
+        line-height: 24px,
+        font-weight: 400,
+      ),
+      semibold: (
+        font-size: 16px,
+        line-height: 24px,
+        font-weight: 600,
+      ),
+    ),
+    tablet: (
+      normal: (
+        font-size: 16px,
+        line-height: 24px,
+        font-weight: 400,
+      ),
+    ),
+    mobile: (
+      normal: (
+        font-size: 14px,
+        line-height: 20px,
+        font-weight: 400,
+      ),
+    ),
+  ),
+  body2: (
+    desktop: (
+      normal: (
+        font-size: 14px,
+        line-height: 20px,
+        font-weight: 400,
+      ),
+      semibold: (
+        font-size: 14px,
+        line-height: 20px,
+        font-weight: 600,
+      ),
+    ),
+    tablet: (
+      normal: (
+        font-size: 14px,
+        line-height: 20px,
+        font-weight: 400,
+      ),
+    ),
+    mobile: (
+      normal: (
+        font-size: 12px,
+        line-height: 16px,
+        font-weight: 400,
+      ),
+    ),
+  ),
+  body3: (
+    desktop: (
+      normal: (
+        font-size: 12px,
+        line-height: 16px,
+        font-weight: 400,
+      ),
+      semibold: (
+        font-size: 12px,
+        line-height: 16px,
+        font-weight: 600,
+      ),
+    ),
+    tablet: (
+      normal: (
+        font-size: 12px,
+        line-height: 16px,
+        font-weight: 400,
+      ),
+    ),
+    mobile: (
+      normal: (
+        font-size: 10px,
+        line-height: 14px,
+        font-weight: 400,
+      ),
+    ),
+  ),
+);
