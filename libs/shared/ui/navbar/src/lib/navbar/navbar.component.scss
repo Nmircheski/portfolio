@@ -4,6 +4,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    max-width: 80rem;
+    margin: 0 auto;
+    width: 100%;
 
     &[sidenav-open='true'] {
       z-index: 0;
@@ -19,7 +22,7 @@
     .navbar {
       display: flex;
       justify-content: space-between;
-      padding: 1rem 5rem;
+      padding: 1rem 2rem;
       gap: 1.5rem;
     }
     .mobile-menu-icon {
