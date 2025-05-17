@@ -1,0 +1,19 @@
+.about-me {
+  padding: 4rem 1rem;
+
+  > *:not(:last-child) {
+    padding-bottom: 3rem;
+  }
+
+  .about-me-chip {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-img-container {
+    width: 100%;
+    .about-me-img {
+      width: 100%;
+    }
+  }
+}
