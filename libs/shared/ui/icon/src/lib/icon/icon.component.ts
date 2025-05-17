@@ -5,7 +5,7 @@ import {
   input,
   output,
 } from '@angular/core';
-import { iconType } from './models';
+import { IconType } from './models';
 
 @Component({
   selector: 'portfolio-icon',
@@ -15,6 +15,6 @@ import { iconType } from './models';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IconComponent {
-  iconType = input.required<iconType>();
+  iconType = input.required<IconType>();
   onClick = output<void>();
 }

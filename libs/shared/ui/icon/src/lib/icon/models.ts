@@ -1,4 +1,4 @@
-export type iconType =
+export type IconType =
   | 'location'
   | 'hamburger'
   | 'close'
@@ -6,4 +6,5 @@ export type iconType =
   | 'linkedin'
   | 'email'
   | 'sun'
-  | 'moon';
+  | 'moon'
+  | 'status';
