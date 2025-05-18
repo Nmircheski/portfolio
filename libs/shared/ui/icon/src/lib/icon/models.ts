@@ -21,4 +21,5 @@ export type IconType =
   | 'git'
   | 'azure'
   | 'external-link'
-  | 'copy';
+  | 'copy'
+  | 'copyright';

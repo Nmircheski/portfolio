@@ -7,13 +7,5 @@
 
   .about-me {
     background-color: $background-color;
-
-    &:hover {
-      background-color: $hover-color;
-    }
-
-    &:active {
-      background-color: $active-color;
-    }
   }
 }
