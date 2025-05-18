@@ -16,5 +16,6 @@ import { IconType } from './models';
 })
 export class IconComponent {
   iconType = input.required<IconType>();
+  iconSize = input<'sm' | 'md' | 'lg'>('sm');
   onClick = output<void>();
 }

@@ -7,4 +7,16 @@ export type IconType =
   | 'email'
   | 'sun'
   | 'moon'
-  | 'status';
+  | 'status'
+  | 'angular'
+  | 'typescript'
+  | 'javascript'
+  | 'html'
+  | 'css'
+  | 'sass'
+  | 'tailwind'
+  | 'cypress'
+  | 'storybook'
+  | 'jest'
+  | 'git'
+  | 'azure';
