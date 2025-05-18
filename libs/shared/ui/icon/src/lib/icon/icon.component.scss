@@ -1,10 +1,19 @@
 .icon-container {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 
   &.sm {
-    width: 24px;
-    height: 24px;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &.md {
+    svg {
+      width: 64px;
+      height: 64px;
+    }
   }
 }

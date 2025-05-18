@@ -1,1 +1,19 @@
-<p>Skills works!</p>
+<section class="skills-section">
+  <header class="skills-header">
+    <portfolio-chip>Skills</portfolio-chip>
+    <p class="subtitle">
+      The skills, tools and technologies I am really good at:
+    </p>
+  </header>
+  <div class="skills-list">
+    @for (skill of skillsList; track $index) {
+    <div class="skill-item">
+      <portfolio-icon
+        [iconType]="skill.icon"
+        [iconSize]="'md'"
+      ></portfolio-icon>
+      <span>{{ skill.label }}</span>
+    </div>
+    }
+  </div>
+</section>
