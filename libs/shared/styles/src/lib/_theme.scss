@@ -2,11 +2,15 @@
 @use '../../../ui/navbar/src/lib/navbar/navbar-theme' as *;
 @use '../../../ui/button/src/lib/button/button-theme' as *;
 @use '../../../ui/chip/src/lib/chip/chip-theme' as *;
+@use '../../../ui/card/src/lib/card/card-theme' as *;
 @use '../../../../feature/about-me/src/lib/about-me/about-me-theme' as *;
+@use '../../../../feature/experience/src/lib/experience/experience-theme' as *;
 
 @mixin theme() {
   @include navbar-theme($gray-light);
   @include button-theme($gray-light);
-  @include about-me-theme($gray-light);
   @include chip-theme($gray-light, $gray-dark);
+  @include card-theme($gray-light);
+  @include about-me-theme($gray-light);
+  @include experience-theme($gray-light);
 }

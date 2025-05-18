@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
   selector: 'portfolio-card',
@@ -8,4 +8,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './card.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CardComponent {}
+export class CardComponent {
+  logoSrc = input.required<string>();
+  subtitle = input.required<string>();
+  title = input.required<string>();
+  bulletPoints = input.required<string[]>();
+}
