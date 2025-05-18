@@ -1,1 +1,21 @@
-<p>Experience works!</p>
+<section class="experience-section">
+  <header class="experience-header">
+    <portfolio-chip>Experience</portfolio-chip>
+    <p class="subtitle">
+      Here is a quick summary of my most recent experiences:
+    </p>
+  </header>
+
+  <div class="experience-list">
+    <portfolio-card
+      [logoSrc]="'/mca-logo.png'"
+      [subtitle]="'Nov 2021 - Present'"
+      [title]="'Sr. Frontend Developer'"
+      [bulletPoints]="[
+        'Lead the development of a new web application using Angular and Node.js',
+        'Implemented a CI/CD pipeline using GitHub Actions and AWS',
+        'Mentored junior developers and conducted code reviews'
+      ]"
+    ></portfolio-card>
+  </div>
+</section>
