@@ -7,15 +7,19 @@
   </header>
 
   <div class="experience-list">
-    <portfolio-card
-      [logoSrc]="'/mca-logo.png'"
-      [subtitle]="'Nov 2021 - Present'"
-      [title]="'Sr. Frontend Developer'"
-      [bulletPoints]="[
-        'Lead the development of a new web application using Angular and Node.js',
-        'Implemented a CI/CD pipeline using GitHub Actions and AWS',
-        'Mentored junior developers and conducted code reviews'
-      ]"
-    ></portfolio-card>
+    <portfolio-card [class]="'p-2'">
+      <div class="experience-card">
+        <div class="card-logo">
+          <img class="card-logo-img" [src]="logoSrc" />
+        </div>
+        <p>{{ subtitle }}</p>
+        <p>{{ title }}</p>
+        <ul class="card-bullets-list">
+          @for (item of bulletPoints; track $index) {
+          <li class="card-bullet body2">{{ item }}</li>
+          }
+        </ul>
+      </div></portfolio-card
+    >
   </div>
 </section>

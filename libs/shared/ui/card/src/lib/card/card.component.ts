@@ -9,8 +9,10 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardComponent {
-  logoSrc = input.required<string>();
-  subtitle = input.required<string>();
-  title = input.required<string>();
-  bulletPoints = input.required<string[]>();
+  // logoSrc = input.required<string>();
+  // subtitle = input.required<string>();
+  // title = input.required<string>();
+  // bulletPoints = input.required<string[]>();
+
+  class = input<string>();
 }

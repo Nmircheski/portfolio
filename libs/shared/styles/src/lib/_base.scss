@@ -18,6 +18,8 @@ body {
   @include theme();
 }
 
+@include padding-classes();
+
 body.sidenav-open {
   position: relative;
 }
