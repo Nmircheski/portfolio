@@ -6,9 +6,13 @@
   $active-color: map.get($theme, 800);
   $text-color: map.get($theme, 50);
 
-  .btn {
+  .button {
     background-color: $background-color;
     color: $text-color;
+
+    .icon-button {
+      background-color: transparent;
+    }
 
     &:hover {
       background-color: $hover-color;

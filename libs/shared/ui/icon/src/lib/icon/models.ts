@@ -20,4 +20,5 @@ export type IconType =
   | 'jest'
   | 'git'
   | 'azure'
-  | 'external-link';
+  | 'external-link'
+  | 'copy';
