@@ -1,0 +1,43 @@
+.contact-section {
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .contact-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .platforms-label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .contact-info {
+      justify-content: center;
+      .copy-button {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .copy-button:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

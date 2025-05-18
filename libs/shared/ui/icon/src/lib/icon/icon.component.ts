@@ -1,10 +1,5 @@
 import { CommonModule } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  input,
-  output,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { IconType } from './models';
 
 @Component({
@@ -17,5 +12,4 @@ import { IconType } from './models';
 export class IconComponent {
   iconType = input.required<IconType>();
   iconSize = input<'sm' | 'md' | 'lg'>('sm');
-  onClick = output<void>();
 }

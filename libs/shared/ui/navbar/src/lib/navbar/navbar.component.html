@@ -12,19 +12,21 @@
     </nav>
 
     <div class="navbar-actions">
-      <portfolio-icon
-        (onClick)="switchTheme()"
-        [iconType]="isDarkTheme() ? 'sun' : 'moon'"
-      ></portfolio-icon>
+      <portfolio-button (clicked)="switchTheme()">
+        <portfolio-icon
+          [iconType]="isDarkTheme() ? 'sun' : 'moon'"
+        ></portfolio-icon>
+      </portfolio-button>
       <portfolio-button> Download CV </portfolio-button>
     </div>
   </div>
 
-  <portfolio-icon
-    class="mobile-menu-icon"
-    [iconType]="'hamburger'"
-    (onClick)="toggleMobileMenu()"
-  ></portfolio-icon>
+  <portfolio-button (clicked)="toggleMobileMenu()">
+    <portfolio-icon
+      class="mobile-menu-icon"
+      [iconType]="'hamburger'"
+    ></portfolio-icon>
+  </portfolio-button>
 </header>
 
 @if(sidenavOpen()) {
@@ -33,10 +35,9 @@
 <div class="sidenav-container">
   <header class="sidenav-header">
     <h1>{{ logoText() }}</h1>
-    <portfolio-icon
-      [iconType]="'close'"
-      (onClick)="toggleMobileMenu()"
-    ></portfolio-icon>
+    <portfolio-button (clicked)="toggleMobileMenu()">
+      <portfolio-icon [iconType]="'close'"></portfolio-icon>
+    </portfolio-button>
   </header>
   <nav class="sidenav-nav body2">
     <ul>
@@ -53,10 +54,11 @@
   <div class="sidenav-footer">
     <div class="sidenav-theme-container">
       <span>Switch Theme</span>
-      <portfolio-icon
-        (onClick)="switchTheme()"
-        [iconType]="isDarkTheme() ? 'sun' : 'moon'"
-      ></portfolio-icon>
+      <portfolio-button (clicked)="switchTheme()">
+        <portfolio-icon
+          [iconType]="isDarkTheme() ? 'sun' : 'moon'"
+        ></portfolio-icon>
+      </portfolio-button>
     </div>
     <portfolio-button> Download CV </portfolio-button>
   </div>

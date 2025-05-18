@@ -1,11 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ButtonComponent } from '@portfolio/ui/button';
 import { CardComponent } from '@portfolio/ui/card';
 import { ChipComponent } from '@portfolio/ui/chip';
 import { IconComponent } from '@portfolio/ui/icon';
 @Component({
   selector: 'portfolio-work',
-  imports: [CommonModule, ChipComponent, CardComponent, IconComponent],
+  imports: [
+    CommonModule,
+    ChipComponent,
+    CardComponent,
+    IconComponent,
+    ButtonComponent,
+  ],
   templateUrl: './work.component.html',
   styleUrl: './work.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

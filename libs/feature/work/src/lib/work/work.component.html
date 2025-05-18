@@ -22,11 +22,13 @@
         <portfolio-chip>Express</portfolio-chip>
       </div>
       <div class="work-card-links">
-        <portfolio-icon
-          [iconType]="'external-link'"
-          (onClick)="onWorkItemClick()"
-        >
-        </portfolio-icon>
+        <portfolio-button>
+          <portfolio-icon
+            [iconType]="'external-link'"
+            (onClick)="onWorkItemClick()"
+          >
+          </portfolio-icon>
+        </portfolio-button>
       </div>
     </div>
   </portfolio-card>

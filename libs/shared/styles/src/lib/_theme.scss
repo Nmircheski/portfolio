@@ -5,6 +5,7 @@
 @use '../../../ui/card/src/lib/card/card-theme' as *;
 @use '../../../../feature/about-me/src/lib/about-me/about-me-theme' as *;
 @use '../../../../feature/experience/src/lib/experience/experience-theme' as *;
+@use '../../../../feature/contact/src/lib/contact/contact-theme' as *;
 @use '../../../../feature/work/src/lib/work/work-theme' as *;
 
 @mixin theme() {
@@ -15,4 +16,5 @@
   @include about-me-theme($gray-light);
   @include experience-theme($gray-light);
   @include work-theme($gray-light);
+  @include contact-theme($gray-light);
 }
