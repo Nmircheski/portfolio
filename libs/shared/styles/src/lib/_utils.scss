@@ -20,3 +20,15 @@
     }
   }
 }
+
+@mixin padding-classes() {
+  // @for $i from 0 through 10 {
+  //   .p-#{$i} {
+  //     padding: $i * 0.25rem;
+  //   }
+  // }
+
+  .p-2 {
+    padding: 2rem;
+  }
+}

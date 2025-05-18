@@ -1,23 +1,4 @@
 .card {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  // padding: 2rem;
   border-radius: 0.75rem;
-  .card-logo-img {
-    max-width: 6.25rem;
-    width: 100%;
-    height: auto;
-  }
-
-  .card-bullets-list {
-    .card-bullet {
-      list-style: disc;
-      list-style-position: inside;
-
-      &:not(:last-child) {
-        margin-bottom: 0.25rem;
-      }
-    }
-  }
 }

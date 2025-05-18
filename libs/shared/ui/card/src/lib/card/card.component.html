@@ -1,10 +1,11 @@
-<div class="card">
-  <div class="card-logo"><img class="card-logo-img" [src]="logoSrc()" /></div>
+<div class="card {{ class() }}">
+  <!-- <div class="card-logo"><img class="card-logo-img" [src]="logoSrc()" /></div>
   <p>{{ subtitle() }}</p>
   <p>{{ title() }}</p>
   <ul class="card-bullets-list">
     @for (item of bulletPoints(); track $index) {
     <li class="card-bullet body2">{{ item }}</li>
     }
-  </ul>
+  </ul> -->
+  <ng-content></ng-content>
 </div>

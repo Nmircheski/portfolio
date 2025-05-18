@@ -19,4 +19,5 @@ export type IconType =
   | 'storybook'
   | 'jest'
   | 'git'
-  | 'azure';
+  | 'azure'
+  | 'external-link';

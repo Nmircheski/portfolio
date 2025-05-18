@@ -9,4 +9,13 @@ import { ChipComponent } from '@portfolio/ui/chip';
   styleUrl: './experience.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ExperienceComponent {}
+export class ExperienceComponent {
+  logoSrc = '/mca-logo.png';
+  subtitle = 'Nov 2021 - Present';
+  title = 'Sr. Frontend Developer';
+  bulletPoints = [
+    'Lead the development of a new web application using Angular and Node.js',
+    'Implemented a CI/CD pipeline using GitHub Actions and AWS',
+    'Mentored junior developers and conducted code reviews',
+  ];
+}

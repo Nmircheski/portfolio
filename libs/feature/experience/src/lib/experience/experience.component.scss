@@ -8,4 +8,31 @@
     gap: 1rem;
     margin-bottom: 1.5rem;
   }
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .card-logo-img {
+    max-width: 6.25rem;
+    width: 100%;
+    height: auto;
+  }
+
+  .experience-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .card-bullets-list {
+      .card-bullet {
+        list-style: disc;
+        list-style-position: inside;
+
+        &:not(:last-child) {
+          margin-bottom: 0.25rem;
+        }
+      }
+    }
+  }
 }
