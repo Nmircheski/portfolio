@@ -18,3 +18,49 @@
   @include work-theme($gray-light);
   @include contact-theme($gray-light);
 }
+
+// updated FILE - refactor the above to use vars instead of scss maps
+
+// Mixin to generate hue-based custom properties
+
+// Light Theme
+:root {
+  // Base color tokens
+  --color-primary-500: #{map-get($emerald, 500)};
+
+  @each $key, $value in $gray-light {
+    --color-muted-#{$key}: #{$value};
+  }
+
+  // Semantic role tokens
+  --color-bg: var(--color-muted-50);
+  --color-surface: var(--color-muted-100);
+  --color-border: var(--color-muted-300);
+  --color-muted: var(--color-muted-500);
+  --color-text: var(--color-muted-900);
+  --color-heading: var(--color-muted-950);
+
+  --color-primary: var(--color-primary-500);
+  --color-accent: var(--color-muted-400);
+  --color-error: #dc3545;
+}
+
+// Dark Theme
+.dark-theme {
+  --color-primary-500: #{map-get($emerald, 500)};
+
+  @each $key, $value in $gray-dark {
+    --color-muted-#{$key}: #{$value};
+  }
+
+  --color-bg: var(--color-muted-950);
+  --color-surface: var(--color-muted-900);
+  --color-border: var(--color-muted-600);
+  --color-muted: var(--color-muted-400);
+  --color-text: var(--color-muted-100);
+  --color-heading: var(--color-muted-50);
+
+  --color-primary: var(--color-primary-500);
+  --color-accent: var(--color-muted-300);
+  --color-error: #ef5350;
+}

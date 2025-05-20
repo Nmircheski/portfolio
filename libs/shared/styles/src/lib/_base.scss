@@ -1,11 +1,6 @@
-@use 'utils' as *;
 @use 'theme' as *;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@use 'mixins' as *;
+@use 'reset' as *;
 
 html,
 body {
@@ -13,17 +8,7 @@ body {
   font-style: normal;
 }
 
-@mixin base() {
-  @include typography();
-  @include theme();
-}
-
+@include typography();
+@include theme();
 @include padding-classes();
-
-body.sidenav-open {
-  position: relative;
-}
-
-.overflow-hidden {
-  overflow: hidden;
-}
+@include reset();
