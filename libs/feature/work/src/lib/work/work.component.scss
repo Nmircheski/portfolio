@@ -1,6 +1,5 @@
 .work-section {
   padding: 4rem 1rem;
-  background-color: var(--color-muted-100);
 
   .work-header {
     text-align: center;
@@ -11,6 +10,7 @@
   }
 
   .work-card-img {
+    background-color: var(--color-muted-100);
     display: flex;
     justify-content: center;
     align-items: center;
