@@ -33,7 +33,9 @@
 
 //Responsive
 @mixin respond-up($breakpoint) {
-  @media (min-width: $breakpoint) {
-    @content;
+  @if $breakpoint == 'md' {
+    @media (min-width: 768px) {
+      @content;
+    }
   }
 }

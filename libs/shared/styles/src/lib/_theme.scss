@@ -1,30 +1,20 @@
 @use 'colors' as *;
-@use '../../../ui/navbar/src/lib/navbar/navbar-theme' as *;
-@use '../../../ui/button/src/lib/button/button-theme' as *;
-@use '../../../ui/chip/src/lib/chip/chip-theme' as *;
-@use '../../../ui/card/src/lib/card/card-theme' as *;
-@use '../../../../feature/about-me/src/lib/about-me/about-me-theme' as *;
-@use '../../../../feature/experience/src/lib/experience/experience-theme' as *;
-@use '../../../../feature/contact/src/lib/contact/contact-theme' as *;
-@use '../../../../feature/work/src/lib/work/work-theme' as *;
-
-@mixin theme() {
-  @include navbar-theme($gray-light);
-  @include button-theme($gray-light);
-  @include chip-theme($gray-light, $gray-dark);
-  @include card-theme($gray-light);
-  @include about-me-theme($gray-light);
-  @include experience-theme($gray-light);
-  @include work-theme($gray-light);
-  @include contact-theme($gray-light);
-}
-
-// updated FILE - refactor the above to use vars instead of scss maps
 
 // Mixin to generate hue-based custom properties
+@mixin generate-color-variables($map, $prefix) {
+  @each $key, $value in $map {
+    --color-#{$prefix}-#{$key}: #{$value};
+  }
+}
 
+/*TODO 
+define appropriate names for the semantic role tokens..
+currently they are used as the color name
+*/
 // Light Theme
 :root {
+  @include generate-color-variables($gray-light, 'muted');
+  @include generate-color-variables($emerald, 'primary');
   // Base color tokens
   --color-primary-500: #{map-get($emerald, 500)};
 
@@ -47,6 +37,9 @@
 
 // Dark Theme
 .dark-theme {
+  @include generate-color-variables($gray-dark, 'muted');
+  @include generate-color-variables($emerald, 'primary');
+
   --color-primary-500: #{map-get($emerald, 500)};
 
   @each $key, $value in $gray-dark {

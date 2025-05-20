@@ -1,18 +1,18 @@
-:host {
-  .chip {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.25rem 1.25rem;
-    border-radius: 1rem;
-    text-align: center;
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 1.25rem;
+  border-radius: 1rem;
+  text-align: center;
+  background-color: var(--color-muted-200);
+  color: var(--color-muted-600);
 
-    &.disabled {
-      background-color: var(--color-gray);
-      cursor: not-allowed;
-    }
+  &.disabled {
+    background-color: var(--color-gray);
+    cursor: not-allowed;
+  }
 
-    &.active {
-      background-color: var(--color-secondary);
-    }
+  &.active {
+    background-color: var(--color-secondary);
   }
 }

@@ -1,13 +1,18 @@
-:host {
-  .button,
-  .img-button {
-    width: 100%;
-    text-align: center;
-    padding: 0.375rem 1rem;
-    border-radius: 0.75rem;
+.button {
+  width: 100%;
+  text-align: center;
+  padding: 0.375rem 1rem;
+  border-radius: 0.75rem;
+  color: var(--color-muted-50);
+  &.regular-button {
+    background-color: var(--color-muted-900);
   }
 
-  .img-button:hover {
+  &.icon-button {
+    background-color: transparent;
+  }
+
+  &:hover {
     cursor: pointer;
   }
 }

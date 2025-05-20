@@ -9,6 +9,5 @@ body {
 }
 
 @include typography();
-@include theme();
 @include padding-classes();
 @include reset();

@@ -1,5 +1,7 @@
 .about-me {
   padding: 4rem 1rem;
+  //TODO the background is repeatable.. create a common class
+  background-color: var(--color-muted-50);
 
   > *:not(:last-child) {
     padding-bottom: 3rem;
