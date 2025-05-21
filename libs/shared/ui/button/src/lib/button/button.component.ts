@@ -16,7 +16,7 @@ import { IconComponent } from '@portfolio/ui/icon';
 })
 export class ButtonComponent {
   type = computed(() => {
-    return this.icon() ? 'icon-button' : 'button';
+    return this.icon() ? 'icon-button' : 'regular-button';
   });
 
   clicked = output<void>();

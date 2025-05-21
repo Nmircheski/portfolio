@@ -1,34 +1,9 @@
-@use 'typography' as *;
-@use 'sass:map';
-
-@mixin typography() {
-  @each $heading, $value in $typography {
-    @each $device, $device-value in $value {
-      @each $weight, $weight-value in $device-value {
-        //TODO the values in the map are being duplicated for normal, medium, and bold
-        //Create if else where if the weight is normal, medium, or bold you add those classes
-        $font-size: map.get($weight-value, font-size);
-        $line-height: map.get($weight-value, line-height);
-        $font-weight: map.get($weight-value, font-weight);
-        #{$heading},
-        .#{$heading} {
-          font-size: $font-size;
-          line-height: $line-height;
-          font-weight: $font-weight;
-        }
-      }
-    }
-  }
+body.sidenav-open {
+  position: relative;
 }
 
-@mixin padding-classes() {
-  // @for $i from 0 through 10 {
-  //   .p-#{$i} {
-  //     padding: $i * 0.25rem;
-  //   }
-  // }
-
-  .p-2 {
-    padding: 2rem;
-  }
+.overflow-hidden {
+  overflow: hidden;
 }
+
+//TODO here add common styles for all components, add classes for grid system or flex

@@ -1,9 +1,0 @@
-@use 'sass:map';
-
-@mixin card-theme($theme) {
-  $background-color: map.get($theme, default);
-
-  .card {
-    background-color: $background-color;
-  }
-}

@@ -1,9 +1,0 @@
-@use 'sass:map';
-
-@mixin work-theme($theme) {
-  $background-color: map.get($theme, 100);
-
-  .work-card-img {
-    background-color: $background-color;
-  }
-}
