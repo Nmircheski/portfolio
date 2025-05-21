@@ -1,3 +1,4 @@
+@use 'mixins' as *;
 .experience-section {
   padding: 4rem 1rem;
   display: flex;
@@ -17,6 +18,14 @@
     max-width: 6.25rem;
     width: 100%;
     height: auto;
+  }
+
+  @include respond-up('md') {
+    .experience-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 
   .experience-card {

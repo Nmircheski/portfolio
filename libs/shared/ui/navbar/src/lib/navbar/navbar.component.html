@@ -21,11 +21,8 @@
     </div>
   </div>
 
-  <portfolio-button (clicked)="toggleMobileMenu()">
-    <portfolio-icon
-      class="mobile-menu-icon"
-      [iconType]="'hamburger'"
-    ></portfolio-icon>
+  <portfolio-button (clicked)="toggleMobileMenu()" class="mobile-menu-icon">
+    <portfolio-icon [iconType]="'hamburger'"></portfolio-icon>
   </portfolio-button>
 </header>
 

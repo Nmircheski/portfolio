@@ -1,8 +1,27 @@
+@use 'mixins' as *;
+
 .hero-section {
-  padding: 1rem 1rem 4rem 1rem;
+  padding: 4rem 1rem;
 
   > *:not(:last-child) {
     padding-bottom: 3rem;
+  }
+}
+
+@include respond-up('md') {
+  .hero-section {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 3rem;
+    padding: 6rem 5rem;
+
+    .hero-content {
+      padding: 0 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      // padding: 0.65rem 0; // TODO this behaves weirdly
+    }
   }
 }
 
@@ -10,17 +29,18 @@
   width: 100%;
   .hero-img {
     width: 100%;
+    max-width: 20rem;
   }
 }
 
 .hero-title {
   margin-bottom: 0.5rem;
+}
 
-  .emoji {
-    vertical-align: top; /* or try: text-bottom, baseline, -2px */
-    font-size: 1em; /* match text size */
-    line-height: 1;
-  }
+.emoji {
+  vertical-align: top; /* or try: text-bottom, baseline, -2px */
+  font-size: 1em; /* match text size */
+  line-height: 1;
 }
 
 .status-info {
