@@ -1,3 +1,4 @@
+@use 'mixins' as *;
 .about-me {
   padding: 4rem 1rem;
   //TODO the background is repeatable.. create a common class
@@ -16,6 +17,17 @@
     width: 100%;
     .about-me-img {
       width: 100%;
+      max-width: 20rem;
     }
+  }
+}
+
+@include respond-up('md') {
+  .about-me {
+    padding: 6rem 5rem;
+  }
+  .about-me-content {
+    display: flex;
+    padding: 0 2rem;
   }
 }
