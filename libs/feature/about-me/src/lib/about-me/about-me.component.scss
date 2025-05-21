@@ -29,5 +29,9 @@
   .about-me-content {
     display: flex;
     padding: 0 2rem;
+    gap: 3rem;
+    > * {
+      flex: 1;
+    }
   }
 }

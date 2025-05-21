@@ -8,28 +8,31 @@
   }
 }
 
+.hero-img-container {
+  width: 100%;
+  .hero-img {
+    width: 100%;
+    max-width: 25rem;
+  }
+}
+
 @include respond-up('md') {
   .hero-section {
     display: flex;
     flex-direction: row-reverse;
     gap: 3rem;
-    padding: 6rem 5rem;
+    padding: 6rem 7rem;
 
     .hero-content {
-      padding: 0 2rem;
       display: flex;
       flex-direction: column;
       gap: 3rem;
       // padding: 0.65rem 0; // TODO this behaves weirdly
     }
-  }
-}
 
-.hero-img-container {
-  width: 100%;
-  .hero-img {
-    width: 100%;
-    max-width: 20rem;
+    .hero-img-container {
+      align-self: flex-end;
+    }
   }
 }
 

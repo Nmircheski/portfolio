@@ -14,5 +14,5 @@ export class CardComponent {
   // title = input.required<string>();
   // bulletPoints = input.required<string[]>();
 
-  class = input<string>();
+  class = input<string>(); //TODO this is a bad pattern, people cannot set class on the host
 }

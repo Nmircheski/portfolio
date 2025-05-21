@@ -4,31 +4,41 @@
     <p class="subtitle">Some of the noteworthy projects I have built:</p>
   </header>
   <portfolio-card>
-    <div class="work-card-img"><img [src]="'/website-thumbnail.png'" /></div>
-    <div class="work-card-content body2">
-      <p class="subtitle">Website</p>
-      <p class="body2">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec
-        urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in
-        faucibus orci luctus et ultrices posuere cubilia curae.
-      </p>
+    <div class="work-card-container">
+      <picture class="work-img-container">
+        <source srcset="/website-lg.png" media="(min-width: 768px)" />
+        <source srcset="/website-thumbnail.png" media="(max-width: 768px)" />
+        <img
+          class="work-img"
+          src="/website-thumbnail.png"
+          alt="Website thumbnail"
+        />
+      </picture>
+      <div class="work-card-content body2">
+        <p class="subtitle">Website</p>
+        <p class="body2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec
+          urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in
+          faucibus orci luctus et ultrices posuere cubilia curae.
+        </p>
 
-      <div class="work-card-chips">
-        <portfolio-chip>Angular</portfolio-chip>
-        <portfolio-chip>TypeScript</portfolio-chip>
-        <portfolio-chip>JavaScript</portfolio-chip>
-        <portfolio-chip>Tailwind</portfolio-chip>
-        <portfolio-chip>Node.js</portfolio-chip>
-        <portfolio-chip>Express</portfolio-chip>
-      </div>
-      <div class="work-card-links">
-        <portfolio-button>
-          <portfolio-icon
-            [iconType]="'external-link'"
-            (onClick)="onWorkItemClick()"
-          >
-          </portfolio-icon>
-        </portfolio-button>
+        <div class="work-card-chips">
+          <portfolio-chip>Angular</portfolio-chip>
+          <portfolio-chip>TypeScript</portfolio-chip>
+          <portfolio-chip>JavaScript</portfolio-chip>
+          <portfolio-chip>Tailwind</portfolio-chip>
+          <portfolio-chip>Node.js</portfolio-chip>
+          <portfolio-chip>Express</portfolio-chip>
+        </div>
+        <div class="work-card-links">
+          <portfolio-button>
+            <portfolio-icon
+              [iconType]="'external-link'"
+              (onClick)="onWorkItemClick()"
+            >
+            </portfolio-icon>
+          </portfolio-button>
+        </div>
       </div>
     </div>
   </portfolio-card>

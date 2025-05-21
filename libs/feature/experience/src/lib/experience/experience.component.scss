@@ -1,4 +1,5 @@
 @use 'mixins' as *;
+
 .experience-section {
   padding: 4rem 1rem;
   display: flex;
@@ -42,6 +43,27 @@
           margin-bottom: 0.25rem;
         }
       }
+    }
+  }
+}
+
+@include respond-up('md') {
+  .experience-section {
+    .experience-card {
+      flex-direction: row;
+      gap: 3rem;
+    }
+
+    .card-text {
+      order: 2;
+    }
+
+    .card-title {
+      margin-bottom: 1rem;
+    }
+
+    .card-subtitle {
+      order: 3;
     }
   }
 }
