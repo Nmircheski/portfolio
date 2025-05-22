@@ -1,25 +1,27 @@
 <section class="contact-section">
-  <header class="contact-header">
-    <portfolio-chip>Get in touch</portfolio-chip>
-    <p class="subtitle">
-      Feel free to reach out to me if you're looking for a developer, have a
-      query, or simply want to connect.
-    </p>
-  </header>
-  <div class="contact-info">
-    <portfolio-icon [iconType]="'email'"></portfolio-icon>
-    <h2 class="contact-email">
-      {{ email }}
-    </h2>
-    <portfolio-button class="copy-button" (click)="copyEmail()">
-      <portfolio-icon [iconType]="'copy'"></portfolio-icon>
-    </portfolio-button>
-  </div>
+  <div class="layout-section">
+    <header class="contact-header">
+      <portfolio-chip>Get in touch</portfolio-chip>
+      <p class="subtitle">
+        Feel free to reach out to me if you're looking for a developer, have a
+        query, or simply want to connect.
+      </p>
+    </header>
+    <div class="contact-info">
+      <portfolio-icon [iconType]="'email'"></portfolio-icon>
+      <h2 class="contact-email">
+        {{ email }}
+      </h2>
+      <portfolio-button class="copy-button" (click)="copyEmail()">
+        <portfolio-icon [iconType]="'copy'"></portfolio-icon>
+      </portfolio-button>
+    </div>
 
-  <div class="platforms-label">
-    <p class="body2">You may also find me on these platforms!</p>
-    <portfolio-button>
-      <portfolio-icon [iconType]="'github'"></portfolio-icon>
-    </portfolio-button>
+    <div class="platforms-label">
+      <p class="body2">You may also find me on these platforms!</p>
+      <portfolio-button>
+        <portfolio-icon [iconType]="'github'"></portfolio-icon>
+      </portfolio-button>
+    </div>
   </div>
 </section>

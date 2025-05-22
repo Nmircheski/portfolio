@@ -1,8 +1,6 @@
 @use 'mixins' as *;
 
 .hero-section {
-  padding: 4rem 1rem;
-
   > *:not(:last-child) {
     padding-bottom: 3rem;
   }
@@ -21,7 +19,10 @@
     display: flex;
     flex-direction: row-reverse;
     gap: 3rem;
-    padding: 6rem 7rem;
+
+    > *:not(:last-child) {
+      padding-bottom: 0;
+    }
 
     .hero-content {
       display: flex;
@@ -32,6 +33,10 @@
 
     .hero-img-container {
       align-self: flex-end;
+
+      .hero-img {
+        max-width: 17.5rem;
+      }
     }
   }
 }

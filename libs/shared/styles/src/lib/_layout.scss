@@ -1,2 +1,47 @@
 //TODO here goes classes for layout that apply to components
-//example layout-container, layout-section for each section etc.
+//example layout-section, layout-section for each section etc.
+@use 'mixins' as *;
+
+.px-sm {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-lg {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-lg {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.py-sm {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.max-width-lg {
+  max-width: 80rem;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.layout-section {
+  padding: 4rem 1rem;
+  width: 100%;
+
+  @include respond-up('md') {
+    padding: 6rem 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
