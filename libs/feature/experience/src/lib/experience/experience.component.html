@@ -2,7 +2,7 @@
   <div class="layout-section">
     <header class="experience-header">
       <portfolio-chip>Experience</portfolio-chip>
-      <p class="subtitle">
+      <p class="subtitle-normal">
         Here is a quick summary of my most recent experiences:
       </p>
     </header>
@@ -13,12 +13,12 @@
           <div class="card-logo">
             <img class="card-logo-img" [src]="logoSrc" />
           </div>
-          <p class="card-subtitle">{{ subtitle }}</p>
+          <p class="card-subtitle body2-normal">{{ subtitle }}</p>
           <div class="card-text">
-            <p class="card-title">{{ title }}</p>
+            <p class="card-title subtitle-semi-bold">{{ title }}</p>
             <ul class="card-bullets-list">
               @for (item of bulletPoints; track $index) {
-              <li class="card-bullet body2">{{ item }}</li>
+              <li class="card-bullet body2-normal">{{ item }}</li>
               }
             </ul>
           </div>

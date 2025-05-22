@@ -5,8 +5,10 @@
 
   <article class="hero-content">
     <div>
-      <h1 class="hero-title">Hi, I am Nikola <span class="emoji">👋</span></h1>
-      <p class="hero-description body2">
+      <h1 class="hero-title h1-bold">
+        Hi, I am Nikola <span class="emoji">👋</span>
+      </h1>
+      <p class="hero-description body2-normal">
         I'm a full stack developer (React.js & Node.js) with a focus on creating
         (and occasionally designing) exceptional digital experiences that are
         fast, accessible, visually appealing, and responsive. Even though I have
@@ -17,7 +19,7 @@
 
     <ul class="status-info">
       @for (statusInfo of statusInfoList; track $index) {
-      <li class="status-info-content">
+      <li class="status-info-content body2-normal">
         <portfolio-icon [iconType]="statusInfo.icon"></portfolio-icon>
         {{ statusInfo.label }}
       </li>
