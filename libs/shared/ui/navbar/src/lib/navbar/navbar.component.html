@@ -1,10 +1,10 @@
 <header class="navbar" [attr.sidenav-open]="sidenavOpen()">
-  <h1>{{ logoText() }}</h1>
+  <h3 class="h3-bold">{{ logoText() }}</h3>
   <div class="navbar-container">
     <nav class="main-nav">
       <ul class="nav-list">
         @for (navLink of navLinks(); track $index) {
-        <li>
+        <li class="body2-medium">
           <a [routerLink]="navLink.path">{{ navLink.label }}</a>
         </li>
         }

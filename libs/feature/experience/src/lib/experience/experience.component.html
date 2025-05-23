@@ -1,25 +1,29 @@
 <section class="experience-section">
-  <header class="experience-header">
-    <portfolio-chip>Experience</portfolio-chip>
-    <p class="subtitle">
-      Here is a quick summary of my most recent experiences:
-    </p>
-  </header>
+  <div class="layout-section">
+    <header class="experience-header">
+      <portfolio-chip>Experience</portfolio-chip>
+      <p class="subtitle-normal">
+        Here is a quick summary of my most recent experiences:
+      </p>
+    </header>
 
-  <div class="experience-list">
-    <portfolio-card [class]="'p-2'">
-      <div class="experience-card">
-        <div class="card-logo">
-          <img class="card-logo-img" [src]="logoSrc" />
+    <div class="experience-list">
+      <portfolio-card [class]="'p-2'">
+        <div class="experience-card">
+          <div class="card-logo">
+            <img class="card-logo-img" [src]="logoSrc" />
+          </div>
+          <p class="card-subtitle body2-normal">{{ subtitle }}</p>
+          <div class="card-text">
+            <p class="card-title subtitle-semi-bold">{{ title }}</p>
+            <ul class="card-bullets-list">
+              @for (item of bulletPoints; track $index) {
+              <li class="card-bullet body2-normal">{{ item }}</li>
+              }
+            </ul>
+          </div>
         </div>
-        <p>{{ subtitle }}</p>
-        <p>{{ title }}</p>
-        <ul class="card-bullets-list">
-          @for (item of bulletPoints; track $index) {
-          <li class="card-bullet body2">{{ item }}</li>
-          }
-        </ul>
-      </div></portfolio-card
-    >
+      </portfolio-card>
+    </div>
   </div>
 </section>
