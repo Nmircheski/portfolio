@@ -1,8 +1,8 @@
 export default {
-  displayName: 'hero',
+  displayName: 'hero-legacy',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../../coverage/libs/feature/hero',
+  coverageDirectory: '../../../coverage/libs/legacy/hero',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

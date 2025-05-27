@@ -1,8 +1,8 @@
 export default {
-  displayName: 'experience',
+  displayName: 'skills-legacy',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../../coverage/libs/feature/experience',
+  coverageDirectory: '../../../coverage/libs/legacy/skills',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

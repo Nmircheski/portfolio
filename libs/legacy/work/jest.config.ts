@@ -1,8 +1,8 @@
 export default {
-  displayName: 'contact',
+  displayName: 'work-legacy',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../../coverage/libs/feature/contact',
+  coverageDirectory: '../../../coverage/libs/legacy/work',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

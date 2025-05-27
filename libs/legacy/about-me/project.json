@@ -1,7 +1,7 @@
 {
-  "name": "contact",
+  "name": "about-me-legacy",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/feature/contact/src",
+  "sourceRoot": "libs/legacy/about-me/src",
   "prefix": "lib",
   "projectType": "library",
   "tags": [],
@@ -10,7 +10,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/feature/contact/jest.config.ts"
+        "jestConfig": "libs/legacy/about-me/jest.config.ts"
       }
     },
     "lint": {
