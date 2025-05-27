@@ -1,14 +1,8 @@
-.layout-section {
+@use 'mixins' as *;
+
+.page-section {
   padding: 4rem 1rem;
   width: 100%;
-
-  &.layout-section--dark {
-    background-color: var(--color-muted-50);
-  }
-
-  &.layout-section--light {
-    background-color: var(--color-muted-default);
-  }
 
   @include respond-up('md') {
     padding: 6rem 2rem;
@@ -19,4 +13,12 @@
     flex-direction: column;
     gap: 3rem;
   }
+}
+
+.page-section--dark {
+  background-color: var(--color-muted-50);
+}
+
+.page-section--light {
+  background-color: var(--color-muted-default);
 }

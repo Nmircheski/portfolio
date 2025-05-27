@@ -1,33 +1,35 @@
-<section class="hero-section layout-section">
-  <figure class="hero-img-container">
-    <img class="hero-img" [src]="'/profile-photo.jpg'" />
-  </figure>
+<portfolio-page-section>
+  <div class="hero">
+    <figure class="hero-img-container">
+      <img class="hero-img" [src]="'/profile-photo.jpg'" />
+    </figure>
 
-  <article class="hero-content">
-    <div>
-      <h1 class="hero-title h1-bold">
-        Hi, I am Nikola <span class="emoji">👋</span>
-      </h1>
-      <p class="hero-description body2-normal">
-        I'm a full stack developer (React.js & Node.js) with a focus on creating
-        (and occasionally designing) exceptional digital experiences that are
-        fast, accessible, visually appealing, and responsive. Even though I have
-        been creating web applications for over 7 years, I still love it as if
-        it was something new.
-      </p>
-    </div>
+    <article class="hero-content">
+      <div>
+        <h1 class="hero-title h1-bold">
+          Hi, I am Nikola <span class="emoji">👋</span>
+        </h1>
+        <p class="hero-description body2-normal">
+          I'm a full stack developer (React.js & Node.js) with a focus on
+          creating (and occasionally designing) exceptional digital experiences
+          that are fast, accessible, visually appealing, and responsive. Even
+          though I have been creating web applications for over 7 years, I still
+          love it as if it was something new.
+        </p>
+      </div>
 
-    <ul class="status-info">
-      @for (statusInfo of statusInfoList; track $index) {
-      <li class="status-info-content body2-normal">
-        <portfolio-icon [iconType]="statusInfo.icon"></portfolio-icon>
-        {{ statusInfo.label }}
-      </li>
-      }
-    </ul>
+      <ul class="status-info">
+        @for (statusInfo of statusInfoList; track $index) {
+        <li class="status-info-content body2-normal">
+          <portfolio-icon [iconType]="statusInfo.icon"></portfolio-icon>
+          {{ statusInfo.label }}
+        </li>
+        }
+      </ul>
 
-    <nav class="hero-links">
-      <portfolio-icon [iconType]="'github'"></portfolio-icon>
-    </nav>
-  </article>
-</section>
+      <nav class="hero-links">
+        <portfolio-icon [iconType]="'github'"></portfolio-icon>
+      </nav>
+    </article>
+  </div>
+</portfolio-page-section>
