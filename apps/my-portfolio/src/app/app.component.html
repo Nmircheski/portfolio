@@ -1,1 +1,15 @@
-<router-outlet></router-outlet>
+<!-- TODO uncomment when using routing <router-outlet></router-outlet> -->
+
+<portfolio-navbar
+  [navLinks]="navLinks"
+  [buttonText]="'Hire me'"
+></portfolio-navbar>
+<main>
+  <portfolio-hero></portfolio-hero>
+  <portfolio-about-me></portfolio-about-me>
+  <portfolio-skills></portfolio-skills>
+  <portfolio-experience></portfolio-experience>
+  <portfolio-my-work></portfolio-my-work>
+  <portfolio-cta></portfolio-cta>
+</main>
+<portfolio-footer></portfolio-footer>
