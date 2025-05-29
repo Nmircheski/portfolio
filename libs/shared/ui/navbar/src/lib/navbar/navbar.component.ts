@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
+  input,
   Renderer2,
   signal,
 } from '@angular/core';
@@ -20,18 +21,22 @@ export class NavbarComponent {
   clicked() {
     alert('clicked');
   }
+
   isDarkTheme = signal(false);
 
   switchTheme() {
     throw new Error('Method not implemented.');
   }
 
-  protected readonly logoText = signal('<NM/>').asReadonly();
-  protected readonly navLinks = signal([
+  public readonly logoText = input('NM');
+  public readonly buttonText = input('');
+  public readonly navLinks = input<{ label: string; path: string }[]>([
     { label: 'About', path: '/#about' },
     { label: 'Work', path: '/#skills' },
     { label: 'Contact', path: '/#contact' },
-  ]).asReadonly();
+  ]);
+  public readonly showThemeSwitch = input(false);
+  public readonly showSideDivider = input(false);
 
   protected readonly sidenavOpen = signal(false);
 

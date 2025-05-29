@@ -1,24 +1,26 @@
 <header class="navbar" [attr.sidenav-open]="sidenavOpen()">
   <h3 class="h3-bold">{{ logoText() }}</h3>
-  <div class="navbar-container">
-    <nav class="main-nav">
-      <ul class="nav-list">
-        @for (navLink of navLinks(); track $index) {
-        <li class="body2-medium">
-          <a [routerLink]="navLink.path">{{ navLink.label }}</a>
-        </li>
-        }
-      </ul>
-    </nav>
+  <!-- <div class="navbar-container"> -->
+  <nav class="navbar__nav" [class.main-nav--side-divider]="showSideDivider()">
+    <ul class="navbar__list">
+      @for (navLink of navLinks(); track $index) {
+      <li class="navbar__list-item body2-normal">
+        <a [routerLink]="navLink.path">{{ navLink.label | uppercase }}</a>
+      </li>
+      }
+    </ul>
+  </nav>
 
-    <div class="navbar-actions">
-      <portfolio-button (clicked)="switchTheme()">
-        <portfolio-icon
-          [iconType]="isDarkTheme() ? 'sun' : 'moon'"
-        ></portfolio-icon>
-      </portfolio-button>
-      <portfolio-button> Download CV </portfolio-button>
-    </div>
+  <div class="navbar__actions navbar__action--end">
+    @if (showThemeSwitch()) {
+    <portfolio-button (clicked)="switchTheme()">
+      <portfolio-icon
+        [iconType]="isDarkTheme() ? 'sun' : 'moon'"
+      ></portfolio-icon>
+    </portfolio-button>
+    }
+    <portfolio-button> {{ buttonText() }} </portfolio-button>
+    <!-- </div> -->
   </div>
 
   <portfolio-button (clicked)="toggleMobileMenu()" class="mobile-menu-icon">
@@ -49,6 +51,7 @@
     <div></div>
   </nav>
   <div class="sidenav-footer">
+    @if (showThemeSwitch()) {
     <div class="sidenav-theme-container">
       <span>Switch Theme</span>
       <portfolio-button (clicked)="switchTheme()">
@@ -57,7 +60,8 @@
         ></portfolio-icon>
       </portfolio-button>
     </div>
-    <portfolio-button> Download CV </portfolio-button>
+    }
+    <portfolio-button> {{ buttonText() }} </portfolio-button>
   </div>
 </div>
 }

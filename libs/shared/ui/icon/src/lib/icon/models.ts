@@ -22,4 +22,5 @@ export type IconType =
   | 'azure'
   | 'external-link'
   | 'copy'
-  | 'copyright';
+  | 'copyright'
+  | 'download';

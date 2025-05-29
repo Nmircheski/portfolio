@@ -2,11 +2,9 @@ import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
-  computed,
-  contentChild,
+  input,
   output,
 } from '@angular/core';
-import { IconComponent } from '@portfolio/ui/icon';
 @Component({
   selector: 'portfolio-button',
   imports: [CommonModule],
@@ -15,11 +13,7 @@ import { IconComponent } from '@portfolio/ui/icon';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {
-  type = computed(() => {
-    return this.icon() ? 'icon-button' : 'regular-button';
-  });
+  bgColor = input<'primary' | 'transparent'>('primary');
 
   clicked = output<void>();
-
-  icon = contentChild(IconComponent);
 }

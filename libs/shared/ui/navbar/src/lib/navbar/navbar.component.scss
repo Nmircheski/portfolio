@@ -21,9 +21,11 @@
 
 @include respond-up('md') {
   .navbar {
+    // display: grid;
+    // grid-template-columns: 1fr auto 1fr;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 2.5rem 2rem;
     gap: 1.5rem;
   }
   .mobile-menu-icon {
@@ -35,22 +37,32 @@
     align-items: center;
   }
 
-  .main-nav {
+  .navbar__nav {
     display: block;
-    padding-right: 1.5rem;
-    border-right: 1px solid var(--color-muted-100);
-    .nav-list {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
+
+    &--side-divider {
+      border-right: 1px solid var(--color-muted-100);
     }
   }
 
-  .navbar-actions {
+  .navbar__list {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .navbar__list-item {
+    text-align: center;
+  }
+
+  .navbar__actions {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding-left: 1.5rem;
+  }
+
+  .navbar__action--end {
+    justify-self: flex-end;
   }
 }
 

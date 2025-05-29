@@ -1,3 +1,7 @@
-<button class="button {{ type() }} body2-medium" (click)="clicked.emit()">
-  <ng-content></ng-content>
+<button
+  class="button button--{{ bgColor() }} body2-medium text-uppercase"
+  (click)="clicked.emit()"
+>
+  <ng-content select="portfolio-icon"></ng-content>
+  <span><ng-content></ng-content></span>
 </button>
