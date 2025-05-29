@@ -1,0 +1,35 @@
+.about-me {
+  display: flex;
+
+  > * {
+    flex: 1;
+  }
+}
+
+.about-me__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-me__subtitle {
+  color: #5e3bee;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+}
+
+.about-me__title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+  letter-spacing: 0.5%;
+}
+
+.about-me__description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.5px;
+}
