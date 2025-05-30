@@ -24,4 +24,5 @@ export type IconType =
   | 'external-link'
   | 'copy'
   | 'copyright'
-  | 'download';
+  | 'download'
+  | 'linkedin';
