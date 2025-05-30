@@ -1,6 +1,10 @@
+@use 'mixins' as *;
+
 .experience {
-  display: flex;
   gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .experience__item {

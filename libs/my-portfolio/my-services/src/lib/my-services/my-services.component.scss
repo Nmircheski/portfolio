@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 .services {
   text-align: center;
 }
@@ -31,4 +33,9 @@
   gap: 40px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+
+  @include respond-up('md') {
+    flex-wrap: nowrap;
+  }
 }

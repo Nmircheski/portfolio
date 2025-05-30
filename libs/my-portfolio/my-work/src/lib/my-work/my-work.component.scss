@@ -1,7 +1,12 @@
+@use 'mixins' as *;
 .my-work {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
+
+  @include respond-up('md') {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .my-work__thumbnail {

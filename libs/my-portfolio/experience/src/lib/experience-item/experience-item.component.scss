@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 .experience-item {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,9 @@
   justify-content: center;
   text-align: center;
   text-transform: uppercase;
-  padding: 0 2rem;
+  @include respond-up('md') {
+    padding: 0 2rem;
+  }
 }
 
 .experience-item__description {

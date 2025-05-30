@@ -1,17 +1,29 @@
+@use 'mixins' as *;
+
 .footer {
+  padding: 0 2rem;
+}
+
+.footer__content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-content: center;
   gap: 4rem;
   row-gap: 8rem;
   height: 100%;
-  padding: 8rem 10rem 4rem 10rem;
+  padding: 5rem 2rem 2rem 2rem;
   margin: 0 auto;
-  max-width: 90rem;
   width: 100%;
   color: #ffffff;
   background-color: #333333;
   border-radius: 24px 24px 0 0;
+  text-align: center;
+
+  @include respond-up('md') {
+    grid-template-columns: 1fr 1fr;
+    padding: 8rem 10rem 4rem 10rem;
+    max-width: 90rem;
+  }
 }
 
 .footer__action-links {
@@ -22,7 +34,12 @@
 
 .footer__list {
   display: flex;
-  gap: 3rem;
+  justify-content: center;
+  gap: 1rem;
+
+  @include respond-up('md') {
+    gap: 3rem;
+  }
 }
 
 .footer__copyright,
