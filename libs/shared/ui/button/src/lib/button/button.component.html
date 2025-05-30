@@ -1,5 +1,6 @@
 <button
   class="button button--{{ bgColor() }} body2-medium text-uppercase"
+  [class.full-width]="fullWidth() || null"
   (click)="clicked.emit()"
 >
   <ng-content select="portfolio-icon"></ng-content>

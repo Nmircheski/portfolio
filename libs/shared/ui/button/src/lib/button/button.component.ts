@@ -14,6 +14,6 @@ import {
 })
 export class ButtonComponent {
   bgColor = input<'primary' | 'transparent'>('primary');
-
+  fullWidth = input(false);
   clicked = output<void>();
 }

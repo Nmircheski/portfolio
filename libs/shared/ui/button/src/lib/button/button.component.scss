@@ -1,8 +1,11 @@
 .button {
-  width: 100%;
   text-align: center;
   border-radius: 3.125rem;
-  padding: 0.375rem 1rem;
+  padding: 1rem 2rem;
+
+  &--full-width {
+    width: 100%;
+  }
 
   &--primary {
     background-color: #5e3bee;

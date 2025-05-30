@@ -23,6 +23,10 @@ export class SkillsComponent {
       label: 'JavaScript',
     },
     {
+      icon: 'html',
+      label: 'HTML',
+    },
+    {
       icon: 'sass',
       label: 'Sass',
     },
