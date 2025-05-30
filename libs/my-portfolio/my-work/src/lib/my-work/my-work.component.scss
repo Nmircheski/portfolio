@@ -1,0 +1,10 @@
+.my-work {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.my-work__thumbnail {
+  //   width: 100%;
+  object-fit: cover;
+}

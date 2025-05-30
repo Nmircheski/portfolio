@@ -1,0 +1,12 @@
+.skills {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.skills__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}

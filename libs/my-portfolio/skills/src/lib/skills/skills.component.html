@@ -1,0 +1,13 @@
+<portfolio-page-section>
+  <div class="skills">
+    @for (skill of skills; track $index) {
+    <div class="skills__item">
+      <portfolio-icon
+        [iconType]="skill.icon"
+        [iconSize]="'md'"
+      ></portfolio-icon>
+      <span>{{ skill.label }}</span>
+    </div>
+    }
+  </div>
+</portfolio-page-section>

@@ -1,0 +1,13 @@
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 2rem;
+}
+
+.experience-item__description {
+  white-space: nowrap;
+}

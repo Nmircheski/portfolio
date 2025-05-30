@@ -1,0 +1,29 @@
+<portfolio-page-section [bg]="'dark'">
+  <div class="hero">
+    <div class="hero__content">
+      <p class="hero__subtitle">Nikola Mircheski</p>
+      <h1 class="hero__title">
+        Hello, my name’s Nikola. I’m software engineer.
+      </h1>
+
+      <div class="hero__actions">
+        <portfolio-button>
+          <portfolio-icon [iconType]="'email'"></portfolio-icon> Contact me
+        </portfolio-button>
+        <portfolio-button [bgColor]="'transparent'">
+          <portfolio-icon [iconType]="'download'"></portfolio-icon> download CV
+        </portfolio-button>
+      </div>
+    </div>
+    <div class="hero__img-container">
+      <div class="hero__img-wrapper"></div>
+      <img
+        [src]="'/profile-transparent.png'"
+        alt="Hero Image"
+        class="hero__img"
+      />
+
+      <div class="hero__overlay"></div>
+    </div>
+  </div>
+</portfolio-page-section>

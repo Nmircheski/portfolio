@@ -20,6 +20,9 @@ export type IconType =
   | 'jest'
   | 'git'
   | 'azure'
+  | 'nx'
   | 'external-link'
   | 'copy'
-  | 'copyright';
+  | 'copyright'
+  | 'download'
+  | 'linkedin';

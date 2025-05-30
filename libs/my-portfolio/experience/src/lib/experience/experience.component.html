@@ -1,0 +1,12 @@
+<portfolio-page-section>
+  <div class="experience">
+    @for (item of experienceList; track $index) {
+    <portfolio-experience-item
+      class="experience__item"
+      [title]="item.title"
+      [description]="item.description"
+    >
+    </portfolio-experience-item>
+    }
+  </div>
+</portfolio-page-section>
