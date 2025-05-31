@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 $font-weights: (
   regular: 400,
   medium: 500,
@@ -5,159 +7,154 @@ $font-weights: (
   bold: 700,
 );
 
-$h2-touch-device-base: (
-  normal: (
-    font-size: 18px,
-    line-height: 28px,
-    font-weight: 600,
-    letter-spacing: -2%,
-  ),
-);
-
 $typography: (
-  h1: (
+  display: (
     bold: (
       sm: (
-        font-size: 32px,
-        line-height: 40px,
-        font-weight: 600,
-      ),
-      md: (
-        font-size: 48px,
-        line-height: 48px,
-        font-weight: 700,
+        font-size: 44px,
+        line-height: 64px,
+        font-weight: map.get($font-weights, bold),
+        letter-spacing: 0%,
       ),
       lg: (
         font-size: 60px,
+        line-height: 78px,
+        font-weight: map.get($font-weights, bold),
+        letter-spacing: 0%,
+      ),
+    ),
+    semi-bold: (
+      sm: (
+        font-size: 38px,
+        line-height: 52px,
+        font-weight: map.get($font-weights, semi-bold),
+        letter-spacing: 0.5%,
+      ),
+      lg: (
+        font-size: 50px,
         line-height: 72px,
-        font-weight: 700,
+        font-weight: map.get($font-weights, semi-bold),
+        letter-spacing: 0.5%,
       ),
     ),
   ),
-  h2: (
+  section-heading: (
     semi-bold: (
       sm: (
-        font-size: 18px,
-        line-height: 28px,
-        font-weight: 600,
-      ),
-      lg: (
-        font-size: 36px,
+        font-size: 34px,
         line-height: 40px,
-        font-weight: 600,
+        font-weight: map.get($font-weights, semi-bold),
+        letter-spacing: 0.5%,
+      ),
+      lg: (
+        font-size: 44px,
+        line-height: 56px,
+        font-weight: map.get($font-weights, semi-bold),
+        letter-spacing: 0.5%,
       ),
     ),
   ),
-  h3: (
+  stat: (
     semi-bold: (
       sm: (
-        font-size: 24px,
-        line-height: 32px,
-        font-weight: 600,
-      ),
-      lg: (
-        font-size: 30px,
-        line-height: 36px,
-        font-weight: 600,
+        font-size: 48px,
+        line-height: 56px,
+        font-weight: map.get($font-weights, semi-bold),
+        letter-spacing: 0.5px,
       ),
     ),
-    bold: (
+  ),
+  label: (
+    normal: (
       sm: (
-        font-size: 24px,
-        line-height: 32px,
-        font-weight: 700,
+        font-size: 16px,
+        line-height: 1,
+        font-weight: map.get($font-weights, regular),
+        letter-spacing: 0.5px,
       ),
-      lg: (
-        font-size: 30px,
-        line-height: 36px,
-        font-weight: 700,
+    ),
+    medium: (
+      sm: (
+        font-size: 16px,
+        line-height: 24px,
+        font-weight: map.get($font-weights, medium),
+        letter-spacing: 0.5px,
+      ),
+    ),
+  ),
+  title: (
+    medium: (
+      sm: (
+        font-size: 20px,
+        line-height: 32px,
+        font-weight: map.get($font-weights, medium),
+        letter-spacing: 0.5px,
       ),
     ),
   ),
   subtitle: (
-    normal: (
-      sm: (
-        font-size: 18px,
-        line-height: 28px,
-        font-weight: 400,
-      ),
-      lg: (
-        font-size: 20px,
-        line-height: 28px,
-        font-weight: 400,
-      ),
-    ),
-    semi-bold: (
-      sm: (
-        font-size: 18px,
-        line-height: 28px,
-        font-weight: 600,
-      ),
-      lg: (
-        font-size: 20px,
-        line-height: 28px,
-        font-weight: 600,
-      ),
-    ),
-  ),
-  body1: (
-    normal: (
+    medium: (
       sm: (
         font-size: 16px,
-        line-height: 24px,
-        font-weight: 400,
-      ),
-      lg: (
-        font-size: 18px,
-        line-height: 28px,
-        font-weight: 400,
-      ),
-    ),
-  ),
-  body2: (
-    normal: (
-      sm: (
-        font-size: 14px,
-        line-height: 22px,
-        font-weight: 400,
+        line-height: 26px,
+        font-weight: map.get($font-weights, medium),
         letter-spacing: 1.5px,
       ),
     ),
+  ),
+  body: (
+    normal: (
+      //TODO change normal to regular in all file
+      sm:
+        (
+          font-size: 16px,
+          line-height: 32px,
+          font-weight: map.get($font-weights, regular),
+          letter-spacing: 0.5px,
+        ),
+    ),
     medium: (
       sm: (
-        font-size: 14px,
-        font-weight: 500,
+        font-size: 16px,
+        line-height: 24px,
+        font-weight: map.get($font-weights, medium),
         letter-spacing: 0.5px,
       ),
     ),
-    semi-bold: (
-      sm: (
-        font-size: 16px,
-        line-height: 24px,
-        font-weight: 600,
-      ),
-    ),
-    underline: (
-      sm: (
-        font-size: 16px,
-        line-height: 24px,
-        font-weight: 400,
-      ),
-    ),
   ),
-  body3: (
-    normal: (
-      sm: (
-        font-size: 14px,
-        line-height: 20px,
-        font-weight: 400,
-      ),
-    ),
+  button: (
     medium: (
       sm: (
         font-size: 14px,
-        line-height: 20px,
-        font-weight: 500,
+        font-weight: map.get($font-weights, medium),
+        line-height: 1,
+        letter-spacing: 0.5px,
+      ),
+    ),
+  ),
+  caption: (
+    normal: (
+      sm: (
+        font-size: 16px,
+        line-height: 1,
+        font-weight: map.get($font-weights, regular),
+        letter-spacing: 0.5px,
+      ),
+    ),
+  ),
+  nav-item: (
+    normal: (
+      sm: (
+        font-size: 13px,
+        line-height: 22px,
+        font-weight: map.get($font-weights, regular),
+        letter-spacing: 1.5px,
+      ),
+      lg: (
+        font-size: 14px,
+        line-height: 22px,
+        font-weight: map.get($font-weights, regular),
+        letter-spacing: 1.5px,
       ),
     ),
   ),

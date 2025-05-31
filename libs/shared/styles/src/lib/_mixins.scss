@@ -13,13 +13,13 @@
         $font-size: map.get($props, font-size);
         $line-height: map.get($props, line-height);
         $font-weight: map.get($props, font-weight);
-
+        $letter-spacing: map.get($props, letter-spacing);
         @media (min-width: $breakpoint) {
           .#{$heading}-#{$weight} {
             font-size: $font-size;
             line-height: $line-height;
             font-weight: $font-weight;
-            letter-spacing: 1.5px;
+            letter-spacing: $letter-spacing;
           }
         }
       }

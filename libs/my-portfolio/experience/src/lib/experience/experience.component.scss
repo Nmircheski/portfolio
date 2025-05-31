@@ -1,10 +1,11 @@
 @use 'mixins' as *;
 
 .experience {
-  gap: 40px;
+  gap: 3rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .experience__item {

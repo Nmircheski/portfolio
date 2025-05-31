@@ -1,8 +1,10 @@
 <portfolio-page-section class="services">
   <div class="services__content">
-    <p class="services__subtitle">services</p>
-    <h1 class="services__title">What I Do For My Customer.</h1>
-    <p class="services__description">
+    <p class="services__subtitle subtitle-medium">services</p>
+    <h1 class="services__title section-heading-semi-bold">
+      What I Do For My Customer.
+    </h1>
+    <p class="services__description body-normal">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae
       blandit lectus. Praesent at hendrerit velit, at dictum nisl.
     </p>
@@ -12,8 +14,10 @@
       <portfolio-card>
         <div class="services__card-content">
           <portfolio-icon [iconType]="'javascript'"></portfolio-icon>
-          <h3 class="services__card-title">{{ item.title }}</h3>
-          <p class="services__card-description">{{ item.description }}</p>
+          <h3 class="services__card-title title-medium">{{ item.title }}</h3>
+          <p class="services__card-description body-normal">
+            {{ item.description }}
+          </p>
         </div>
       </portfolio-card>
       }
