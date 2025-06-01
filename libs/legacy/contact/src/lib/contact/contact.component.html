@@ -8,19 +8,19 @@
       </p>
     </header>
     <div class="contact-info">
-      <portfolio-icon [iconType]="'email'"></portfolio-icon>
+      <portfolio-icon [name]="'email'"></portfolio-icon>
       <h2 class="contact-email h2-semi-bold">
         {{ email }}
       </h2>
       <portfolio-button class="copy-button" (click)="copyEmail()">
-        <portfolio-icon [iconType]="'copy'"></portfolio-icon>
+        <portfolio-icon [name]="'copy'"></portfolio-icon>
       </portfolio-button>
     </div>
 
     <div class="platforms-label">
       <p class="body2">You may also find me on these platforms!</p>
       <portfolio-button>
-        <portfolio-icon [iconType]="'github'"></portfolio-icon>
+        <portfolio-icon [name]="'github'"></portfolio-icon>
       </portfolio-button>
     </div>
   </div>

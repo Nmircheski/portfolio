@@ -15,6 +15,7 @@
         $font-weight: map.get($props, font-weight);
         $letter-spacing: map.get($props, letter-spacing);
         @media (min-width: $breakpoint) {
+          //TODO do not use utility classes, go full BEM in this project
           .#{$heading}-#{$weight} {
             font-size: $font-size;
             line-height: $line-height;
@@ -27,13 +28,77 @@
   }
 }
 
+//Colors
+// Mixin to generate hue-based custom properties
+@mixin generate-color-variables($map, $prefix) {
+  @each $key, $value in $map {
+    --color-#{$prefix}-#{$key}: #{$value};
+  }
+}
+
 //Spacing
-@mixin padding-classes() {
-  @for $i from 0 through 10 {
-    .p-#{$i} {
-      padding: $i * 1rem;
+@mixin generate-spacing-tokens() {
+  @each $name, $value in $spacing {
+    --space-#{$name}: #{$value};
+  }
+}
+
+@mixin generate-padding-modifiers() {
+  @each $name, $value in $spacing {
+    &--space-py-#{$name} {
+      padding-top: #{$value};
+      padding-bottom: #{$value};
+    }
+    &--space-pt-#{$name} {
+      padding-top: #{$value};
+    }
+    &--space-pb-#{$name} {
+      padding-bottom: #{$value};
+    }
+    &--space-px-#{$name} {
+      padding-left: #{$value};
+      padding-right: #{$value};
+    }
+    &--space-pr-#{$name} {
+      padding-right: #{$value};
+    }
+    &--space-pl-#{$name} {
+      padding-left: #{$value};
     }
   }
+}
+
+@mixin generate-margin-modifiers() {
+  @each $name, $value in $spacing {
+    &--space-my-#{$name} {
+      margin-top: #{$value};
+      margin-bottom: #{$value};
+    }
+    &--space-mt-#{$name} {
+      margin-top: #{$value};
+    }
+    &--space-mb-#{$name} {
+      margin-bottom: #{$value};
+    }
+
+    &--space-mx-#{$name} {
+      margin-left: #{$value};
+      margin-right: #{$value};
+    }
+
+    &--space-mr-#{$name} {
+      margin-right: #{$value};
+    }
+
+    &--space-ml-#{$name} {
+      margin-left: #{$value};
+    }
+  }
+}
+
+@mixin generate-all-spacing-modifiers() {
+  @include generate-margin-modifiers();
+  @include generate-padding-modifiers();
 }
 
 //Responsive

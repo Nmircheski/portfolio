@@ -1,4 +1,9 @@
-<portfolio-page-section class="services">
+<portfolio-page-section
+  class="services"
+  [paddingTop]="'2xl'"
+  [paddingBottom]="'none'"
+  [marginBottom]="'3xl'"
+>
   <div class="services__content">
     <p class="services__subtitle subtitle-medium">services</p>
     <h1 class="services__title section-heading-semi-bold">
@@ -13,7 +18,7 @@
       @for (item of services; track $index) {
       <portfolio-card>
         <div class="services__card-content">
-          <portfolio-icon [iconType]="'javascript'"></portfolio-icon>
+          <portfolio-icon [name]="'javascript'"></portfolio-icon>
           <h3 class="services__card-title title-medium">{{ item.title }}</h3>
           <p class="services__card-description body-normal">
             {{ item.description }}

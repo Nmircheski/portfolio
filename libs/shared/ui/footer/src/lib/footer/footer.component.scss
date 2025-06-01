@@ -46,3 +46,10 @@
 .footer__action-links {
   justify-self: center;
 }
+
+.footer__social-media {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: center;
+  align-items: center;
+}

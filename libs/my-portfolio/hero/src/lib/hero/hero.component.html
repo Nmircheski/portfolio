@@ -1,4 +1,4 @@
-<portfolio-page-section [bg]="'dark'">
+<portfolio-page-section [bg]="'dark'" [paddingBottom]="'none'">
   <div class="hero">
     <div class="hero__content">
       <p class="hero__subtitle subtitle-medium">Nikola Mircheski</p>
@@ -8,10 +8,10 @@
 
       <div class="hero__actions">
         <portfolio-button>
-          <portfolio-icon [iconType]="'email'"></portfolio-icon> Contact me
+          <portfolio-icon [name]="'email'"></portfolio-icon> Contact me
         </portfolio-button>
         <portfolio-button [bgColor]="'transparent'">
-          <portfolio-icon [iconType]="'download'"></portfolio-icon> download CV
+          <portfolio-icon [name]="'download'"></portfolio-icon> download CV
         </portfolio-button>
       </div>
     </div>

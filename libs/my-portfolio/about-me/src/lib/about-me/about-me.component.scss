@@ -1,5 +1,9 @@
+@use 'mixins' as *;
+
 .about-me {
-  display: flex;
+  @include respond-up('md') {
+    display: flex;
+  }
 
   > * {
     flex: 1;
@@ -9,7 +13,14 @@
 .about-me__content {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 2rem;
+  text-align: center;
+
+  @include respond-up('md') {
+    text-align: left;
+  }
 }
 
 .about-me__subtitle {

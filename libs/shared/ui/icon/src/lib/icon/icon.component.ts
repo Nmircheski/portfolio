@@ -10,6 +10,6 @@ import { IconType } from './models';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IconComponent {
-  iconType = input.required<IconType>();
+  name = input.required<IconType>();
   iconSize = input<'sm' | 'md' | 'lg'>('sm');
 }

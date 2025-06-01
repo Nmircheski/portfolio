@@ -13,6 +13,7 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {
+  type = input<'regular' | 'icon'>('regular');
   bgColor = input<'primary' | 'transparent'>('primary');
   fullWidth = input(false);
   clicked = output<void>();

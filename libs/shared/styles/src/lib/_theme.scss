@@ -1,11 +1,5 @@
 @use 'colors' as *;
-
-// Mixin to generate hue-based custom properties
-@mixin generate-color-variables($map, $prefix) {
-  @each $key, $value in $map {
-    --color-#{$prefix}-#{$key}: #{$value};
-  }
-}
+@use 'mixins' as *;
 
 /*TODO 
 define appropriate names for the semantic role tokens..
@@ -33,6 +27,8 @@ currently they are used as the color name
   --color-primary: var(--color-primary-500);
   --color-accent: var(--color-muted-400);
   --color-error: #dc3545;
+
+  @include generate-spacing-tokens();
 }
 
 // Dark Theme

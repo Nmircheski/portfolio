@@ -38,6 +38,7 @@
 
 .hero__img {
   width: 100%;
+  display: block;
   @include respond-up('md') {
     height: 100%;
     object-fit: contain;

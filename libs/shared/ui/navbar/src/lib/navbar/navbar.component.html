@@ -13,22 +13,20 @@
 
   <div class="navbar__actions navbar__actions--end">
     @if (showThemeSwitch()) {
-    <portfolio-button (clicked)="switchTheme()">
-      <portfolio-icon
-        [iconType]="isDarkTheme() ? 'sun' : 'moon'"
-      ></portfolio-icon>
+    <portfolio-button (clicked)="switchTheme()" [type]="'icon'">
+      <portfolio-icon [name]="isDarkTheme() ? 'sun' : 'moon'"></portfolio-icon>
     </portfolio-button>
     }
     <portfolio-button> {{ buttonText() }} </portfolio-button>
-    <!-- </div> -->
   </div>
 
   <portfolio-button
     (clicked)="toggleMobileMenu()"
     class="mobile-menu-icon"
     [bgColor]="'transparent'"
+    [type]="'icon'"
   >
-    <portfolio-icon [iconType]="'hamburger'"></portfolio-icon>
+    <portfolio-icon [name]="'hamburger'"></portfolio-icon>
   </portfolio-button>
 </header>
 
@@ -39,7 +37,7 @@
   <header class="sidenav-header">
     <h1>{{ logoText() }}</h1>
     <portfolio-button (clicked)="toggleMobileMenu()" [bgColor]="'transparent'">
-      <portfolio-icon [iconType]="'close'"></portfolio-icon>
+      <portfolio-icon [name]="'close'"></portfolio-icon>
     </portfolio-button>
   </header>
   <nav class="sidenav-nav body2">
@@ -60,7 +58,7 @@
       <span>Switch Theme</span>
       <portfolio-button (clicked)="switchTheme()">
         <portfolio-icon
-          [iconType]="isDarkTheme() ? 'sun' : 'moon'"
+          [name]="isDarkTheme() ? 'sun' : 'moon'"
         ></portfolio-icon>
       </portfolio-button>
     </div>
