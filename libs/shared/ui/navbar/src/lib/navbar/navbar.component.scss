@@ -4,10 +4,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 1rem;
   max-width: 80rem;
   margin: 0 auto;
   width: 100%;
+  background-color: #f9f9fc;
 
   &[sidenav-open='true'] {
     z-index: 0;
@@ -15,7 +16,8 @@
   }
 }
 
-.navbar-container {
+.navbar__nav,
+.navbar__actions {
   display: none;
 }
 
@@ -61,7 +63,7 @@
     gap: 1rem;
   }
 
-  .navbar__action--end {
+  .navbar__actions--end {
     justify-self: flex-end;
   }
 }
@@ -89,7 +91,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 1rem;
   }
 
   .sidenav-nav {

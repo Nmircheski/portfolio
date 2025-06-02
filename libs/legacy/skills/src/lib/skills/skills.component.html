@@ -8,10 +8,7 @@
   <div class="skills-list">
     @for (skill of skillsList; track $index) {
     <div class="skill-item">
-      <portfolio-icon
-        [iconType]="skill.icon"
-        [iconSize]="'md'"
-      ></portfolio-icon>
+      <portfolio-icon [name]="skill.icon" [iconSize]="'md'"></portfolio-icon>
       <span>{{ skill.label }}</span>
     </div>
     }

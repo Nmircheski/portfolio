@@ -1,15 +1,13 @@
+@use 'mixins' as *;
+
 .cta {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--space-2xl);
   align-items: center;
   text-align: center;
-  padding: 0 12rem;
-}
-
-.cta__title {
-  font-size: 60px;
-  font-weight: 700;
-  line-height: 78px;
-  letter-spacing: 0.5%;
+  padding: 0;
+  @include respond-up(md) {
+    padding: 0 12rem;
+  }
 }

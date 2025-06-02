@@ -6,7 +6,7 @@
 
     <article class="hero-content">
       <div>
-        <h1 class="hero-title h1-bold">
+        <h1 class="hero-title text-display-bold">
           Hi, I am Nikola <span class="emoji">👋</span>
         </h1>
         <p class="hero-description body2-normal">
@@ -21,14 +21,14 @@
       <ul class="status-info">
         @for (statusInfo of statusInfoList; track $index) {
         <li class="status-info-content body2-normal">
-          <portfolio-icon [iconType]="statusInfo.icon"></portfolio-icon>
+          <portfolio-icon [name]="statusInfo.icon"></portfolio-icon>
           {{ statusInfo.label }}
         </li>
         }
       </ul>
 
       <nav class="hero-links">
-        <portfolio-icon [iconType]="'github'"></portfolio-icon>
+        <portfolio-icon [name]="'github'"></portfolio-icon>
       </nav>
     </article>
   </div>

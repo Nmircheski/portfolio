@@ -25,4 +25,5 @@ export type IconType =
   | 'copy'
   | 'copyright'
   | 'download'
-  | 'linkedin';
+  | 'linkedin'
+  | 'phone';

@@ -1,19 +1,30 @@
-<portfolio-page-section class="services">
-  <div class="services__content">
-    <p class="services__subtitle">services</p>
-    <h1 class="services__title">What I Do For My Customer.</h1>
-    <p class="services__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae
-      blandit lectus. Praesent at hendrerit velit, at dictum nisl.
-    </p>
+<portfolio-page-section
+  class="services"
+  [paddingTop]="'2xl'"
+  [paddingBottom]="'none'"
+  [marginBottom]="'3xl'"
+>
+  <div class="services__wrapper">
+    <header class="services__header">
+      <p class="services__subtitle subtitle-medium">services</p>
+      <h1 class="services__title section-heading-semi-bold">
+        What I Do For My Customer.
+      </h1>
+      <p class="services__description body-normal">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae
+        blandit lectus. Praesent at hendrerit velit, at dictum nisl.
+      </p>
+    </header>
 
     <div class="services__items">
       @for (item of services; track $index) {
       <portfolio-card>
         <div class="services__card-content">
-          <portfolio-icon [iconType]="'javascript'"></portfolio-icon>
-          <h3 class="services__card-title">{{ item.title }}</h3>
-          <p class="services__card-description">{{ item.description }}</p>
+          <portfolio-icon [name]="'javascript'"></portfolio-icon>
+          <h3 class="services__card-title title-medium">{{ item.title }}</h3>
+          <p class="services__card-description body-normal">
+            {{ item.description }}
+          </p>
         </div>
       </portfolio-card>
       }

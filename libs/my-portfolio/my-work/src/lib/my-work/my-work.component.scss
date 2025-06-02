@@ -1,10 +1,60 @@
-.my-work {
+@use 'mixins' as *;
+
+.my-work__header-wrapper {
+  gap: var(--space-2xl);
+  @include respond-up('md') {
+    display: flex;
+    > * {
+      flex: 1;
+    }
+  }
+}
+
+.my-work__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.my-work__subtitle {
+  color: #5e3bee;
+  text-transform: uppercase;
+}
+
+.my-work__description {
+  @include respond-up('md') {
+    align-self: center;
+  }
+}
+
+.my-work__title,
+.my-work__subtitle,
+.my-work__description {
+  text-align: center;
+
+  @include respond-up('md') {
+    text-align: left;
+  }
+}
+
+.my-work__card-description,
+.my-work__description {
+  color: #121212;
+  opacity: 70%;
+}
+
+.my-work__cards {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  margin-top: var(--space-xl);
+
+  @include respond-up('md') {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .my-work__thumbnail {
-  //   width: 100%;
+  width: 100%;
   object-fit: cover;
 }

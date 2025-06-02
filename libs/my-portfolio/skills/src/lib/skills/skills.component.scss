@@ -1,5 +1,6 @@
 .skills {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
   justify-content: center;
   gap: 4rem;
 }

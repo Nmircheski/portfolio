@@ -1,8 +1,15 @@
-<portfolio-page-section>
+<portfolio-page-section
+  [marginTop]="'3xl'"
+  [marginBottom]="'3xl'"
+  [paddingTop]="'3xl'"
+  [paddingBottom]="'3xl'"
+>
   <div class="cta">
-    <h1 class="cta__title">Interested Working With me? Let's connect!</h1>
+    <h1 class="cta__title display-semi-bold">
+      Interested Working With me? Let's connect!
+    </h1>
     <portfolio-button>
-      <portfolio-icon [iconType]="'email'"> </portfolio-icon>
+      <portfolio-icon [name]="'email'"> </portfolio-icon>
       <span>Contact Me</span>
     </portfolio-button>
   </div>

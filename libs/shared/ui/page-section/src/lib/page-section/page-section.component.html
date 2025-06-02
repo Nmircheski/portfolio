@@ -1,7 +1,9 @@
 <section
-  class="page-section {{
-    bg() === 'dark' ? 'page-section--dark' : 'page-section--light'
-  }}"
+  class="page-section  page-section--{{ bg() }} page-section--space-pt-{{
+    paddingTop()
+  }} page-section--space-pb-{{ paddingBottom() }} page-section--space-mt-{{
+    marginTop()
+  }} page-section--space-mb-{{ marginBottom() }}"
 >
   <div class="page-section__content mx-auto">
     <ng-content></ng-content>
