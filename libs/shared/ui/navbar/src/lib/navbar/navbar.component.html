@@ -1,35 +1,40 @@
 <header class="navbar" [attr.sidenav-open]="sidenavOpen()">
-  <h3 class="h3-bold">{{ logoText() }}</h3>
-  <!-- <div class="navbar-container"> -->
-  <nav class="navbar__nav" [class.main-nav--side-divider]="showSideDivider()">
-    <ul class="navbar__list">
-      @for (navLink of navLinks(); track $index) {
-      <li class="navbar__list-item body2-normal">
-        <a [routerLink]="navLink.path">{{ navLink.label | uppercase }}</a>
-      </li>
-      }
-    </ul>
-  </nav>
+  <div class="navbar__content">
+    <h3>{{ logoText() }}</h3>
 
-  <div class="navbar__actions navbar__actions--end">
-    @if (showThemeSwitch()) {
-    <portfolio-button (clicked)="switchTheme()" [type]="'icon'">
-      <portfolio-icon [name]="isDarkTheme() ? 'sun' : 'moon'"></portfolio-icon>
-    </portfolio-button>
-    }
-    <portfolio-button>
-      <portfolio-icon [name]="'email'"></portfolio-icon> {{ buttonText() }}
+    <!-- <div class="navbar-container"> -->
+    <nav class="navbar__nav" [class.main-nav--side-divider]="showSideDivider()">
+      <ul class="navbar__list">
+        @for (navLink of navLinks(); track $index) {
+        <li class="navbar__list-item body2-normal">
+          <a [routerLink]="navLink.path">{{ navLink.label | uppercase }}</a>
+        </li>
+        }
+      </ul>
+    </nav>
+
+    <div class="navbar__actions navbar__actions--end">
+      @if (showThemeSwitch()) {
+      <portfolio-button (clicked)="switchTheme()" [type]="'icon'">
+        <portfolio-icon
+          [name]="isDarkTheme() ? 'sun' : 'moon'"
+        ></portfolio-icon>
+      </portfolio-button>
+      }
+      <portfolio-button>
+        <portfolio-icon [name]="'email'"></portfolio-icon> {{ buttonText() }}
+      </portfolio-button>
+    </div>
+
+    <portfolio-button
+      (clicked)="toggleMobileMenu()"
+      class="mobile-menu-icon"
+      [bgColor]="'transparent'"
+      [type]="'icon'"
+    >
+      <portfolio-icon [name]="'hamburger'"></portfolio-icon>
     </portfolio-button>
   </div>
-
-  <portfolio-button
-    (clicked)="toggleMobileMenu()"
-    class="mobile-menu-icon"
-    [bgColor]="'transparent'"
-    [type]="'icon'"
-  >
-    <portfolio-icon [name]="'hamburger'"></portfolio-icon>
-  </portfolio-button>
 </header>
 
 @if(sidenavOpen()) {

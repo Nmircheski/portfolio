@@ -1,9 +1,22 @@
 @use 'mixins' as *;
 
-.my-work__header-wrapper {
-  gap: var(--space-2xl);
+.my-work {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
   @include respond-up('md') {
-    display: flex;
+    gap: var(--space-2xl);
+  }
+}
+
+.my-work__header-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  @include respond-up('md') {
+    flex-direction: row;
+    gap: var(--space-2xl);
+
     > * {
       flex: 1;
     }
@@ -47,7 +60,6 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-2xl);
-  margin-top: var(--space-xl);
 
   @include respond-up('md') {
     grid-template-columns: 1fr 1fr;

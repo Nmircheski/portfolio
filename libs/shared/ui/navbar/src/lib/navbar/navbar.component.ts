@@ -28,7 +28,7 @@ export class NavbarComponent {
     throw new Error('Method not implemented.');
   }
 
-  public readonly logoText = input('NM');
+  public readonly logoText = input('Nikola Mircheski');
   public readonly buttonText = input('');
   public readonly navLinks = input<{ label: string; path: string }[]>([
     { label: 'About', path: '/#about' },

@@ -1,29 +1,33 @@
 @use 'mixins' as *;
 
 .page-section {
-  $paddingX: var(--space-lg);
-
-  padding: 4rem 1rem;
   width: 100%;
-  padding: 0 $paddingX;
 
-  @include generate-all-spacing-modifiers();
-  @include respond-up('md') {
-    // padding: 6rem 2rem;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 80rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-  }
+  @include generate-margin-modifiers();
 }
 
 .page-section__content {
+  $padding-lr: var(--space-xl);
+
+  padding-left: $padding-lr;
+  padding-right: $padding-lr;
   width: 100%;
+
+  @include generate-padding-modifiers();
+
+  @include respond-up('md') {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80rem;
+  }
 }
-.page-section--dark {
+.page-section--dark,
+.page-section__content--dark {
   background-color: #f9f9fc; // var(--color-muted-50);
+}
+
+.page-section__content {
+  @include generate-radius-modidifiers();
 }
 
 .page-section--light {

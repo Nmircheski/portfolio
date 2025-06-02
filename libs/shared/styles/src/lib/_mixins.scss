@@ -96,6 +96,14 @@
   }
 }
 
+@mixin generate-radius-modidifiers() {
+  @each $name, $value in $spacing {
+    &--radius-#{$name} {
+      border-radius: #{$value};
+    }
+  }
+}
+
 @mixin generate-all-spacing-modifiers() {
   @include generate-margin-modifiers();
   @include generate-padding-modifiers();
