@@ -20,11 +20,13 @@
 
   @include respond-up('md') {
     text-align: left;
+    align-items: flex-start;
   }
 }
 
 .about-me__subtitle {
   color: #5e3bee;
+  text-transform: uppercase;
 }
 
 .about-me__title {

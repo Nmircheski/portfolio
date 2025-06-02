@@ -17,7 +17,9 @@
       <portfolio-icon [name]="isDarkTheme() ? 'sun' : 'moon'"></portfolio-icon>
     </portfolio-button>
     }
-    <portfolio-button> {{ buttonText() }} </portfolio-button>
+    <portfolio-button>
+      <portfolio-icon [name]="'email'"></portfolio-icon> {{ buttonText() }}
+    </portfolio-button>
   </div>
 
   <portfolio-button
