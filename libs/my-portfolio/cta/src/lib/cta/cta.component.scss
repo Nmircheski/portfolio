@@ -7,7 +7,11 @@
   align-items: center;
   text-align: center;
   padding: 0;
+  background-color: #f1f0fb; // var(--color-muted-50);
+  border-radius: var(--space-lg);
+  padding: var(--space-3xl) var(--space-lg);
   @include respond-up(md) {
     padding: 0 12rem;
+    padding: var(--space-4xl) var(--space-3xl);
   }
 }

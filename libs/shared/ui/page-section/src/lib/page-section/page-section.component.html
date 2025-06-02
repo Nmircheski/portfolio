@@ -1,11 +1,17 @@
 <section
-  class="page-section  page-section--{{ bg() }} page-section--space-pt-{{
-    paddingTop()
-  }} page-section--space-pb-{{ paddingBottom() }} page-section--space-mt-{{
+  class="page-section  page-section--{{ bg() }}  page-section--space-mt-{{
     marginTop()
   }} page-section--space-mb-{{ marginBottom() }}"
 >
-  <div class="page-section__content mx-auto">
+  <div
+    class="page-section__content page-section__content--space-pt-{{
+      paddingTop()
+    }} page-section__content--space-pb-{{
+      paddingBottom()
+    }} page-section__content--{{ bgContent() }}
+    page-section__content--radius-{{ borderRadius() }}
+    "
+  >
     <ng-content></ng-content>
   </div>
 </section>

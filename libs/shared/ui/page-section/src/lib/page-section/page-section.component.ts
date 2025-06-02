@@ -15,4 +15,6 @@ export class PageSectionComponent {
   paddingBottom = input<Spacing>('xl');
   marginTop = input<Spacing>('none');
   marginBottom = input<Spacing>('none');
+  bgContent = input<'light' | 'dark'>('light');
+  borderRadius = input<Spacing>('none');
 }
