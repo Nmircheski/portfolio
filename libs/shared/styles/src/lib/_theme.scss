@@ -24,7 +24,8 @@ currently they are used as the color name
   --color-text: var(--color-muted-900);
   --color-heading: var(--color-muted-950);
 
-  --color-primary: var(--color-primary-500);
+  // Primary brand colors
+  --color-primary: #ffffff; //var(--color-primary);
   --color-accent: var(--color-muted-400);
   --color-error: #dc3545;
 
@@ -52,4 +53,8 @@ currently they are used as the color name
   --color-primary: var(--color-primary-500);
   --color-accent: var(--color-muted-300);
   --color-error: #ef5350;
+}
+
+body {
+  background: #212121;
 }

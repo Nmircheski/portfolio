@@ -14,13 +14,16 @@
         $line-height: map.get($props, line-height);
         $font-weight: map.get($props, font-weight);
         $letter-spacing: map.get($props, letter-spacing);
+        $font-family: map.get($props, font-family);
         @media (min-width: $breakpoint) {
           //TODO do not use utility classes, go full BEM in this project
           .#{$heading}-#{$weight} {
+            font-family: $font-family;
             font-size: $font-size;
             line-height: $line-height;
             font-weight: $font-weight;
             letter-spacing: $letter-spacing;
+            color: #ffffff;
           }
         }
       }

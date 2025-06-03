@@ -9,18 +9,29 @@ $font-weights: (
 
 $typography: (
   display: (
+    normal: (
+      sm: (
+        font-size: 85px,
+        line-height: 122px,
+        font-weight: map.get($font-weights, regular),
+        letter-spacing: 0%,
+        font-family: 'Exo 2',
+      ),
+    ),
     bold: (
       sm: (
         font-size: 44px,
         line-height: 64px,
         font-weight: map.get($font-weights, bold),
         letter-spacing: 0%,
+        font-family: 'Exo 2',
       ),
       lg: (
         font-size: 60px,
         line-height: 78px,
         font-weight: map.get($font-weights, bold),
         letter-spacing: 0%,
+        font-family: 'Exo 2',
       ),
     ),
     semi-bold: (
@@ -29,12 +40,14 @@ $typography: (
         line-height: 52px,
         font-weight: map.get($font-weights, semi-bold),
         letter-spacing: 0.5%,
+        font-family: 'Exo 2',
       ),
       lg: (
         font-size: 50px,
         line-height: 72px,
         font-weight: map.get($font-weights, semi-bold),
         letter-spacing: 0.5%,
+        font-family: 'Exo 2',
       ),
     ),
   ),
@@ -96,9 +109,9 @@ $typography: (
     medium: (
       sm: (
         font-size: 16px,
-        line-height: 26px,
+        line-height: 30px,
         font-weight: map.get($font-weights, medium),
-        letter-spacing: 1.5px,
+        letter-spacing: 26%,
       ),
     ),
   ),
@@ -123,6 +136,14 @@ $typography: (
     ),
   ),
   button: (
+    normal: (
+      sm: (
+        font-size: 16px,
+        font-weight: map.get($font-weights, regular),
+        line-height: 100%,
+        letter-spacing: 0%,
+      ),
+    ),
     medium: (
       sm: (
         font-size: 14px,
