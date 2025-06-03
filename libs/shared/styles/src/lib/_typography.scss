@@ -1,6 +1,7 @@
 @use 'sass:map';
 
 $font-weights: (
+  light: 300,
   regular: 400,
   medium: 500,
   semi-bold: 600,
@@ -68,6 +69,22 @@ $typography: (
     ),
   ),
   stat: (
+    light-sm: (
+      sm: (
+        font-size: 48px,
+        line-height: 30px,
+        font-weight: map.get($font-weights, light),
+        letter-spacing: 0%,
+      ),
+    ),
+    light-lg: (
+      sm: (
+        font-size: 64px,
+        line-height: 30px,
+        font-weight: map.get($font-weights, light),
+        letter-spacing: 0%,
+      ),
+    ),
     semi-bold: (
       sm: (
         font-size: 48px,
@@ -81,9 +98,9 @@ $typography: (
     normal: (
       sm: (
         font-size: 16px,
-        line-height: 1,
+        line-height: 30px,
         font-weight: map.get($font-weights, regular),
-        letter-spacing: 0.5px,
+        letter-spacing: 0%,
       ),
     ),
     medium: (
@@ -106,10 +123,10 @@ $typography: (
     ),
     medium: (
       sm: (
-        font-size: 20px,
-        line-height: 32px,
+        font-size: 24px,
+        line-height: 45px,
         font-weight: map.get($font-weights, medium),
-        letter-spacing: 0.5px,
+        letter-spacing: 0%,
       ),
     ),
   ),
