@@ -23,8 +23,11 @@
     background: linear-gradient(90deg, #ff0066 0%, #a020f0 100%);
     color: #ffffff;
   }
-  &--transparent {
+  &--surface {
     background-color: var(--color-surface-mid);
+  }
+  &--transparent {
+    background: transparent;
   }
 
   &:hover {

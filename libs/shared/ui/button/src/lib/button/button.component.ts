@@ -15,7 +15,7 @@ import { Spacing } from '@portfolio/shared/models';
 })
 export class ButtonComponent {
   type = input<'regular' | 'icon'>('regular');
-  bgColor = input<'primary' | 'transparent'>('primary');
+  bgColor = input<'primary' | 'transparent' | 'surface'>('primary');
   fullWidth = input(false);
   borderRadius = input<Spacing | 'circle'>('md');
   clicked = output<void>();
