@@ -1,7 +1,5 @@
 <button
-  class="button button--{{ bgColor() }} button--{{
-    type()
-  }} button-medium text-uppercase"
+  class="button button--{{ bgColor() }} button--{{ type() }} button-normal "
   [class.full-width]="fullWidth() || null"
   (click)="clicked.emit()"
 >

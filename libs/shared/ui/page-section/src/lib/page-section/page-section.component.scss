@@ -18,12 +18,12 @@
   @include respond-up('md') {
     margin-left: auto;
     margin-right: auto;
-    max-width: 80rem;
+    max-width: 90rem;
   }
 }
 .page-section--dark,
 .page-section__content--dark {
-  background-color: #f9f9fc; // var(--color-muted-50);
+  background-color: var(--color-bg); // #f9f9fc; // var(--color-muted-50);
 }
 
 .page-section__content {
@@ -31,5 +31,5 @@
 }
 
 .page-section--light {
-  background-color: var(--color-muted-default);
+  background-color: var(--color-bg); // var(--color-muted-default);
 }

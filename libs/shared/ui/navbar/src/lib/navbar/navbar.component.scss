@@ -1,7 +1,7 @@
 @use 'mixins' as *;
 
 .navbar {
-  background-color: #f9f9fc;
+  background-color: var(--color-bg);
 }
 
 .navbar__content {
@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1rem;
-  max-width: 80rem;
+  max-width: 90rem;
   margin: 0 auto;
   width: 100%;
 
@@ -89,7 +89,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-color: var(--color-muted-default);
+  background-color: var(--color-bg);
   .sidenav-header {
     display: flex;
     justify-content: space-between;

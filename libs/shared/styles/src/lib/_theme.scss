@@ -17,8 +17,9 @@ currently they are used as the color name
   }
 
   // Semantic role tokens
-  --color-bg: var(--color-muted-50);
-  --color-surface: var(--color-muted-100);
+  --color-bg: #03030c;
+  --color-surface-low: rgba(255, 255, 255, 0.05);
+  --color-surface-mid: rgba(255, 255, 255, 0.15);
   --color-border: var(--color-muted-300);
   --color-muted: var(--color-muted-500);
   --color-text: var(--color-muted-900);
@@ -56,5 +57,5 @@ currently they are used as the color name
 }
 
 body {
-  background: #212121;
+  background: var(--color-bg);
 }

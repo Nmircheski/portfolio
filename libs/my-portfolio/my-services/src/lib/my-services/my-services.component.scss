@@ -13,13 +13,12 @@
 }
 
 .services__subtitle {
-  color: #5e3bee;
+  color: var(--color-primary);
   text-transform: uppercase;
 }
 
 .services__description,
 .services__card-description {
-  color: #121212;
   opacity: 70%;
 }
 

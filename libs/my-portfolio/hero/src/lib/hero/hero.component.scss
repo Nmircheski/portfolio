@@ -28,7 +28,6 @@
 .hero__img-wrapper {
   width: 36.75rem;
   height: 36.75rem;
-  //   background-color: #f1f0fb;
 }
 
 .hero__img {
@@ -44,12 +43,8 @@
 }
 
 .hero__subtitle {
-  color: #5e3bee;
+  color: var(--color-primary);
   text-transform: uppercase;
-}
-
-.hero__title {
-  max-width: 30rem;
 }
 
 .hero__actions {
@@ -57,6 +52,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: var(--space-md);
 
   @include respond-up('md') {
     flex-direction: row;
@@ -85,8 +81,6 @@
   .hero__img-wrapper {
     width: 36.75rem;
     height: 36.75rem;
-    // border-radius: 50%;
-    //   background-color: #f1f0fb;
   }
 
   .hero__img {
@@ -97,13 +91,5 @@
     position: absolute;
     top: 10px;
     z-index: 999;
-  }
-
-  .hero__subtitle {
-    color: #5e3bee;
-  }
-
-  .hero__title {
-    max-width: 30rem;
   }
 }
