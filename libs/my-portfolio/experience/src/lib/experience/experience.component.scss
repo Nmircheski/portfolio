@@ -1,11 +1,21 @@
 @use 'mixins' as *;
 
-.experience {
+.experience__list {
   gap: 3rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.experience__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.experience__card-item {
+  list-style: disc;
 }
 
 .experience__item {
