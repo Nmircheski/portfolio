@@ -12,10 +12,11 @@
 
   @include respond-up('md') {
     gap: var(--space-2xl);
+    grid-template-columns: 1fr 1fr 2fr;
     grid-template-areas:
-      'header header . image image  image'
-      'buttons  buttons .  image image image'
-      'card description . image image image';
+      'header header image'
+      'buttons  buttons  image'
+      'card description image ';
   }
 }
 
