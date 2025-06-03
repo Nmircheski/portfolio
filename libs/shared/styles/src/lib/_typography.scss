@@ -121,6 +121,14 @@ $typography: (
         letter-spacing: 0%,
       ),
     ),
+    normal-sm: (
+      sm: (
+        font-size: 20px,
+        line-height: 34px,
+        font-weight: map.get($font-weights, regular),
+        letter-spacing: 0%,
+      ),
+    ),
     medium: (
       sm: (
         font-size: 24px,

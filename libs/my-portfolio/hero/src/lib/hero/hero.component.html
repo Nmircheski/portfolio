@@ -4,28 +4,28 @@
   [paddingTop]="'4xl'"
 >
   <div class="hero">
-    <div class="hero__content">
-      <!-- <p class="hero__subtitle subtitle-medium">Nikola Mircheski</p> -->
-      <h1 class="hero__title display-normal">
-        Hello, my name’s Nikola. I’m software engineer.
-      </h1>
+    <!-- <p class="hero__subtitle subtitle-medium">Nikola Mircheski</p> -->
+    <h1 class="hero__title display-normal">Hello, my name’s Nikola.</h1>
 
-      <div class="hero__actions">
-        <portfolio-button>
-          <!-- <portfolio-icon [name]="'email'"></portfolio-icon> -->
-          Contact me
-        </portfolio-button>
-        <portfolio-button [bgColor]="'surface'">
-          <!-- <portfolio-icon [name]="'download'"></portfolio-icon> -->
-          Download CV
-        </portfolio-button>
+    <div class="hero__actions">
+      <portfolio-button> Contact me </portfolio-button>
+      <portfolio-button [bgColor]="'surface'"> Download CV </portfolio-button>
+    </div>
+
+    <portfolio-card class="hero__card">
+      <div class="hero__card-content">
+        <h3 class="hero__card-title title-normal-sm">Scalable Technology</h3>
+        <portfolio-button class="hero__card-cta" [bgColor]="'transparent'"
+          >Learn More</portfolio-button
+        >
       </div>
-    </div>
-    <div class="hero__img-container">
-      <!-- <div class="hero__img-wrapper"></div> -->
-      <img [src]="'/profile-photo-3.png'" alt="Hero Image" class="hero__img" />
+    </portfolio-card>
 
-      <!-- <div class="hero__overlay"></div> -->
-    </div>
+    <p class="hero__description body-normal">
+      Step into the future with cutting-edge innovation, seamless
+    </p>
+    <!-- <div class="hero__img-container"> -->
+    <img [src]="'/profile-photo-3.png'" alt="Hero Image" class="hero__img" />
+    <!-- </div> -->
   </div>
 </portfolio-page-section>
