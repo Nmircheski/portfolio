@@ -1,30 +1,41 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ButtonComponent } from '@portfolio/ui/button';
 import { CardComponent } from '@portfolio/ui/card';
-import { IconComponent } from '@portfolio/ui/icon';
+import { IconComponent, IconType } from '@portfolio/ui/icon';
 import { PageSectionComponent } from '@portfolio/ui/page-section';
 @Component({
   selector: 'portfolio-my-services',
-  imports: [CommonModule, PageSectionComponent, CardComponent, IconComponent],
+  imports: [
+    CommonModule,
+    PageSectionComponent,
+    CardComponent,
+    IconComponent,
+    ButtonComponent,
+  ],
   templateUrl: './my-services.component.html',
   styleUrl: './my-services.component.scss',
 })
 export class MyServicesComponent {
-  services = [
+  services: {
+    title: string;
+    description: string;
+    icon: IconType;
+  }[] = [
     {
       title: 'UI/UX Design',
       description: 'lorem ipsum dolor sit amet consectur adi pising leo',
-      icon: 'web',
+      icon: 'all-inclusive',
     },
     {
       title: 'Web Development',
       description: 'lorem ipsum dolor sit amet consectur adi pising leo',
-      icon: 'web',
+      icon: 'webhook',
     },
     {
       title: 'Motion Graphics',
       description: 'lorem ipsum dolor sit amet consectur adi pising leo',
-      icon: 'web',
+      icon: 'memory',
     },
   ];
 }

@@ -1,9 +1,10 @@
+@use 'mixins' as *;
+
 .button {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
-  border-radius: var(--space-md);
   white-space: nowrap;
 
   &--regular {
@@ -28,5 +29,15 @@
 
   &:hover {
     cursor: pointer;
+  }
+
+  @include generate-radius-modidifiers();
+
+  &--radius-circle {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    padding: var(--space-md);
+    display: inline-block;
   }
 }

@@ -26,4 +26,7 @@ export type IconType =
   | 'copyright'
   | 'download'
   | 'linkedin'
-  | 'phone';
+  | 'phone'
+  | 'memory'
+  | 'webhook'
+  | 'all-inclusive';
