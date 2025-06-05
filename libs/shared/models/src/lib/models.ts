@@ -8,3 +8,5 @@ export type Spacing =
   | '2xl'
   | '3xl'
   | '4xl';
+
+export type Radius = Spacing | 'circle';

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { Spacing } from '@portfolio/shared/models';
+import { Radius, Spacing } from '@portfolio/shared/models';
 
 @Component({
   selector: 'portfolio-page-section',
@@ -16,5 +16,5 @@ export class PageSectionComponent {
   marginTop = input<Spacing>('none');
   marginBottom = input<Spacing>('none');
   bgContent = input<'light' | 'dark'>('light');
-  borderRadius = input<Spacing>('none');
+  borderRadius = input<Radius>('none');
 }

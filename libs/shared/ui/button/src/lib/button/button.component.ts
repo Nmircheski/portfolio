@@ -5,7 +5,7 @@ import {
   input,
   output,
 } from '@angular/core';
-import { Spacing } from '@portfolio/shared/models';
+import { Radius } from '@portfolio/shared/models';
 @Component({
   selector: 'portfolio-button',
   imports: [CommonModule],
@@ -17,6 +17,6 @@ export class ButtonComponent {
   type = input<'regular' | 'icon'>('regular');
   bgColor = input<'primary' | 'transparent' | 'surface'>('primary');
   fullWidth = input(false);
-  borderRadius = input<Spacing | 'circle'>('md');
+  borderRadius = input<Radius>('md');
   clicked = output<void>();
 }
