@@ -22,15 +22,15 @@ export class ExperienceComponent {
   experienceList = [
     {
       title: '5+',
-      description: 'years experience',
+      description: 'Experience',
     },
     {
       title: '10+',
       description: 'Apps Supported',
     },
     {
-      title: '70+',
-      description: 'Components Maintained',
+      title: '100+',
+      description: 'UI Libraries',
     },
   ];
 }

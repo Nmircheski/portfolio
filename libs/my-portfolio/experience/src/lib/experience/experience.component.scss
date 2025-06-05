@@ -1,14 +1,87 @@
 @use 'mixins' as *;
 
-.experience__list {
-  gap: 3rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.experience {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    'head head head head desc desc'
+    'card img img content content links'
+    '. img  img stat stat stat';
+  gap: var(--space-2xl);
+
+  @include respond-up('md') {
+    row-gap: var(--space-4xl);
+  }
+}
+
+.experience__title {
+  grid-area: head;
+}
+
+.experience__description {
+  grid-area: desc;
+  padding: var(--space-2xl) 0;
+}
+
+.experience__description,
+.experience__content-text {
+  color: #fff;
+  opacity: 63%;
 }
 
 .experience__card {
+  grid-area: card;
+}
+
+.experience__img {
+  grid-area: img;
+  width: 100%;
+}
+
+.experience__content {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'title .'
+    'img text ';
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.experience__content-title {
+  grid-area: title;
+}
+
+.experience__content-desc {
+  display: flex;
+  gap: var(--space-xl);
+}
+
+.experience__content-img {
+  grid-area: img;
+  width: 100%;
+  flex: 1;
+  align-self: flex-start;
+}
+
+.experience__content-text {
+  grid-area: text;
+  padding: var(--space-md) 0;
+  flex: 1;
+}
+
+.experience__social-links {
+  grid-area: links;
+  justify-self: end;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience__card-content {
   display: flex;
   flex-direction: column;
   gap: var(--space-xl);
@@ -20,4 +93,13 @@
 
 .experience__item {
   flex: 1;
+}
+
+.experience__list {
+  grid-area: stat;
+  gap: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
