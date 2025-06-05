@@ -4,20 +4,32 @@
   [bg]="'dark'"
 >
   <div class="about-me">
-    <div class="about-me__content">
-      <p class="about-me__subtitle subtitle-medium">Software engineer</p>
-      <h2 class="about-me__title display-normal">
-        Graphic Designer With 10 Years Of Experience.
-      </h2>
-      <p class="about-me__description body-normal">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae
-        blandit lectus. Praesent at hendrerit velit, at dictum nisl.
-      </p>
-
-      <portfolio-button>
-        <portfolio-icon [name]="'email'"></portfolio-icon> Contact me
-      </portfolio-button>
-    </div>
-    <div class="about-me__img-container"></div>
+    <p class="about-me__subtitle subtitle-medium">About Me</p>
+    <h2 class="about-me__title display-normal">
+      Software Engineer With 5 Years Of Experience.
+    </h2>
+    <portfolio-button class="about-me__cta-button">
+      Contact me
+    </portfolio-button>
+    <p class="about-me__description body-normal">
+      Innovation is the key to a brighter future. At Evoke, we harness the power
+      of cutting-edge technology
+    </p>
+    <portfolio-card class="about-me__education">
+      <div class="about-me__education-content">
+        <h3 class="title-normal-sm">Computer Engineering Technology</h3>
+        <p class="about-me__education-text body-normal">
+          Bachelor's degree, <br />
+          Faculty of Electrical Engineering and Information Technologies
+        </p>
+      </div>
+    </portfolio-card>
+    <portfolio-card class="about-me__location">
+      <div class="about-me__location-content">
+        <portfolio-icon [name]="'location'"></portfolio-icon>
+        <h3 class="title-normal-sm">Skopje, North Macedonia</h3>
+      </div></portfolio-card
+    >
+    <img class="about-me__img" [src]="'./about-me.png'" />
   </div>
 </portfolio-page-section>
