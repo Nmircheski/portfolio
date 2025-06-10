@@ -24,17 +24,20 @@ export class MyServicesComponent {
   }[] = [
     {
       title: 'UI/UX Design',
-      description: 'lorem ipsum dolor sit amet consectur adi pising leo',
+      description:
+        'Transform the way you work with cutting-edge AI and automation technologies',
       icon: 'all-inclusive',
     },
     {
       title: 'Web Development',
-      description: 'lorem ipsum dolor sit amet consectur adi pising leo',
+      description:
+        'Stay ahead in the digital era with tailored software solutions designed to meet your unique',
       icon: 'webhook',
     },
     {
       title: 'Motion Graphics',
-      description: 'lorem ipsum dolor sit amet consectur adi pising leo',
+      description:
+        'Future-proof your business with a strategic approach to digital transformation. ',
       icon: 'memory',
     },
   ];

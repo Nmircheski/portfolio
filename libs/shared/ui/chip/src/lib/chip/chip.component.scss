@@ -4,8 +4,10 @@
   padding: 0.25rem 1.25rem;
   border-radius: 1rem;
   text-align: center;
-  background-color: var(--color-muted-200);
-  color: var(--color-muted-600);
+  white-space: nowrap;
+  outline: #e1f5fe solid 2px;
+
+  color: #f5f5f5;
 
   &.disabled {
     background-color: var(--color-gray);
