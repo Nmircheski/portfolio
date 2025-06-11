@@ -51,6 +51,15 @@ $typography: (
         font-family: 'Exo 2',
       ),
     ),
+    semi-bold-sm: (
+      sm: (
+        font-size: 18px,
+        line-height: 30px,
+        font-weight: map.get($font-weights, semi-bold),
+        letter-spacing: 0%,
+        font-family: 'Exo 2',
+      ),
+    ),
   ),
   section-heading: (
     semi-bold: (
