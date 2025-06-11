@@ -5,7 +5,8 @@
   position: relative;
 }
 
-.footer::before {
+.footer::before,
+.footer__copyright::before {
   content: '';
   position: absolute;
   top: 0;
@@ -18,7 +19,6 @@
 .footer__content {
   display: grid;
   grid-template-columns: 1fr;
-  justify-content: center;
   gap: 4rem;
   row-gap: 8rem;
   height: 100%;
@@ -33,7 +33,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
       'links nav desc'
-      '. copy .';
+      'copy copy copy';
     padding: 8rem 10rem 4rem 10rem;
     max-width: 95rem;
   }
@@ -65,6 +65,9 @@
 
 .footer__copyright {
   grid-area: copy;
+  position: relative;
+  text-align: center;
+  padding-top: var(--space-md);
 }
 
 .footer__list {
@@ -73,7 +76,7 @@
   gap: 1rem;
 
   @include respond-up('md') {
-    gap: var(--space-xl);
+    gap: var(--space-md);
   }
 }
 

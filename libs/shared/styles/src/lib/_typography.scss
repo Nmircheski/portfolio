@@ -104,14 +104,6 @@ $typography: (
     ),
   ),
   label: (
-    normal: (
-      sm: (
-        font-size: 16px,
-        line-height: 30px,
-        font-weight: map.get($font-weights, regular),
-        letter-spacing: 0%,
-      ),
-    ),
     medium: (
       sm: (
         font-size: 16px,
