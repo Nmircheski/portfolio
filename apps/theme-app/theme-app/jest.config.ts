@@ -1,8 +1,8 @@
 export default {
-  displayName: 'my-portfolio-legacy',
-  preset: '../../jest.preset.js',
+  displayName: 'theme-app',
+  preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/my-portfolio-legacy',
+  coverageDirectory: '../../../coverage/apps/theme-app/theme-app',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

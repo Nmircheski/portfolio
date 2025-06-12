@@ -1,28 +1,28 @@
 {
   "name": "theme-app",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/theme-app/src",
+  "sourceRoot": "apps/theme-app/theme-app/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/theme-app",
-        "index": "apps/theme-app/src/index.html",
-        "browser": "apps/theme-app/src/main.ts",
+        "outputPath": "dist/apps/theme-app/theme-app",
+        "index": "apps/theme-app/theme-app/src/index.html",
+        "browser": "apps/theme-app/theme-app/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/theme-app/tsconfig.app.json",
+        "tsConfig": "apps/theme-app/theme-app/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/theme-app/public"
+            "input": "apps/theme-app/theme-app/public"
           }
         ],
-        "styles": ["apps/theme-app/src/styles.scss"],
+        "styles": ["apps/theme-app/theme-app/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -74,7 +74,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/theme-app/jest.config.ts"
+        "jestConfig": "apps/theme-app/theme-app/jest.config.ts"
       }
     },
     "serve-static": {
@@ -82,7 +82,7 @@
       "options": {
         "buildTarget": "theme-app:build",
         "port": 4200,
-        "staticFilePath": "dist/apps/theme-app/browser",
+        "staticFilePath": "dist/apps/theme-app/theme-app/browser",
         "spa": true
       }
     }
