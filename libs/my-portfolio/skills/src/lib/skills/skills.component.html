@@ -1,9 +1,18 @@
-<portfolio-page-section [paddingTop]="'3xl'" [paddingBottom]="'2xl'">
+<portfolio-page-section
+  [marginTop]="'4xl'"
+  [marginBottom]="'4xl'"
+  [paddingTop]="'3xl'"
+  [paddingBottom]="'2xl'"
+>
   <div class="skills">
     @for (skill of skills; track $index) {
     <div class="skills__item">
-      <portfolio-icon [name]="skill.icon" [iconSize]="'md'"></portfolio-icon>
-      <span class="label-medium">{{ skill.label }}</span>
+      <portfolio-icon
+        [name]="skill.icon"
+        [iconSize]="'md'"
+        [glow]="true"
+      ></portfolio-icon>
+      <!-- <span class="body-normal">{{ skill.label }}</span> -->
     </div>
     }
   </div>

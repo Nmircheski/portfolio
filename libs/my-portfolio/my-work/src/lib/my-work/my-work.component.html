@@ -4,9 +4,7 @@
     <div class="my-work__header-wrapper">
       <header class="my-work__header">
         <p class="my-work__subtitle subtitle-medium">Portfolio</p>
-        <h2 class="my-work__title section-heading-semi-bold">
-          Selected Works.
-        </h2>
+        <h2 class="my-work__title display-normal">Selected Works.</h2>
       </header>
 
       <p class="my-work__description body-normal">
@@ -16,36 +14,56 @@
     </div>
     <div class="my-work__cards">
       <portfolio-card>
-        <img [src]="'./dashboard.jpg'" class="my-work__thumbnail" />
-        <h3 class="title-medium">My Project</h3>
-        <p class="my-work__card-description body-normal">
-          A showcase of my projects and contributions
-        </p>
+        <div class="my-work__card">
+          <div class="my-work__img-container">
+            <img [src]="'./dashboard.jpg'" class="my-work__thumbnail" />
+          </div>
+          <h3 class="title-medium">My Project</h3>
+          <p class="my-work__card-description body-normal">
+            Responsive Angular-based dashboard that visualizes real-time
+            cryptocurrency data using the CoinGecko API. Features include
+            dynamic charts, user authentication, and personalized coin tracking
+          </p>
+          <div class="my-work__technologies">
+            <portfolio-chip>Angular</portfolio-chip>
+            <portfolio-chip>Tailwind</portfolio-chip>
+            <portfolio-chip>Angular Material</portfolio-chip>
+            <portfolio-chip>Rxjs</portfolio-chip>
+            <portfolio-chip>NgRx</portfolio-chip>
+          </div>
+          <div class="my-work__links">
+            <portfolio-button> Live Preview </portfolio-button>
+            <portfolio-button [bgColor]="'surface'">
+              <span class="my-work__code">Source Code</span>
+            </portfolio-button>
+          </div>
+        </div>
       </portfolio-card>
       <portfolio-card>
-        <img class="my-work__thumbnail" [src]="'./dashboard.jpg'" />
-
-        <h3 class="title-medium">My Project</h3>
-        <p class="my-work__card-description body-normal">
-          A showcase of my projects and contributions
-        </p>
-      </portfolio-card>
-      <portfolio-card>
-        <img [src]="'./dashboard.jpg'" class="my-work__thumbnail" />
-
-        <h3 class="title-medium">My Project</h3>
-        <p class="my-work__card-description body-normal">
-          A showcase of my projects and contributions
-        </p>
-      </portfolio-card>
-
-      <portfolio-card>
-        <img [src]="'./dashboard.jpg'" class="my-work__thumbnail" />
-
-        <h3 class="title-medium">My Project</h3>
-        <p class="my-work__card-description body-normal">
-          A showcase of my projects and contributions
-        </p>
+        <div class="my-work__card">
+          <div class="my-work__img-container">
+            <img class="my-work__thumbnail" [src]="'./dashboard.jpg'" />
+          </div>
+          <h3 class="title-medium">My Project</h3>
+          <p class="my-work__card-description body-normal">
+            Responsive Angular-based dashboard that visualizes real-time
+            cryptocurrency data using the CoinGecko API. Features include
+            dynamic charts, user authentication, and personalized coin tracking
+          </p>
+          <div class="my-work__technologies">
+            <portfolio-chip>Angular</portfolio-chip>
+            <portfolio-chip>Tailwind</portfolio-chip>
+            <portfolio-chip>Angular Material</portfolio-chip>
+            <portfolio-chip>Rxjs</portfolio-chip>
+            <portfolio-chip>NgRx</portfolio-chip>
+          </div>
+          <div class="my-work__links">
+            <portfolio-button> Live Preview </portfolio-button>
+            <portfolio-button [bgColor]="'surface'">
+              <span class="my-work__code">Source Code</span>
+            </portfolio-button>
+          </div>
+        </div>
       </portfolio-card>
     </div>
   </div>

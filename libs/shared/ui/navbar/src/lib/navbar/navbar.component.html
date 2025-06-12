@@ -6,7 +6,7 @@
     <nav class="navbar__nav" [class.main-nav--side-divider]="showSideDivider()">
       <ul class="navbar__list">
         @for (navLink of navLinks(); track $index) {
-        <li class="navbar__list-item body2-normal">
+        <li class="navbar__list-item body-normal">
           <a [routerLink]="navLink.path">{{ navLink.label | uppercase }}</a>
         </li>
         }
@@ -22,7 +22,8 @@
       </portfolio-button>
       }
       <portfolio-button>
-        <portfolio-icon [name]="'email'"></portfolio-icon> {{ buttonText() }}
+        <!-- <portfolio-icon [name]="'email'"></portfolio-icon>  -->
+        {{ buttonText() }}
       </portfolio-button>
     </div>
 

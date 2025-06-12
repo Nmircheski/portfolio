@@ -1,30 +1,36 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { ButtonComponent } from '@portfolio/ui/button';
+import { CardComponent } from '@portfolio/ui/card';
+import { IconComponent } from '@portfolio/ui/icon';
 import { PageSectionComponent } from '@portfolio/ui/page-section';
 import { ExperienceItemComponent } from '../experience-item/experience-item.component';
 @Component({
   selector: 'portfolio-experience',
-  imports: [CommonModule, PageSectionComponent, ExperienceItemComponent],
+  imports: [
+    CommonModule,
+    ExperienceItemComponent,
+    PageSectionComponent,
+    CardComponent,
+    ButtonComponent,
+    IconComponent,
+  ],
   templateUrl: './experience.component.html',
   styleUrl: './experience.component.scss',
 })
 export class ExperienceComponent {
   experienceList = [
     {
-      title: '100 +',
-      description: 'projects',
+      title: '5+',
+      description: 'Experience',
     },
     {
-      title: '24',
-      description: 'Winning award',
+      title: '10+',
+      description: 'Apps Supported',
     },
     {
-      title: '70 +',
-      description: 'happy clients',
-    },
-    {
-      title: '10',
-      description: 'years experience',
+      title: '100+',
+      description: 'UI Libraries',
     },
   ];
 }

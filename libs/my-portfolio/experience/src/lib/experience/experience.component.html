@@ -1,12 +1,49 @@
 <portfolio-page-section [marginTop]="'3xl'" [marginBottom]="'2xl'">
   <div class="experience">
-    @for (item of experienceList; track $index) {
-    <portfolio-experience-item
-      class="experience__item"
-      [title]="item.title"
-      [description]="item.description"
-    >
-    </portfolio-experience-item>
-    }
+    <h2 class="experience__title display-normal">ENGINEERING UI SOLUTIONS</h2>
+    <p class="experience__description body-normal">
+      With 5+ years of experience in front-end development, I craft scalable UI
+      systems and reusable design infrastructure using Angular and modern web
+      technologies. My focus is on performance, accessibility, and developer
+      efficiency
+    </p>
+    <portfolio-card class="experience__card">
+      <div class="experience__card-content">
+        <li class="experience__card-item body-normal">Startup Growth Rate</li>
+        <portfolio-experience-item [title]="'24%'"> </portfolio-experience-item>
+      </div>
+    </portfolio-card>
+    <img class="experience__img" [src]="'./brain-2.png'" />
+    <div class="experience__content">
+      <h3 class="experience__content-title title-medium">
+        Design. Engineer. Deliver
+      </h3>
+      <!-- <div class="experience__content-desc"> -->
+      <img class="experience__content-img" [src]="'./graph-line.svg'" />
+      <p class="experience__content-text body-normal">
+        From internal Angular libraries to scalable UI patterns, I empower teams
+        to ship faster with design-consistent, tested code.
+      </p>
+      <!-- </div> -->
+    </div>
+    <div class="experience__social-links">
+      <portfolio-button [borderRadius]="'circle'" [bgColor]="'transparent'">
+        <portfolio-icon [name]="'github'"></portfolio-icon>
+      </portfolio-button>
+      <portfolio-button [borderRadius]="'circle'" [bgColor]="'transparent'">
+        <portfolio-icon [name]="'linkedin'"></portfolio-icon>
+      </portfolio-button>
+    </div>
+    <div class="experience__list">
+      @for (item of experienceList; track $index) {
+      <portfolio-experience-item
+        class="experience__item"
+        [title]="item.title"
+        [description]="item.description"
+        [stateSize]="'sm'"
+      >
+      </portfolio-experience-item>
+      }
+    </div>
   </div>
 </portfolio-page-section>

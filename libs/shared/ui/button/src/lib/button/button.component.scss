@@ -1,5 +1,6 @@
+@use 'mixins' as *;
+
 .button {
-  border-radius: 3.125rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,15 +20,27 @@
   }
 
   &--primary {
-    background-color: #5e3bee;
+    background: linear-gradient(90deg, #ff0066 0%, #a020f0 100%);
     color: #ffffff;
   }
+  &--surface {
+    background-color: var(--color-surface-mid);
+  }
   &--transparent {
-    background-color: transparent;
-    color: #333333;
+    background: transparent;
   }
 
   &:hover {
     cursor: pointer;
+  }
+
+  @include generate-radius-modidifiers();
+
+  &--radius-circle {
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    padding: var(--space-md);
+    display: inline-block;
   }
 }

@@ -1,43 +1,45 @@
 <footer class="footer body3">
   <div class="footer__content">
     <div class="footer__description">
-      <div class="footer__logo"><img /></div>
-      <p class="body-normal">
+      <h3 class="display-semi-bold-sm">Nikola Mircheski</h3>
+      <p class="body-normal text-muted">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae
         blandit lectus. Praesent at hendrerit.
       </p>
     </div>
     <div class="footer__action-links">
+      <h3 class="display-semi-bold-sm">Contact</h3>
       <p>
         <portfolio-icon [name]="'email'"></portfolio-icon>
-        <span class="label-normal"> inquiry-email.com </span>
-      </p>
-      <p>
-        <portfolio-icon [name]="'phone'"></portfolio-icon>
-        <span class="label-normal"> (001) 1231 3435 </span>
+        <span class="body-normal text-muted"> inquiry-email.com </span>
       </p>
       <div class="footer__social-media">
-        <portfolio-icon [name]="'github'"></portfolio-icon>
-        <portfolio-icon [name]="'linkedin'"></portfolio-icon>
+        <portfolio-button [borderRadius]="'circle'">
+          <portfolio-icon [name]="'github'"></portfolio-icon>
+        </portfolio-button>
+        <portfolio-button [borderRadius]="'circle'">
+          <portfolio-icon [name]="'linkedin'"></portfolio-icon>
+        </portfolio-button>
       </div>
     </div>
     <nav class="footer__nav">
+      <h3 class="display-semi-bold-sm">Explore</h3>
       <ul class="footer__list">
-        <li class="footer__list-item nav-item-normal">
+        <li class="footer__list-item nav-item-normal text-muted">
           <a>Home</a>
         </li>
-        <li class="footer__list-item nav-item-normal">
+        <li class="footer__list-item nav-item-normal text-muted">
           <a>About me</a>
         </li>
-        <li class="footer__list-item nav-item-normal">
+        <li class="footer__list-item nav-item-normal text-muted">
           <a>Services</a>
         </li>
-        <li class="footer__list-item nav-item-normal">
+        <li class="footer__list-item nav-item-normal text-muted">
           <a>Works</a>
         </li>
       </ul>
     </nav>
-    <p class="footer__copyright caption-normal">
+    <p class="footer__copyright body-normal text-muted">
       2025 | Coded by Nikola Mircheski
     </p>
   </div>

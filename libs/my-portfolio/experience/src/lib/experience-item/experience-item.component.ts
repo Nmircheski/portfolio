@@ -10,4 +10,5 @@ import { Component, input } from '@angular/core';
 export class ExperienceItemComponent {
   description = input('');
   title = input('');
+  stateSize = input<'sm' | 'lg'>('lg');
 }

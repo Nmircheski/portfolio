@@ -18,10 +18,10 @@ export class SkillsComponent {
       icon: 'typescript',
       label: 'TypeScript',
     },
-    {
-      icon: 'javascript',
-      label: 'JavaScript',
-    },
+    // {
+    //   icon: 'javascript',
+    //   label: 'JavaScript',
+    // },
     {
       icon: 'html',
       label: 'HTML',
@@ -34,13 +34,13 @@ export class SkillsComponent {
       icon: 'nx',
       label: 'Nx',
     },
-    {
-      icon: 'git',
-      label: 'Git',
-    },
+    // {
+    //   icon: 'git',
+    //   label: 'Git',
+    // },
     {
       icon: 'azure',
-      label: 'Azure DevOps',
+      label: 'Azure',
     },
   ];
 }
