@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx run my-portfolio:serve"
+    "start": "nx run my-portfolio:serve",
+    "start-crypto": "nx run crypto-dashboard:serve"
   },
   "private": true,
   "dependencies": {
