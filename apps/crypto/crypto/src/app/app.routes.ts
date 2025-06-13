@@ -2,10 +2,10 @@ import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
   {
-    path: 'overview',
+    path: 'dashboard',
     loadChildren: () =>
-      import('@portfolio/crypto-feature-overview-shell').then(
-        (m) => m.cryptoOverviewShellRoutes
+      import('@portfolio/crypto-feature-dashboard-shell').then(
+        (m) => m.cryptoDashboardRoutes
       ),
   },
 ];

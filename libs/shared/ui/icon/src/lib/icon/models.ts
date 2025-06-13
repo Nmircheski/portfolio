@@ -29,4 +29,5 @@ export type IconType =
   | 'phone'
   | 'memory'
   | 'webhook'
-  | 'all-inclusive';
+  | 'all-inclusive'
+  | 'bitcoin';

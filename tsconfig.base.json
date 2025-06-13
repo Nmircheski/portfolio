@@ -19,11 +19,11 @@
       "@portfolio/about-me-legacy": ["libs/legacy/about-me/src/index.ts"],
       "@portfolio/charts": ["libs/crypto/ui/charts/src/index.ts"],
       "@portfolio/contact-legacy": ["libs/legacy/contact/src/index.ts"],
-      "@portfolio/crypto-feature-overview-shell": [
-        "libs/crypto/features/overview/shell/src/index.ts"
+      "@portfolio/crypto-feature-dashboard-shell": [
+        "libs/crypto/features/dashboard/shell/src/index.ts"
       ],
-      "@portfolio/crypto-feature-overview-ui": [
-        "libs/crypto/features/overview/ui/src/index.ts"
+      "@portfolio/crypto-feature-dashboard-ui": [
+        "libs/crypto/features/dashboard/ui/src/index.ts"
       ],
       "@portfolio/crypto-ui-navbar": ["libs/crypto/ui/navbar/src/index.ts"],
       "@portfolio/crypto-ui-sidenav": ["libs/crypto/ui/sidenav/src/index.ts"],
