@@ -17,7 +17,7 @@
     "paths": {
       "@portfolio/about-me": ["libs/my-portfolio/about-me/src/index.ts"],
       "@portfolio/about-me-legacy": ["libs/legacy/about-me/src/index.ts"],
-      "@portfolio/charts": ["libs/crypto/ui/charts/src/index.ts"],
+      "@portfolio/crypto-ui-charts": ["libs/crypto/ui/charts/src/index.ts"],
       "@portfolio/contact-legacy": ["libs/legacy/contact/src/index.ts"],
       "@portfolio/crypto-feature-dashboard-shell": [
         "libs/crypto/features/dashboard/shell/src/index.ts"
