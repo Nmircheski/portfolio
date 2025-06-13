@@ -3,10 +3,12 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx run my-portfolio:serve"
+    "start": "nx run my-portfolio:serve",
+    "start-crypto": "nx run crypto:serve"
   },
   "private": true,
   "dependencies": {
+    "@angular/cdk": "19.2.18",
     "@angular/common": "~19.2.0",
     "@angular/compiler": "~19.2.0",
     "@angular/core": "~19.2.0",
@@ -16,7 +18,9 @@
     "@angular/platform-server": "~19.2.0",
     "@angular/router": "~19.2.0",
     "@angular/ssr": "~19.2.0",
+    "echarts": "^5.6.0",
     "express": "^4.21.2",
+    "ngx-echarts": "19.0.0",
     "rxjs": "~7.8.0",
     "zone.js": "~0.15.0"
   },

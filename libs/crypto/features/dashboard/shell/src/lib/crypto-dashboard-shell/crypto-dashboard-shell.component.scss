@@ -1,0 +1,33 @@
+.dashboard__content {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    'balance balance balance status'
+    'candlestick candlestick candlestick currencies'
+    'table table table table';
+
+  > * {
+    outline: blue solid thin;
+  }
+}
+
+.dashboard__balance {
+  grid-area: balance;
+}
+
+.dashboard__status {
+  grid-area: status;
+}
+
+.dashboard__candlestick {
+  grid-area: candlestick;
+}
+
+.dashboard__currencies {
+  grid-area: currencies;
+}
+
+.dashboard__table {
+  grid-area: table;
+}
