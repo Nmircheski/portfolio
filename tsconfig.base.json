@@ -17,7 +17,6 @@
     "paths": {
       "@portfolio/about-me": ["libs/my-portfolio/about-me/src/index.ts"],
       "@portfolio/about-me-legacy": ["libs/legacy/about-me/src/index.ts"],
-      "@portfolio/crypto-ui-charts": ["libs/crypto/ui/charts/src/index.ts"],
       "@portfolio/contact-legacy": ["libs/legacy/contact/src/index.ts"],
       "@portfolio/crypto-feature-dashboard-shell": [
         "libs/crypto/features/dashboard/shell/src/index.ts"
@@ -25,8 +24,10 @@
       "@portfolio/crypto-feature-dashboard-ui": [
         "libs/crypto/features/dashboard/ui/src/index.ts"
       ],
+      "@portfolio/crypto-ui-charts": ["libs/crypto/ui/charts/src/index.ts"],
       "@portfolio/crypto-ui-navbar": ["libs/crypto/ui/navbar/src/index.ts"],
       "@portfolio/crypto-ui-sidenav": ["libs/crypto/ui/sidenav/src/index.ts"],
+      "@portfolio/crypto-ui-table": ["libs/crypto/ui/table/src/index.ts"],
       "@portfolio/cta": ["libs/my-portfolio/cta/src/index.ts"],
       "@portfolio/experience": ["libs/my-portfolio/experience/src/index.ts"],
       "@portfolio/experience-legacy": ["libs/legacy/experience/src/index.ts"],
@@ -38,7 +39,6 @@
       "@portfolio/skills": ["libs/my-portfolio/skills/src/index.ts"],
       "@portfolio/skills-legacy": ["libs/legacy/skills/src/index.ts"],
       "@portfolio/styles": ["libs/shared/styles/src/index.ts"],
-      "@portfolio/table": ["libs/crypto/ui/table/src/index.ts"],
       "@portfolio/ui/button": ["libs/shared/ui/button/src/index.ts"],
       "@portfolio/ui/card": ["libs/shared/ui/card/src/index.ts"],
       "@portfolio/ui/chip": ["libs/shared/ui/chip/src/index.ts"],
