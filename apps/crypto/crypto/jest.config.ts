@@ -1,8 +1,8 @@
 export default {
-  displayName: 'crypto-dashboard',
+  displayName: 'crypto',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../../coverage/apps/dashboard/dashboard',
+  coverageDirectory: '../../../coverage/apps/crypto/crypto',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

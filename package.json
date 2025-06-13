@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nx run my-portfolio:serve",
-    "start-crypto": "nx run crypto-dashboard:serve"
+    "start-crypto": "nx run crypto:serve"
   },
   "private": true,
   "dependencies": {
