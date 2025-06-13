@@ -30,4 +30,7 @@ export type IconType =
   | 'memory'
   | 'webhook'
   | 'all-inclusive'
-  | 'bitcoin';
+  | 'bitcoin'
+  | 'doge'
+  | 'tether'
+  | 'arrow';

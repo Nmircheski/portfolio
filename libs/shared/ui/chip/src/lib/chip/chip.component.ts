@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
   selector: 'portfolio-chip',
@@ -8,4 +8,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './chip.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ChipComponent {}
+export class ChipComponent {
+  darkText = input(false);
+}
