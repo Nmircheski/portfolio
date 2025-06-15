@@ -9,7 +9,6 @@ $typography: (
         line-height: 122px,
         font-weight: map.get($font-weights, regular),
         letter-spacing: 0%,
-        font-family: 'Exo 2',
       ),
     ),
     bold: (
@@ -18,14 +17,12 @@ $typography: (
         line-height: 64px,
         font-weight: map.get($font-weights, bold),
         letter-spacing: 0%,
-        font-family: 'Exo 2',
       ),
       lg: (
         font-size: 60px,
         line-height: 78px,
         font-weight: map.get($font-weights, bold),
         letter-spacing: 0%,
-        font-family: 'Exo 2',
       ),
     ),
     semi-bold: (
@@ -34,14 +31,12 @@ $typography: (
         line-height: 52px,
         font-weight: map.get($font-weights, semi-bold),
         letter-spacing: 0.5%,
-        font-family: 'Exo 2',
       ),
       lg: (
         font-size: 50px,
         line-height: 72px,
         font-weight: map.get($font-weights, semi-bold),
         letter-spacing: 0.5%,
-        font-family: 'Exo 2',
       ),
     ),
     semi-bold-sm: (
@@ -50,7 +45,6 @@ $typography: (
         line-height: 30px,
         font-weight: map.get($font-weights, semi-bold),
         letter-spacing: 0%,
-        font-family: 'Exo 2',
       ),
     ),
   ),
@@ -103,6 +97,14 @@ $typography: (
         line-height: 24px,
         font-weight: map.get($font-weights, medium),
         letter-spacing: 0.5px,
+      ),
+    ),
+    semi-bold: (
+      sm: (
+        font-size: 20px,
+        line-height: 24px,
+        font-weight: map.get($font-weights, semi-bold),
+        letter-spacing: 0px,
       ),
     ),
   ),

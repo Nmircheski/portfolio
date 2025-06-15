@@ -1,4 +1,9 @@
+@use 'typography-crypto' as *;
+@use 'mixins' as *;
+
 html,
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
+@include typography($typography);

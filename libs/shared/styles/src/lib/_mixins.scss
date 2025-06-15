@@ -1,9 +1,8 @@
 @use 'variables' as *;
-@use 'typography' as *;
 @use 'sass:map';
 
 //Typography
-@mixin typography() {
+@mixin typography($typography) {
   @each $heading, $value in $typography {
     @each $weight, $weight-value in $value {
       @each $device, $props in $weight-value {
