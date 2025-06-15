@@ -1,0 +1,13 @@
+.currency-list {
+  padding: 1.25rem 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.currency-list__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+}
