@@ -1,0 +1,23 @@
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas:
+    'header header'
+    'sidenav main';
+
+  > * {
+    outline: aqua solid thin;
+  }
+}
+
+.app-container__header {
+  grid-area: header;
+}
+
+.app-container__sidenav {
+  grid-area: sidenav;
+}
+
+.app-container__main {
+  grid-area: main;
+}
