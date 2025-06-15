@@ -1,10 +1,18 @@
-<div>
-  <portfolio-icon [name]="'bitcoin'"></portfolio-icon>
-  <p>58.042</p>
-  <portfolio-chip>
-    <portfolio-icon [name]="'arrow'"></portfolio-icon>+12,7%</portfolio-chip
-  >
-  <p>Bitcoin / BTC</p>
-  <p>Balance: 2.750,99 USD</p>
-  <crypto-ui-chart></crypto-ui-chart>
-</div>
+<portfolio-card [fullHeight]="true" [spacing]="'none'">
+  <div class="status-widget">
+    <div class="status-widget__currency">
+      <portfolio-icon [name]="'bitcoin'" [iconSize]="'md'"></portfolio-icon>
+      <p class="display-bold">58.042</p>
+    </div>
+    <portfolio-chip class="status-widget__chip">
+      <portfolio-icon [name]="'arrow'"></portfolio-icon>+12,7%</portfolio-chip
+    >
+    <div class="status-widget__balance">
+      <p class="label-semi-bold">Bitcoin / BTC</p>
+      <p class="status-widget__balance-subtitle subtitle-semi-bold">
+        Balance: 2.750,99 USD
+      </p>
+    </div>
+    <crypto-ui-chart class="status-widget__chart"></crypto-ui-chart>
+  </div>
+</portfolio-card>

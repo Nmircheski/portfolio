@@ -18,4 +18,5 @@ export class CardComponent {
   class = input<string>(); //TODO this is a bad pattern, people cannot set class on the host
   spacing = input<Spacing>('xl');
   borderRadius = input<Radius>('xl');
+  fullHeight = input(false);
 }

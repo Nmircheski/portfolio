@@ -7,4 +7,8 @@
 
   @include generate-padding-modifiers();
   @include generate-radius-modidifiers();
+
+  &--full-height {
+    height: 100%;
+  }
 }

@@ -30,7 +30,11 @@ export class ChartComponent {
       {
         data: [50, 70, 30, 40, 50, 60],
         type: 'bar',
-        barWidth: 12,
+        barWidth: 6,
+        itemStyle: {
+          color: '#24E4A4',
+          borderRadius: 5,
+        },
       },
     ],
   });

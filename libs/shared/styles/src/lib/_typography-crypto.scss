@@ -93,14 +93,6 @@ $typography: (
         letter-spacing: 0.5px,
       ),
     ),
-    semi-bold-xs: (
-      sm: (
-        font-size: 15px,
-        line-height: 18px,
-        font-weight: map.get($font-weights, semi-bold),
-        letter-spacing: 0px,
-      ),
-    ),
     semi-bold-sm: (
       sm: (
         font-size: 18px,
@@ -159,6 +151,14 @@ $typography: (
         line-height: 30px,
         font-weight: map.get($font-weights, medium),
         letter-spacing: 26%,
+      ),
+    ),
+    semi-bold: (
+      sm: (
+        font-size: 15px,
+        line-height: 18px,
+        font-weight: map.get($font-weights, semi-bold),
+        letter-spacing: 0px,
       ),
     ),
   ),
