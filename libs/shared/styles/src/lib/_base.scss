@@ -2,17 +2,12 @@
 @use 'mixins' as *;
 @use 'reset' as *;
 
-html,
-body {
-  font-family: 'Poppins', sans-serif;
-  font-style: normal;
-}
-
 img {
   max-width: 100%;
   @include respond-up('md') {
     min-width: 25rem;
   }
 }
+
 @include typography();
 @include reset();

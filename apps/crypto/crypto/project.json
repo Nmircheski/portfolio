@@ -23,6 +23,9 @@
           }
         ],
         "styles": ["apps/crypto/crypto/src/styles.scss"],
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/shared/styles/src/lib"]
+        },
         "scripts": []
       },
       "configurations": {

@@ -1,0 +1,13 @@
+@use 'typography' as *;
+
+body {
+  background: var(--color-bg);
+}
+
+html,
+body {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+}
+
+// @include typography();
