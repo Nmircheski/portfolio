@@ -1,24 +1,35 @@
 .balance-card {
   display: flex;
-  gap: 2rem;
   padding: 1.25rem;
+  color: #ffffff;
+}
+
+.balance-card__status-wrapper {
+  flex: 1;
 }
 
 .balance-card__status {
-  flex: 1;
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
-  padding: 0 1.875rem;
+  padding: 0 3.75rem 0 1.875rem;
+  border-right: 1px solid #f3ecec71;
+}
+
+.balance-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
 }
 
 .balance-card__total {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 10px;
 }
 
-.balance_card__currency {
+.balance-card__currency-holding {
   padding: 0.375rem 0;
   display: flex;
   align-items: center;
@@ -42,6 +53,11 @@
   gap: 0.75rem;
 }
 
+.balance-card__finance-item-type,
+.balance-card__currency-subtitle {
+  color: #809fb8;
+}
+
 .balance-card__donut {
   display: flex;
   flex: 1;
@@ -52,4 +68,19 @@
 
 .balance-card__currencies {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+
+.balance-card__currency {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.balance-card__currency-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }

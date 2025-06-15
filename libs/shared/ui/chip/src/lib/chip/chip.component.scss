@@ -6,8 +6,8 @@
   text-align: center;
   white-space: nowrap;
   outline: #e1f5fe solid 2px;
-
-  color: #f5f5f5;
+  background-color: var(--chip-bg-color);
+  color: var(--chip-text-color);
 
   &--dark-text {
     color: #111;

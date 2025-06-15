@@ -15,12 +15,12 @@ export class DonutChartComponent {
       {
         name: 'Access From',
         type: 'pie',
-        radius: ['40%', '70%'],
+        radius: ['60%', '90%'],
         avoidLabelOverlap: false,
         itemStyle: {
           borderRadius: 10,
           borderColor: '#fff',
-          borderWidth: 2,
+          borderWidth: 0,
         },
         label: {
           show: false,
@@ -38,9 +38,8 @@ export class DonutChartComponent {
         },
         data: [
           { value: 1048, name: 'BTC' },
-          { value: 735, name: 'Doge' },
-          { value: 580, name: 'Tether' },
-          { value: 484, name: 'ETH' },
+          { value: 550, name: 'Doge' },
+          { value: 250, name: 'Tether' },
         ],
       },
     ],

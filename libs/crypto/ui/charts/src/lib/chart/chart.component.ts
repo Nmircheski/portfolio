@@ -10,18 +10,27 @@ import { NgxEchartsDirective } from 'ngx-echarts';
   styleUrl: './chart.component.scss',
 })
 export class ChartComponent {
+  opt: EChartsCoreOption = {
+    series: [
+      {
+        data: [50, 70, 30, 40, 50, 60],
+        type: 'bar',
+      },
+    ],
+  };
   options = signal<EChartsCoreOption>({
     xAxis: {
+      show: false,
       type: 'category',
-      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     },
     yAxis: {
-      type: 'value',
+      show: false,
     },
     series: [
       {
-        data: [120, 200, 150, 80, 70, 110, 130],
+        data: [50, 70, 30, 40, 50, 60],
         type: 'bar',
+        barWidth: 12,
       },
     ],
   });

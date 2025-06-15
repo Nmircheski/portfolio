@@ -1,71 +1,100 @@
-<article class="balance-card">
-  <div class="balance-card__status">
-    <header>
-      <h3>Currency Balance</h3>
-      <div class="balance-card__total">
-        <h3>USD 1.250.418</h3>
-        <portfolio-chip [darkText]="true">12.7%</portfolio-chip>
-      </div>
-    </header>
-    <p class="balance_card__currency">
-      <portfolio-icon [name]="'bitcoin'"></portfolio-icon> Bitcoin/BTC
-    </p>
-    <div class="balance-card__finance-summary">
-      <div class="balance-card__finance-item">
-        <div class="balance-card__finance-item-title">
-          <portfolio-icon [name]="'status'" [iconSize]="'sm'"></portfolio-icon>
-          <p>Income</p>
+<portfolio-card [spacing]="'none'" [borderRadius]="'md'">
+  <div class="balance-card">
+    <div class="balance-card__status-wrapper">
+      <div class="balance-card__status">
+        <header class="balance-card__header">
+          <h3 class="balance-card__title title-semi-bold">Currency Balance</h3>
+          <div class="balance-card__total">
+            <h3 class="display-bold">USD 1.250.418</h3>
+            <portfolio-chip>12.7%</portfolio-chip>
+          </div>
+        </header>
+        <div class="balance-card__currency-holding label-semi-bold">
+          <portfolio-icon [name]="'bitcoin'"></portfolio-icon>
+          <p>Bitcoin/BTC</p>
         </div>
-        <p>USD 25.103,63</p>
-      </div>
-      <div class="balance-card__finance-item">
-        <div class="balance-card__finance-item-title">
-          <portfolio-icon [name]="'status'" [iconSize]="'sm'"></portfolio-icon>
-          <p>Expenses</p>
+        <div class="balance-card__finance-summary">
+          <div class="balance-card__finance-item">
+            <div class="balance-card__finance-item-title">
+              <portfolio-icon
+                [name]="'status'"
+                [iconSize]="'sm'"
+              ></portfolio-icon>
+              <p class="balance-card__finance-item-type body-semi-bold">
+                Income
+              </p>
+            </div>
+            <p class="label-bold">USD 25.103,63</p>
+          </div>
+          <div class="balance-card__finance-item">
+            <div class="balance-card__finance-item-title">
+              <portfolio-icon
+                [name]="'status'"
+                [iconSize]="'sm'"
+              ></portfolio-icon>
+              <p class="balance-card__finance-item-type body-semi-bold">
+                Expenses
+              </p>
+            </div>
+            <p class="label-bold">USD 16.267,04</p>
+          </div>
         </div>
-        <p>USD 16.267,04</p>
+      </div>
+    </div>
+    <div class="balance-card__donut">
+      <crypto-ui-donut-chart
+        class="balance-card__chart"
+      ></crypto-ui-donut-chart>
+      <div class="balance-card__currencies">
+        <div class="balance-card__currency">
+          <div class="balance-card__currency-info">
+            <portfolio-icon [name]="'bitcoin'"> </portfolio-icon>
+            <label>
+              <span class="label-semi-bold-sm"> Bitcoin </span>
+              <span class="balance-card__currency-subtitle label-semi-bold-xs">
+                BTC
+              </span>
+            </label>
+          </div>
+          <portfolio-chip
+            ><portfolio-icon [name]="'arrow'"> </portfolio-icon>
+            +12.7%
+          </portfolio-chip>
+          <span class="body2-semi-bold"> $42.004,01 </span>
+        </div>
+        <div class="balance-card__currency">
+          <div class="balance-card__currency-info">
+            <portfolio-icon [name]="'doge'"> </portfolio-icon>
+            <label>
+              <span class="label-semi-bold-sm"> Bitcoin </span>
+              <span class="balance-card__currency-subtitle label-semi-bold-xs">
+                BTC
+              </span>
+            </label>
+          </div>
+          <portfolio-chip
+            ><portfolio-icon [name]="'arrow'"> </portfolio-icon>
+            +12.7%
+          </portfolio-chip>
+          <span class="body2-semi-bold"> $42.004,01 </span>
+        </div>
+        <div class="balance-card__currency">
+          <div class="balance-card__currency-info">
+            <portfolio-icon [name]="'tether'"> </portfolio-icon>
+            <label>
+              <span class="label-semi-bold-sm"> Bitcoin </span>
+              <span class="balance-card__currency-subtitle label-semi-bold-xs">
+                BTC
+              </span>
+            </label>
+          </div>
+          <portfolio-chip
+            ><portfolio-icon [name]="'arrow'"> </portfolio-icon>
+            +12.7%
+          </portfolio-chip>
+          <span class="body2-semi-bold"> $42.004,01 </span>
+        </div>
       </div>
     </div>
   </div>
-  <div class="balance-card__donut">
-    <crypto-ui-donut-chart class="balance-card__chart"></crypto-ui-donut-chart>
-    <div class="balance-card__currencies">
-      <div>
-        <portfolio-icon [name]="'bitcoin'"> </portfolio-icon>
-        <div>
-          <span> Bitcoin </span>
-          <span> BTC </span>
-        </div>
-        <portfolio-chip [darkText]="true"
-          ><portfolio-icon [name]="'arrow'"> </portfolio-icon>
-          +12.7%
-        </portfolio-chip>
-        <span> $42.004,01 </span>
-      </div>
-      <div>
-        <portfolio-icon [name]="'doge'"> </portfolio-icon>
-        <div>
-          <span> Bitcoin </span>
-          <span> BTC </span>
-        </div>
-        <portfolio-chip [darkText]="true"
-          ><portfolio-icon [name]="'arrow'"> </portfolio-icon>
-          +12.7%
-        </portfolio-chip>
-        <span> $42.004,01 </span>
-      </div>
-      <div>
-        <portfolio-icon [name]="'tether'"> </portfolio-icon>
-        <div>
-          <span> Bitcoin </span>
-          <span> BTC </span>
-        </div>
-        <portfolio-chip [darkText]="true"
-          ><portfolio-icon [name]="'arrow'"> </portfolio-icon>
-          +12.7%
-        </portfolio-chip>
-        <span> $42.004,01 </span>
-      </div>
-    </div>
-  </div>
-</article>
+</portfolio-card>

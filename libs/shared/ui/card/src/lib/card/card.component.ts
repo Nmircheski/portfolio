@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { Radius, Spacing } from '@portfolio/shared/models';
 
 @Component({
   selector: 'portfolio-card',
@@ -15,4 +16,6 @@ export class CardComponent {
   // bulletPoints = input.required<string[]>();
 
   class = input<string>(); //TODO this is a bad pattern, people cannot set class on the host
+  spacing = input<Spacing>('xl');
+  borderRadius = input<Radius>('xl');
 }

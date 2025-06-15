@@ -6,4 +6,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+:root {
+  --chip-bg-color: rgba(36, 228, 164, 0.2);
+  --chip-text-color: #24e4a4;
+  --color-surface-low: #1c1c1e;
+}
+
 @include typography($typography);

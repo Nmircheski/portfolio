@@ -47,6 +47,9 @@
 
 @mixin generate-padding-modifiers() {
   @each $name, $value in $spacing {
+    &--space-p-#{$name} {
+      padding: #{$value};
+    }
     &--space-py-#{$name} {
       padding-top: #{$value};
       padding-bottom: #{$value};
