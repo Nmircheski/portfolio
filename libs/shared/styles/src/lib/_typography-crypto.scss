@@ -19,6 +19,14 @@ $typography: (
         letter-spacing: 0px,
       ),
     ),
+    bold-sm: (
+      sm: (
+        font-size: 38px,
+        line-height: 46px,
+        font-weight: map.get($font-weights, bold),
+        letter-spacing: 0px,
+      ),
+    ),
     semi-bold: (
       sm: (
         font-size: 38px,

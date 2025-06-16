@@ -1,0 +1,13 @@
+.currency-candlestick__header {
+  display: flex; //TODO change to grid once we have action buttons
+  flex-direction: column;
+  padding: 30px;
+  gap: 1rem;
+  color: #fff;
+}
+
+.currency-candlestick__currency {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

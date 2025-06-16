@@ -1,1 +1,10 @@
-<crypto-ui-candlestick-chart></crypto-ui-candlestick-chart>
+<portfolio-card [spacing]="'none'" [fullHeight]="true" [borderRadius]="'md'">
+  <header class="currency-candlestick__header">
+    <h2 class="currency-candlestick__title label-bold">Currency</h2>
+    <div class="currency-candlestick__currency">
+      <portfolio-icon [name]="'bitcoin'" [iconSize]="'md'"></portfolio-icon>
+      <h3 class="currency-candlestick__value display-bold-sm">$ 159.461,50</h3>
+    </div>
+  </header>
+  <crypto-ui-candlestick-chart></crypto-ui-candlestick-chart>
+</portfolio-card>
