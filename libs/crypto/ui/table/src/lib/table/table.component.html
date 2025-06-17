@@ -1,12 +1,29 @@
 <table cdk-table [dataSource]="dataSource" class="table">
+  @if (selectable()) {
   <ng-container cdkColumnDef="checkbox">
     <th cdk-header-cell *cdkHeaderCellDef></th>
     <td cdk-cell *cdkCellDef="let element" class="table__data-cell">
       <input type="checkbox" checked />&nbsp;
     </td>
   </ng-container>
-
+  } @for (tableCell of cellTemplates(); track tableCell.columnName) {
   <ng-container cdkColumnDef="position">
+    <th
+      cdk-header-cell
+      *cdkHeaderCellDef
+      class="table__header-cell subtitle-semi-bold"
+    >
+      <ng-container [ngTemplateOutlet]="tableCell.headerTemplate() ?? null">
+      </ng-container>
+    </th>
+    <td cdk-cell *cdkCellDef="let element" class="table__data-cell">
+      <ng-container [ngTemplateOutlet]="tableCell.dataTemplate() ?? null">
+      </ng-container>
+    </td>
+  </ng-container>
+  }
+
+  <!-- <ng-container cdkColumnDef="position">
     <th
       cdk-header-cell
       *cdkHeaderCellDef
@@ -106,8 +123,8 @@
         </portfolio-chip>
       </div>
     </td>
-  </ng-container>
+  </ng-container> -->
 
   <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>
-  <tr cdk-row *cdkRowDef="let row; columns: displayedColumns"></tr>
+  <tr cdk-row *cdkRowDef="let row; columns: displayedColumns()"></tr>
 </table>
