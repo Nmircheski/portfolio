@@ -10,12 +10,18 @@ body {
   --chip-bg-color: rgba(36, 228, 164, 0.2);
   --chip-text-color: #24e4a4;
   --color-surface-low: #1c1c1e;
+  --color-surface-main: #ffffff;
 
   //text colors
+  --color-text-primary: #ffffff;
   --color-text-secondary: #777e90;
   --color-text-positive: #58bd7d;
 
   --color-search-input: #222630;
+
+  // tabs
+  --color-tabs-active: #3772ff;
+  --color-tabs-divider-line: #1f2332;
 
   //DARK
   --color-dark-background: #18191d;
