@@ -8,6 +8,7 @@ export type IconType =
   | 'sun'
   | 'moon'
   | 'status'
+  | 'star'
   | 'angular'
   | 'typescript'
   | 'javascript'

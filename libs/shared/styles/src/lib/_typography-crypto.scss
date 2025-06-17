@@ -49,5 +49,13 @@ $typography: (
         letter-spacing: 0,
       ),
     ),
+    bold: (
+      sm: (
+        font-size: 12px,
+        line-height: 20px,
+        font-weight: map.get($font-weights, bold),
+        letter-spacing: 10%,
+      ),
+    ),
   ),
 );
