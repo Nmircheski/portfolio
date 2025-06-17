@@ -7,7 +7,8 @@ import {
   contentChildren,
   input,
 } from '@angular/core';
-import { TableCellDirective } from '../cells/table-cell/table-cell.directive';
+import { DataCellDirective } from '../cells/data-cell/data-cell.directive';
+import { HeaderCellDirective } from '../cells/header-cell/header-cell.directive';
 import { CryptoTableDataSource } from './data-source';
 
 @Component({
@@ -20,10 +21,28 @@ export class TableComponent<T> {
   data = input.required<T[]>();
 
   selectable = input(false, { transform: booleanAttribute });
-  cellTemplates = contentChildren(TableCellDirective<T>);
+  headerCells = contentChildren(HeaderCellDirective<T>);
+  dataCells = contentChildren(DataCellDirective<T>);
+
+  cellTemplates = computed(() => {
+    return this.headerCells().length && this.dataCells().length
+      ? this.headerCells().map((hc) => {
+          const headerTemplate = hc.templateRef;
+          const dataTemplate = this.dataCells().find(
+            (c) => c.columnName() === hc.columnName()
+          )?.templateRef;
+
+          return {
+            columnName: hc.columnName,
+            headerTemplate,
+            dataTemplate,
+          };
+        })
+      : [];
+  });
 
   displayedColumns = computed(() => {
-    return this.cellTemplates().map((c) => c.columnName);
+    return this.headerCells().map((c) => c.columnName());
   });
 
   dataSource = new CryptoTableDataSource(this.data);

@@ -10,4 +10,72 @@
       [iconSize]="'original'"
     ></portfolio-icon>
   </div>
+
+  <div class="currencies-list__tabs">
+    <mat-tab-group stretchTabs>
+      @for (item of tabsList(); track $index) {
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <div class="currencies-list__tab-label caption2-bold">
+            @if (item.icon) {
+            <portfolio-icon
+              [name]="item.icon"
+              [iconSize]="'original'"
+              [align]="'text-top'"
+            >
+            </portfolio-icon>
+            }
+            <p>{{ item.label | uppercase }}</p>
+          </div>
+        </ng-template></mat-tab
+      >
+      }
+    </mat-tab-group>
+  </div>
+
+  <crypto-ui-table [data]="coinsList()">
+    <ng-template cryptoHeaderCell="'pair'">Pair</ng-template>
+    <ng-template cryptoDataCell="'pair'" [selectFrom]="coinsList()" let-item>
+      <div>
+        <portfolio-icon [name]="item.pair.icon"></portfolio-icon>
+        <p>{{ item.pair.label }}</p>
+      </div>
+    </ng-template>
+
+    <ng-template cryptoHeaderCell="'currentPrice'">Current Price</ng-template>
+    <ng-template
+      cryptoDataCell="'currentPrice'"
+      [selectFrom]="coinsList()"
+      let-item
+    >
+      <div>
+        <p>{{ item.currentPrice }}</p>
+      </div>
+    </ng-template>
+
+    <ng-template cryptoHeaderCell="'dayToDayPrice'">Day to day</ng-template>
+    <ng-template
+      cryptoDataCell="'dayToDayPrice'"
+      [selectFrom]="coinsList()"
+      let-item
+    >
+      <div>
+        <p>{{ item.dayToDayPrice.change }}</p>
+        <p>{{ item.dayToDayPrice.amount }}</p>
+      </div>
+    </ng-template>
+
+    <ng-template cryptoHeaderCell="'transactionAmount'"
+      >Transaction amount</ng-template
+    >
+    <ng-template
+      cryptoDataCell="'transactionAmount'"
+      [selectFrom]="coinsList()"
+      let-item
+    >
+      <div>
+        <p>{{ item.transactionAmount }}</p>
+      </div>
+    </ng-template>
+  </crypto-ui-table>
 </div>

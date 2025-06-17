@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TableComponent } from '@portfolio/crypto-ui-table';
-import { CardComponent } from '../../../../../../../../shared/ui/card/src/lib/card/card.component';
+import { CardComponent } from '@portfolio/ui/card';
 @Component({
   selector: 'crypto-dashboard-currency-table',
   imports: [CommonModule, TableComponent, CardComponent],

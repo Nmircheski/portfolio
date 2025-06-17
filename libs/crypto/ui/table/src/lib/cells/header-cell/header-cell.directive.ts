@@ -5,5 +5,5 @@ import { Directive, inject, input, TemplateRef } from '@angular/core';
 })
 export class HeaderCellDirective<T> {
   templateRef = inject<TemplateRef<T>>(TemplateRef);
-  columnName = input.required<string>();
+  columnName = input.required<string>({ alias: 'cryptoHeaderCell' });
 }

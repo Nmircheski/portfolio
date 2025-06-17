@@ -1,3 +1,18 @@
+@use '@angular/material' as mat;
+
+:host {
+  min-width: 0;
+  @include mat.tabs-overrides(
+    (
+      active-indicator-color: var(--color-tabs-active),
+      active-focus-indicator-color: var(--color-tabs-active),
+      divider-color: var(--color-tabs-divider-line),
+      active-label-text-color: var(--color-text-primary),
+      inactive-label-text-color: var(--color-text-secondary),
+    )
+  );
+}
+
 .currencies-list {
   padding: 28px 20px;
 }
@@ -20,4 +35,14 @@
   left: 12px;
   top: 8px;
   pointer-events: none;
+}
+
+.currencies-list__tabs {
+  width: 100%;
+}
+
+.currencies-list__tab-label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }

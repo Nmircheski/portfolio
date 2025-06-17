@@ -17,9 +17,6 @@
     "paths": {
       "@portfolio/about-me": ["libs/my-portfolio/about-me/src/index.ts"],
       "@portfolio/about-me-legacy": ["libs/legacy/about-me/src/index.ts"],
-      "@portfolio/crypto-ui-coin-select": [
-        "libs/crypto/ui/coin-select/src/index.ts"
-      ],
       "@portfolio/contact-legacy": ["libs/legacy/contact/src/index.ts"],
       "@portfolio/crypto-feature-dashboard-shell": [
         "libs/crypto/features/dashboard/shell/src/index.ts"
@@ -37,13 +34,16 @@
       "@portfolio/crypto-ui-coin-info": [
         "libs/crypto/ui/coin-info/src/index.ts"
       ],
+      "@portfolio/crypto-ui-coin-select": [
+        "libs/crypto/ui/coin-select/src/index.ts"
+      ],
+      "@portfolio/crypto-ui-currencies-list": [
+        "libs/crypto/ui/currencies-list/src/index.ts"
+      ],
       "@portfolio/crypto-ui-navbar": ["libs/crypto/ui/navbar/src/index.ts"],
       "@portfolio/crypto-ui-sidenav": ["libs/crypto/ui/sidenav/src/index.ts"],
       "@portfolio/crypto-ui-table": ["libs/crypto/ui/table/src/index.ts"],
       "@portfolio/cta": ["libs/my-portfolio/cta/src/index.ts"],
-      "@portfolio/crypto-ui-currencies-list": [
-        "libs/crypto/ui/currencies-list/src/index.ts"
-      ],
       "@portfolio/exchange-widget": [
         "libs/crypto/ui/exchange-widget/src/index.ts"
       ],
