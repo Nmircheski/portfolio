@@ -1,6 +1,7 @@
 .trading {
   color: #fff;
   display: grid;
+  gap: 0.25rem;
   grid-template-columns: 2fr 1fr;
   grid-template-areas:
     'header  header'
