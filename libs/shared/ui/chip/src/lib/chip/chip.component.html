@@ -1,3 +1,6 @@
-<span class="chip body3-medium" [class.chip--dark-text]="darkText()"
+<span
+  class="chip body3-medium chip--radius-{{ borderRadius() }}"
+  [class.chip--outline]="outline()"
+  [class.chip--full-width]="fullWidth()"
   ><ng-content></ng-content
 ></span>

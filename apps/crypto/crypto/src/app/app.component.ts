@@ -2,7 +2,12 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CryptoNavbarComponent } from '@portfolio/crypto-ui-navbar';
 import { CryptoSidenavComponent } from '@portfolio/crypto-ui-sidenav';
-import { BarChart, CandlestickChart, PieChart } from 'echarts/charts';
+import {
+  BarChart,
+  CandlestickChart,
+  LineChart,
+  PieChart,
+} from 'echarts/charts';
 import { DataZoomComponent, GridComponent } from 'echarts/components';
 import * as echarts from 'echarts/core';
 import { CanvasRenderer } from 'echarts/renderers';
@@ -11,6 +16,7 @@ echarts.use([
   PieChart,
   CandlestickChart,
   BarChart,
+  LineChart,
   DataZoomComponent,
   GridComponent,
   CanvasRenderer,

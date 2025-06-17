@@ -1,4 +1,4 @@
-<portfolio-card [spacing]="'none'" [borderRadius]="'md'">
+<portfolio-card [borderRadius]="'none'" [spacing]="'none'">
   <div class="balance-card">
     <div class="balance-card__status-wrapper">
       <div class="balance-card__status">
@@ -47,15 +47,7 @@
       ></crypto-ui-donut-chart>
       <div class="balance-card__currencies">
         <div class="balance-card__currency">
-          <div class="balance-card__currency-info">
-            <portfolio-icon [name]="'bitcoin'"> </portfolio-icon>
-            <label>
-              <span class="label-semi-bold-sm"> Bitcoin </span>
-              <span class="balance-card__currency-subtitle subtitle-semi-bold">
-                BTC
-              </span>
-            </label>
-          </div>
+          <crypto-coin-info [name]="'bitcoin'"></crypto-coin-info>
           <portfolio-chip
             ><portfolio-icon [name]="'arrow'"> </portfolio-icon>
             +12.7%
@@ -63,15 +55,7 @@
           <span class="body2-semi-bold"> $42.004,01 </span>
         </div>
         <div class="balance-card__currency">
-          <div class="balance-card__currency-info">
-            <portfolio-icon [name]="'doge'"> </portfolio-icon>
-            <label>
-              <span class="label-semi-bold-sm"> Bitcoin </span>
-              <span class="balance-card__currency-subtitle subtitle-semi-bold">
-                BTC
-              </span>
-            </label>
-          </div>
+          <crypto-coin-info [name]="'doge'"></crypto-coin-info>
           <portfolio-chip
             ><portfolio-icon [name]="'arrow'"> </portfolio-icon>
             +12.7%
@@ -79,15 +63,7 @@
           <span class="body2-semi-bold"> $42.004,01 </span>
         </div>
         <div class="balance-card__currency">
-          <div class="balance-card__currency-info">
-            <portfolio-icon [name]="'tether'"> </portfolio-icon>
-            <label>
-              <span class="label-semi-bold-sm"> Bitcoin </span>
-              <span class="balance-card__currency-subtitle subtitle-semi-bold">
-                BTC
-              </span>
-            </label>
-          </div>
+          <crypto-coin-info [name]="'tether'"></crypto-coin-info>
           <portfolio-chip
             ><portfolio-icon [name]="'arrow'"> </portfolio-icon>
             +12.7%

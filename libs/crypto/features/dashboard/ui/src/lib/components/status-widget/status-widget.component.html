@@ -1,4 +1,4 @@
-<portfolio-card [fullHeight]="true" [spacing]="'none'">
+<portfolio-card [borderRadius]="'none'" [fullHeight]="true" [spacing]="'none'">
   <div class="status-widget">
     <div class="status-widget__currency">
       <portfolio-icon [name]="'bitcoin'" [iconSize]="'md'"></portfolio-icon>
@@ -13,6 +13,6 @@
         Balance: 2.750,99 USD
       </p>
     </div>
-    <crypto-ui-chart class="status-widget__chart"></crypto-ui-chart>
+    <crypto-ui-bar-chart class="status-widget__chart"></crypto-ui-bar-chart>
   </div>
 </portfolio-card>

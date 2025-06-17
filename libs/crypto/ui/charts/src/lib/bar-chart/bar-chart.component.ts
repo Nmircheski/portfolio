@@ -4,20 +4,12 @@ import { EChartsCoreOption, EChartsType } from 'echarts/core';
 import { NgxEchartsDirective } from 'ngx-echarts';
 
 @Component({
-  selector: 'crypto-ui-chart',
+  selector: 'crypto-ui-bar-chart',
   imports: [CommonModule, NgxEchartsDirective],
-  templateUrl: './chart.component.html',
-  styleUrl: './chart.component.scss',
+  templateUrl: './bar-chart.component.html',
+  styleUrl: './bar-chart.component.scss',
 })
-export class ChartComponent {
-  opt: EChartsCoreOption = {
-    series: [
-      {
-        data: [50, 70, 30, 40, 50, 60],
-        type: 'bar',
-      },
-    ],
-  };
+export class BarChartComponent {
   options = signal<EChartsCoreOption>({
     xAxis: {
       show: false,

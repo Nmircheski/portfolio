@@ -1,9 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { BarChartComponent } from '@portfolio/crypto-ui-charts';
 import { CardComponent } from '@portfolio/ui/card';
-import { ChipComponent } from '../../../../../../../../shared/ui/chip/src/lib/chip/chip.component';
-import { IconComponent } from '../../../../../../../../shared/ui/icon/src/lib/icon/icon.component';
-import { ChartComponent } from '../../../../../../../ui/charts/src/lib/chart/chart.component';
+import { ChipComponent } from '@portfolio/ui/chip';
+import { IconComponent } from '@portfolio/ui/icon';
 
 @Component({
   selector: 'crypto-dashboard-status-widget',
@@ -11,7 +11,7 @@ import { ChartComponent } from '../../../../../../../ui/charts/src/lib/chart/cha
     CommonModule,
     IconComponent,
     ChipComponent,
-    ChartComponent,
+    BarChartComponent,
     CardComponent,
   ],
   templateUrl: './status-widget.component.html',

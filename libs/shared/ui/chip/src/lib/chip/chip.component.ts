@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import {
+  booleanAttribute,
+  ChangeDetectionStrategy,
+  Component,
+  input,
+} from '@angular/core';
+import { Radius } from '@portfolio/shared/models';
 
 @Component({
   selector: 'portfolio-chip',
@@ -9,5 +15,7 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChipComponent {
-  darkText = input(false);
+  borderRadius = input<Radius>('md');
+  outline = input(false, { transform: booleanAttribute });
+  fullWidth = input(false, { transform: booleanAttribute });
 }

@@ -1,13 +1,9 @@
 .app-container {
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 0fr 4fr;
   grid-template-areas:
     'header header'
     'sidenav main';
-
-  > * {
-    outline: aqua solid thin;
-  }
 }
 
 .app-container__header {
@@ -20,4 +16,5 @@
 
 .app-container__main {
   grid-area: main;
+  padding: 0 20px;
 }

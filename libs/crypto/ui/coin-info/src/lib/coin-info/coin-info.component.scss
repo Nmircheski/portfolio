@@ -1,0 +1,14 @@
+.coin-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.coin-info__label {
+  display: flex;
+  flex-direction: column;
+}
+
+.coin-info__subtitle {
+  color: #809fb8;
+}
