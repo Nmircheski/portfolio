@@ -25,6 +25,9 @@
         "libs/crypto/features/dashboard/ui/src/index.ts"
       ],
       "@portfolio/crypto-ui-charts": ["libs/crypto/ui/charts/src/index.ts"],
+      "@portfolio/crypto-ui-coin-info": [
+        "libs/crypto/ui/coin-info/src/index.ts"
+      ],
       "@portfolio/crypto-ui-navbar": ["libs/crypto/ui/navbar/src/index.ts"],
       "@portfolio/crypto-ui-sidenav": ["libs/crypto/ui/sidenav/src/index.ts"],
       "@portfolio/crypto-ui-table": ["libs/crypto/ui/table/src/index.ts"],

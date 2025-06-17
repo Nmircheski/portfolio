@@ -1,0 +1,40 @@
+.status-widget {
+  color: #ffff;
+  height: 100%;
+  padding: 30px 20px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--space-md);
+  row-gap: var(--space-md);
+  grid-template-areas:
+    'currency currency'
+    'chip .'
+    'balance chart';
+}
+
+.status-widget__currency {
+  grid-area: currency;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-widget__chip {
+  grid-area: chip;
+}
+
+.status-widget__balance {
+  grid-area: balance;
+}
+
+.status-widget__chart {
+  grid-area: chart;
+}
+
+.status-widget__balance-title {
+  padding: 6px 0;
+}
+
+.status-widget__balance-subtitle {
+  color: #99b2c6;
+}

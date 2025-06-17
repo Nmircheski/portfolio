@@ -1,26 +1,111 @@
-<table cdk-table [dataSource]="dataSource">
-  <!-- Position Column -->
+<table cdk-table [dataSource]="dataSource" class="table">
+  <ng-container cdkColumnDef="checkbox">
+    <th cdk-header-cell *cdkHeaderCellDef></th>
+    <td cdk-cell *cdkCellDef="let element" class="table__data-cell">
+      <input type="checkbox" checked />&nbsp;
+    </td>
+  </ng-container>
+
   <ng-container cdkColumnDef="position">
-    <th cdk-header-cell *cdkHeaderCellDef>No.</th>
-    <td cdk-cell *cdkCellDef="let element">{{ element.position }}</td>
+    <th
+      cdk-header-cell
+      *cdkHeaderCellDef
+      class="table__header-cell subtitle-semi-bold"
+    >
+      No.
+    </th>
+    <td cdk-cell *cdkCellDef="let element" class="table__data-cell">
+      {{ element.position }}
+    </td>
   </ng-container>
 
-  <!-- Name Column -->
   <ng-container cdkColumnDef="name">
-    <th cdk-header-cell *cdkHeaderCellDef>Name</th>
-    <td cdk-cell *cdkCellDef="let element">{{ element.name }}</td>
+    <th
+      cdk-header-cell
+      *cdkHeaderCellDef
+      class="table__header-cell subtitle-semi-bold"
+    >
+      Currency
+    </th>
+    <td
+      cdk-cell
+      *cdkCellDef="let element"
+      class="table__data-cell table__data-cell-name"
+    >
+      <crypto-coin-info [name]="'bitcoin'"></crypto-coin-info>
+    </td>
   </ng-container>
 
-  <!-- Weight Column -->
-  <ng-container cdkColumnDef="weight">
-    <th cdk-header-cell *cdkHeaderCellDef>Weight</th>
-    <td cdk-cell *cdkCellDef="let element">{{ element.weight }}</td>
+  <ng-container cdkColumnDef="daily">
+    <th
+      cdk-header-cell
+      *cdkHeaderCellDef
+      class="table__header-cell subtitle-semi-bold"
+    >
+      Last 24h
+    </th>
+    <td cdk-cell *cdkCellDef="let element" class="table__data-cell">
+      <portfolio-chip [borderRadius]="'sm'"
+        ><portfolio-icon [name]="'arrow'"> </portfolio-icon>
+        +12.7%
+      </portfolio-chip>
+    </td>
   </ng-container>
 
-  <!-- Symbol Column -->
-  <ng-container cdkColumnDef="symbol">
-    <th cdk-header-cell *cdkHeaderCellDef>Symbol</th>
-    <td cdk-cell *cdkCellDef="let element">{{ element.symbol }}</td>
+  <ng-container cdkColumnDef="currentPrice">
+    <th
+      cdk-header-cell
+      *cdkHeaderCellDef
+      class="table__header-cell subtitle-semi-bold"
+    >
+      Current Price
+    </th>
+    <td cdk-cell *cdkCellDef="let element" class="table__data-cell">
+      {{ element.currentPrice }}
+    </td>
+  </ng-container>
+
+  <ng-container cdkColumnDef="performance">
+    <th
+      cdk-header-cell
+      *cdkHeaderCellDef
+      class="table__header-cell subtitle-semi-bold"
+    >
+      Performance
+    </th>
+    <td cdk-cell *cdkCellDef="let element" class="table__data-cell">
+      <crypto-ui-line-chart></crypto-ui-line-chart>
+    </td>
+  </ng-container>
+
+  <ng-container cdkColumnDef="lastPrice">
+    <th
+      cdk-header-cell
+      *cdkHeaderCellDef
+      class="table__header-cell subtitle-semi-bold"
+    >
+      Last Price
+    </th>
+    <td cdk-cell *cdkCellDef="let element" class="table__data-cell">
+      {{ element.lastPrice }}
+    </td>
+  </ng-container>
+
+  <ng-container cdkColumnDef="option">
+    <th
+      cdk-header-cell
+      *cdkHeaderCellDef
+      class="table__header-cell subtitle-semi-bold"
+    >
+      Options
+    </th>
+    <td cdk-cell *cdkCellDef="let element" class="table__data-cell">
+      <div class="table__data-cell-option">
+        <portfolio-chip [borderRadius]="'sm'" fullWidth>
+          {{ element.option }}
+        </portfolio-chip>
+      </div>
+    </td>
   </ng-container>
 
   <tr cdk-header-row *cdkHeaderRowDef="displayedColumns"></tr>

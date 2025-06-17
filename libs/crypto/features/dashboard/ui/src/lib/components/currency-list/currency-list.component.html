@@ -1,3 +1,10 @@
-@for (item of items; track $index) {
-<crypto-dashboard-currency-list-item></crypto-dashboard-currency-list-item>
-}
+<portfolio-card [borderRadius]="'none'" [spacing]="'none'" [fullHeight]="true">
+  <div class="currency-list">
+    <h2 class="title-semi-bold">Current Value</h2>
+    <div class="currency-list__items">
+      @for (item of items; track $index) {
+      <crypto-dashboard-currency-list-item></crypto-dashboard-currency-list-item>
+      }
+    </div>
+  </div>
+</portfolio-card>

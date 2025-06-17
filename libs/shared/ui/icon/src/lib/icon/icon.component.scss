@@ -13,6 +13,12 @@
 
   &.md {
     svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  &.lg {
+    svg {
       width: 64px;
       height: 64px;
     }

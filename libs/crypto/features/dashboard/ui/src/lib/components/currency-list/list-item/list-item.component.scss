@@ -1,9 +1,23 @@
 .list-item {
   display: flex;
-  gap: 1rem;
 }
+
 .list-item__currency {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 10px;
+  color: #809fb8;
+  background-color: #384455;
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+}
+
+.list-item__value {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: 1px solid #384455;
+  border-radius: 0 10px 10px 0;
+  padding-left: 20px;
+  color: #809fb8;
 }
