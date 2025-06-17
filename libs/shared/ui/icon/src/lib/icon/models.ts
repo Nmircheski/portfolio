@@ -33,4 +33,5 @@ export type IconType =
   | 'bitcoin'
   | 'doge'
   | 'tether'
-  | 'arrow';
+  | 'arrow'
+  | 'dropdown-arrow';

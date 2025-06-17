@@ -1,5 +1,5 @@
 <span
-  class="icon-container {{ iconSize() }}"
+  class="icon-container {{ iconSize() }} icon-container--align-{{ align() }}"
   [class.icon-container--glow]="glow()"
 >
   @switch (name()) { @case ('hamburger') {
@@ -870,6 +870,20 @@
         />
       </clipPath>
     </defs>
+  </svg>
+
+  } @case ('dropdown-arrow') {
+  <svg
+    width="12"
+    height="12"
+    viewBox="0 0 12 12"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M1.91983 3.72561C2.06413 3.57525 2.28993 3.56158 2.44905 3.6846L2.49464 3.72561L6.00078 7.37888L9.50693 3.72561C9.65122 3.57525 9.87703 3.56158 10.0361 3.6846L10.0817 3.72561C10.226 3.87597 10.2392 4.11127 10.1211 4.27707L10.0817 4.32457L6.28819 8.27751C6.14389 8.42788 5.91808 8.44154 5.75896 8.31852L5.71338 8.27751L1.91983 4.32457C1.7611 4.15917 1.7611 3.89101 1.91983 3.72561Z"
+      fill="white"
+    />
   </svg>
 
   } }

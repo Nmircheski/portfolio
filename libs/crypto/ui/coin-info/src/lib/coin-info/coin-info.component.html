@@ -1,6 +1,6 @@
 <div class="coin-info">
-  @if (name(); as name) {
-  <portfolio-icon [name]="name"> </portfolio-icon>
+  @if (iconName()) {
+  <portfolio-icon [name]="iconName()!"> </portfolio-icon>
   }
   <label class="coin-info__label">
     <span class="coin-info__title label-semi-bold-sm"> Bitcoin </span>

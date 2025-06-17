@@ -1,0 +1,22 @@
+.trading-header {
+  background-color: var(--color-dark-background);
+  padding: 1rem 1.25rem;
+
+  display: flex;
+  gap: 60px;
+  color: #fff;
+}
+
+.trading-header__stat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trading-header__label {
+  color: var(--color-text-secondary);
+}
+
+.trading-header__value--positive {
+  color: var(--color-text-positive);
+}

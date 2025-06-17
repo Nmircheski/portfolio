@@ -2,7 +2,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  vertical-align: text-bottom;
+
+  &--align-text-bottom {
+    vertical-align: text-bottom;
+  }
+
+  &--align-baseline {
+    vertical-align: baseline;
+  }
 
   &.sm {
     svg {

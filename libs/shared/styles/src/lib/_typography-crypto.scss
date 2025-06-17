@@ -12,7 +12,25 @@ $typography: (
       ),
     ),
   ),
+  body3: (
+    bold: (
+      sm: (
+        font-size: 16px,
+        line-height: 24px,
+        font-weight: map.get($font-weights, bold),
+        letter-spacing: 0,
+      ),
+    ),
+  ),
   caption: (
+    normal: (
+      sm: (
+        font-size: 14px,
+        line-height: 24px,
+        font-weight: map.get($font-weights, regular),
+        letter-spacing: 0,
+      ),
+    ),
     bold: (
       sm: (
         font-size: 14px,

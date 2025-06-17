@@ -1,13 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, input } from '@angular/core';
 import { IconComponent, IconType } from '@portfolio/ui/icon';
-
 @Component({
-  selector: 'crypto-coin-info',
+  selector: 'crypto-coin-select',
   imports: [CommonModule, IconComponent],
-  templateUrl: './coin-info.component.html',
-  styleUrl: './coin-info.component.scss',
+  templateUrl: './coin-select.component.html',
+  styleUrl: './coin-select.component.scss',
 })
-export class CoinInfoComponent {
+export class CoinSelectComponent {
   iconName = input<IconType>();
 }

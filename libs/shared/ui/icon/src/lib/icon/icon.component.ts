@@ -12,5 +12,6 @@ import { IconType } from './models';
 export class IconComponent {
   name = input.required<IconType>();
   glow = input(false);
-  iconSize = input<'sm' | 'md' | 'lg'>('sm');
+  iconSize = input<'sm' | 'md' | 'lg' | 'original'>('sm');
+  align = input<'text-bottom' | 'baseline'>('text-bottom');
 }

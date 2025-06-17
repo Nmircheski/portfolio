@@ -1,0 +1,20 @@
+<div class="coin-select">
+  <div class="coin-select__info">
+    @if (iconName()) {
+    <portfolio-icon [name]="iconName()!" [align]="'baseline'"> </portfolio-icon>
+    }
+
+    <div class="coin-select__label">
+      <p class="coin-select__title body3-bold">BTC/USDT</p>
+      <p class="coin-select__subtitle caption-normal">Bitcoin</p>
+    </div>
+  </div>
+
+  <div>
+    <portfolio-icon
+      [name]="'dropdown-arrow'"
+      [iconSize]="'original'"
+      [align]="'baseline'"
+    ></portfolio-icon>
+  </div>
+</div>
