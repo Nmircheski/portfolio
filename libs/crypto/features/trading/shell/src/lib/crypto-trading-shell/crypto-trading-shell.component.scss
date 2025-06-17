@@ -1,0 +1,34 @@
+.trading {
+  color: #fff;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    'header  header'
+    'chart  search-list'
+    'table  exchange'
+    'table  orders';
+}
+
+.trading__header {
+  grid-area: header;
+}
+
+.trading__chart {
+  grid-area: chart;
+}
+
+.trading__table {
+  grid-area: table;
+}
+
+.trading__search-list {
+  grid-area: search-list;
+}
+
+.trading__exchange {
+  grid-area: exchange;
+}
+
+.trading__orders {
+  grid-area: orders;
+}

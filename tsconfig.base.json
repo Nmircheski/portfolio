@@ -41,7 +41,7 @@
       "@portfolio/crypto-ui-sidenav": ["libs/crypto/ui/sidenav/src/index.ts"],
       "@portfolio/crypto-ui-table": ["libs/crypto/ui/table/src/index.ts"],
       "@portfolio/cta": ["libs/my-portfolio/cta/src/index.ts"],
-      "@portfolio/currencies-list": [
+      "@portfolio/crypto-ui-currencies-list": [
         "libs/crypto/ui/currencies-list/src/index.ts"
       ],
       "@portfolio/exchange-widget": [
