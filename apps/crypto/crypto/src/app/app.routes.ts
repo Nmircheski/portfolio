@@ -8,4 +8,11 @@ export const appRoutes: Route[] = [
         (m) => m.cryptoDashboardRoutes
       ),
   },
+  {
+    path: 'trading',
+    loadChildren: () =>
+      import('@portfolio/crypto-feature-trading-shell').then(
+        (m) => m.cryptoTradingRoutes
+      ),
+  },
 ];

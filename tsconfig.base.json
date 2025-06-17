@@ -24,6 +24,12 @@
       "@portfolio/crypto-feature-dashboard-ui": [
         "libs/crypto/features/dashboard/ui/src/index.ts"
       ],
+      "@portfolio/crypto-feature-trading-shell": [
+        "libs/crypto/features/trading/shell/src/index.ts"
+      ],
+      "@portfolio/crypto-feature-trading-ui": [
+        "libs/crypto/features/trading/ui/src/index.ts"
+      ],
       "@portfolio/crypto-ui-charts": ["libs/crypto/ui/charts/src/index.ts"],
       "@portfolio/crypto-ui-coin-info": [
         "libs/crypto/ui/coin-info/src/index.ts"
