@@ -15,6 +15,7 @@
 
 .currencies-list {
   padding: 28px 20px;
+  background-color: var(--color-dark-background);
 }
 
 .currencies-list__search {
@@ -45,4 +46,14 @@
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+.currencies-list__pair-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.currencies-list__transactionAmount-cell {
+  color: var(--color-text-secondary2);
 }

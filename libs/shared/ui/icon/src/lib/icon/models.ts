@@ -9,6 +9,7 @@ export type IconType =
   | 'moon'
   | 'status'
   | 'star'
+  | 'empty-star'
   | 'angular'
   | 'typescript'
   | 'javascript'
@@ -36,4 +37,6 @@ export type IconType =
   | 'tether'
   | 'arrow'
   | 'dropdown-arrow'
-  | 'lookup';
+  | 'lookup'
+  | 'sort-arrow-up'
+  | 'sort-arrow-down';

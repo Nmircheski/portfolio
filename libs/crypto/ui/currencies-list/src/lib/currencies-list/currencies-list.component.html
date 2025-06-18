@@ -34,11 +34,22 @@
   </div>
 
   <crypto-ui-table [data]="coinsList()">
-    <ng-template cryptoHeaderCell="'pair'">Pair</ng-template>
-    <ng-template cryptoDataCell="'pair'" [selectFrom]="coinsList()" let-item>
-      <div>
+    <ng-template cryptoHeaderCell="'pair'" [align]="'left'">Pair</ng-template>
+    <ng-template
+      cryptoDataCell="'pair'"
+      [selectFrom]="coinsList()"
+      [align]="'left'"
+      let-item
+      let-index="index"
+    >
+      <div class="currencies-list__pair-cell">
+        <portfolio-icon
+          [name]="index < 3 ? 'star' : 'empty-star'"
+          [iconSize]="'original'"
+          [align]="'text-top'"
+        ></portfolio-icon>
         <portfolio-icon [name]="item.pair.icon"></portfolio-icon>
-        <p>{{ item.pair.label }}</p>
+        <p class="caption2-bold">{{ item.pair.label }}</p>
       </div>
     </ng-template>
 
@@ -49,7 +60,12 @@
       let-item
     >
       <div>
-        <p>{{ item.currentPrice }}</p>
+        <p
+          cryptoTrendColor
+          [value]="item.dayToDayPrice.amount - item.currentPrice"
+        >
+          {{ item.currentPrice }}
+        </p>
       </div>
     </ng-template>
 
@@ -60,8 +76,12 @@
       let-item
     >
       <div>
-        <p>{{ item.dayToDayPrice.change }}</p>
-        <p>{{ item.dayToDayPrice.amount }}</p>
+        <p cryptoTrendColor [value]="item.dayToDayPrice.change">
+          {{ item.dayToDayPrice.change | cryptoTrendSign }}%
+        </p>
+        <p cryptoTrendColor [value]="item.dayToDayPrice.amount">
+          {{ item.dayToDayPrice.amount | cryptoTrendSign }}
+        </p>
       </div>
     </ng-template>
 
@@ -73,8 +93,11 @@
       [selectFrom]="coinsList()"
       let-item
     >
-      <div>
-        <p>{{ item.transactionAmount }}</p>
+      <div class="currencies-list__transactionAmount-cell">
+        <p>
+          {{ item.transactionAmount }}
+        </p>
+        <p>million</p>
       </div>
     </ng-template>
   </crypto-ui-table>

@@ -8,15 +8,39 @@ th {
   text-align: left;
 }
 
-.cdk-header-row {
-}
-
 .table__header-cell {
-  padding: var(--space-md);
+  padding: var(--space-xs);
   color: var(--color-text-secondary);
 }
 
 .table__data-cell {
-  padding: var(--space-md);
+  padding: var(--space-xs);
   color: var(--color-text-primary);
+
+  &--align-left {
+    text-align: left;
+  }
+
+  &--align-right {
+    text-align: right;
+  }
+}
+
+.table__header-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  &--align-left {
+    justify-content: flex-start;
+  }
+
+  &--align-right {
+    justify-content: flex-end;
+  }
+}
+
+.table__sort-icons {
+  display: flex;
+  flex-direction: column;
 }

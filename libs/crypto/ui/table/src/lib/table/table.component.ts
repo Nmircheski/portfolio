@@ -7,13 +7,14 @@ import {
   contentChildren,
   input,
 } from '@angular/core';
+import { IconComponent } from '@portfolio/ui/icon';
 import { DataCellDirective } from '../cells/data-cell/data-cell.directive';
 import { HeaderCellDirective } from '../cells/header-cell/header-cell.directive';
 import { CryptoTableDataSource } from './data-source';
 
 @Component({
   selector: 'crypto-ui-table',
-  imports: [CommonModule, CdkTableModule],
+  imports: [CommonModule, CdkTableModule, IconComponent],
   templateUrl: './table.component.html',
   styleUrl: './table.component.scss',
 })
@@ -28,14 +29,22 @@ export class TableComponent<T> {
     return this.headerCells().length && this.dataCells().length
       ? this.headerCells().map((hc) => {
           const headerTemplate = hc.templateRef;
-          const dataTemplate = this.dataCells().find(
+          const dataCell = this.dataCells().find(
             (c) => c.columnName() === hc.columnName()
-          )?.templateRef;
+          );
 
           return {
             columnName: hc.columnName,
-            headerTemplate,
-            dataTemplate,
+            header: {
+              headerTemplate,
+              align: hc.align,
+            },
+            data: dataCell
+              ? {
+                  dataTemplate: dataCell.templateRef,
+                  align: dataCell.align,
+                }
+              : null,
           };
         })
       : [];

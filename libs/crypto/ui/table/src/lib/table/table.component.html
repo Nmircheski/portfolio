@@ -6,23 +6,47 @@
       <input type="checkbox" checked />&nbsp;
     </td>
   </ng-container>
-  } @for (tableCell of cellTemplates(); track tableCell.columnName) {
+  } @for (tableCell of cellTemplates(); track tableCell.columnName(); let
+  index=$index) {
   <ng-container [cdkColumnDef]="tableCell.columnName()">
-    <th
-      cdk-header-cell
-      *cdkHeaderCellDef
-      class="table__header-cell caption2-normal"
-    >
-      <ng-container [ngTemplateOutlet]="tableCell.headerTemplate">
-      </ng-container>
+    <th cdk-header-cell *cdkHeaderCellDef class="table__header-cell">
+      <div
+        class="table__header-container table__header-container--align-{{
+          tableCell.header.align()
+        }}"
+      >
+        <p class="caption2-normal">
+          <ng-container [ngTemplateOutlet]="tableCell.header.headerTemplate">
+          </ng-container>
+        </p>
+        <div class="table__sort-icons">
+          <portfolio-icon
+            [name]="'sort-arrow-up'"
+            [iconSize]="'original'"
+          ></portfolio-icon>
+          <portfolio-icon
+            [name]="'sort-arrow-down'"
+            [iconSize]="'original'"
+            [align]="'text-top'"
+          ></portfolio-icon>
+        </div>
+      </div>
     </th>
-    <td cdk-cell *cdkCellDef="let element" class="table__data-cell">
+    @if (tableCell.data) {
+    <td
+      cdk-cell
+      *cdkCellDef="let element; let i = index"
+      class="table__data-cell caption2-normal table__data-cell--align-{{
+        tableCell.data.align()
+      }}"
+    >
       <ng-container
-        [ngTemplateOutlet]="tableCell.dataTemplate ?? null"
-        [ngTemplateOutletContext]="{ $implicit: element }"
+        [ngTemplateOutlet]="tableCell.data.dataTemplate"
+        [ngTemplateOutletContext]="{ $implicit: element, index: i }"
       >
       </ng-container>
     </td>
+    }
   </ng-container>
   }
 
