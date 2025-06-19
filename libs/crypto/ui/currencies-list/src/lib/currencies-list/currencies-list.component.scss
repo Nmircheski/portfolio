@@ -4,8 +4,8 @@
   min-width: 0;
   @include mat.tabs-overrides(
     (
-      active-indicator-color: var(--color-tabs-active),
-      active-focus-indicator-color: var(--color-tabs-active),
+      active-indicator-color: var(--color-primary),
+      active-focus-indicator-color: var(--color-primary),
       divider-color: var(--color-tabs-divider-line),
       active-label-text-color: var(--color-text-primary),
       inactive-label-text-color: var(--color-text-secondary),
@@ -19,7 +19,7 @@
 }
 
 .currencies-list__search {
-  background-color: var(--color-search-input);
+  background-color: var(--color-dark-hover);
   position: relative;
 }
 
