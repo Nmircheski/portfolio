@@ -1,19 +1,11 @@
+@use 'mixins' as *;
+
 .icon-container {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  &--align-text-bottom {
-    vertical-align: text-bottom;
-  }
-
-  &--align-text-top {
-    vertical-align: text-top;
-  }
-
-  &--align-baseline {
-    vertical-align: baseline;
-  }
+  @include generate-vertical-align-modifiers();
 
   &.sm {
     svg {

@@ -39,4 +39,5 @@ export type IconType =
   | 'dropdown-arrow'
   | 'lookup'
   | 'sort-arrow-up'
-  | 'sort-arrow-down';
+  | 'sort-arrow-down'
+  | 'eye';

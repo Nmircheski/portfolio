@@ -13,25 +13,7 @@
 
   <div class="currencies-list__tabs">
     <!-- TODO tabs should be a component -->
-    <mat-tab-group stretchTabs>
-      @for (item of tabsList(); track $index) {
-      <mat-tab>
-        <ng-template mat-tab-label>
-          <div class="currencies-list__tab-label caption2-bold">
-            @if (item.icon) {
-            <portfolio-icon
-              [name]="item.icon"
-              [iconSize]="'original'"
-              [align]="'text-top'"
-            >
-            </portfolio-icon>
-            }
-            <p>{{ item.label | uppercase }}</p>
-          </div>
-        </ng-template></mat-tab
-      >
-      }
-    </mat-tab-group>
+    <crypto-ui-tabs [tabsList]="tabsList()"></crypto-ui-tabs>
   </div>
 
   <crypto-ui-table [data]="coinsList()">

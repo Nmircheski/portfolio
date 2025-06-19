@@ -1,16 +1,5 @@
-@use '@angular/material' as mat;
-
 :host {
   min-width: 0;
-  @include mat.tabs-overrides(
-    (
-      active-indicator-color: var(--color-primary),
-      active-focus-indicator-color: var(--color-primary),
-      divider-color: var(--color-tabs-divider-line),
-      active-label-text-color: var(--color-text-primary),
-      inactive-label-text-color: var(--color-text-secondary),
-    )
-  );
 }
 
 .currencies-list {
@@ -40,12 +29,6 @@
 
 .currencies-list__tabs {
   width: 100%;
-}
-
-.currencies-list__tab-label {
-  display: flex;
-  align-items: center;
-  gap: 5px;
 }
 
 .currencies-list__pair-cell {

@@ -1,32 +1,32 @@
 import { CommonModule } from '@angular/common';
 import { Component, input, signal } from '@angular/core';
-import { MatTabsModule } from '@angular/material/tabs';
 import {
   DataCellDirective,
   HeaderCellDirective,
   TableComponent,
 } from '@portfolio/crypto-ui-table';
+import { Tab, TabsComponent } from '@portfolio/crypto-ui-tabs';
 import { TrendColorDirective, TrendSignPipe } from '@portfolio/crypto-ui-utils';
-import { IconComponent, IconType } from '@portfolio/ui/icon';
+import { IconComponent } from '@portfolio/ui/icon';
 import { CurrencyTableItem } from './models';
 
 @Component({
   selector: 'crypto-ui-currencies-list',
   imports: [
     CommonModule,
-    MatTabsModule,
     IconComponent,
     TableComponent,
     HeaderCellDirective,
     DataCellDirective,
     TrendColorDirective,
     TrendSignPipe,
+    TabsComponent,
   ],
   templateUrl: './currencies-list.component.html',
   styleUrl: './currencies-list.component.scss',
 })
 export class CurrenciesListComponent {
-  tabsList = input<{ label: string; icon?: IconType }[]>([
+  tabsList = input<Tab[]>([
     {
       label: 'FAVORITE',
       icon: 'star',

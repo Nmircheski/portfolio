@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { VerticalAlign } from '@portfolio/shared/models';
 import { IconType } from './models';
 
 @Component({
@@ -13,5 +14,5 @@ export class IconComponent {
   name = input.required<IconType>();
   glow = input(false);
   iconSize = input<'sm' | 'md' | 'lg' | 'original'>('sm');
-  align = input<'text-bottom' | 'text-top' | 'baseline'>('text-bottom');
+  align = input<VerticalAlign>('text-bottom');
 }

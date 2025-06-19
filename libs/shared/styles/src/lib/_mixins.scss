@@ -108,6 +108,14 @@
   }
 }
 
+@mixin generate-vertical-align-modifiers() {
+  @each $name, $value in $vertical-alignments {
+    &--align-#{$name} {
+      vertical-align: #{$value};
+    }
+  }
+}
+
 @mixin generate-all-spacing-modifiers() {
   @include generate-margin-modifiers();
   @include generate-padding-modifiers();
