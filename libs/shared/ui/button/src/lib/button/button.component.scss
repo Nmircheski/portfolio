@@ -6,9 +6,13 @@
   justify-content: center;
   gap: var(--space-sm);
   white-space: nowrap;
+  position: relative;
+  color: #ffffff;
+  z-index: 0;
+  border-bottom-right-radius: 0;
 
   &--regular {
-    padding: 1rem 2rem;
+    padding: var(--button-padding, 1rem 2rem);
   }
 
   &--icon {
@@ -19,15 +23,34 @@
     width: 100%;
   }
 
-  &--primary {
-    background: linear-gradient(90deg, #ff0066 0%, #a020f0 100%);
-    color: #ffffff;
+  &--primary,
+  &--primary.button--skew-left::before,
+  &--primary.button--skew-right::after {
+    background: var(--color-primary);
   }
-  &--surface {
-    background-color: var(--color-surface-mid);
+
+  &--success,
+  &--success.button--skew-left::before,
+  &--success.button--skew-right::after {
+    background-color: var(--color-success);
   }
-  &--transparent {
+
+  &--critical,
+  &--critical.button--skew-left::before,
+  &--critical.button--skew-right::after {
+    background-color: var(--color-critical);
+  }
+
+  &--transparent,
+  &--transparent.button--skew-left::before,
+  &--transparent.button--skew-right::after {
     background: transparent;
+  }
+
+  &--inactive,
+  &--inactive.button--skew-left::before,
+  &--inactive.button--skew-right::after {
+    background-color: var(--color-dark-hover);
   }
 
   &:hover {
@@ -42,5 +65,44 @@
     width: 100%;
     padding: var(--space-md);
     display: inline-block;
+  }
+
+  //TODO create skew mixin
+
+  &--skew-right::after {
+    z-index: -1;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -18px;
+    width: 30px;
+    height: 100%;
+    transform: skewX(-15deg);
+    border-radius: 4px;
+    z-index: -1;
+  }
+
+  &--skew-right {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &--skew-left::before {
+    z-index: -1;
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -18px;
+    width: 30px;
+    height: 100%;
+    transform: skewX(-15deg);
+    border-radius: 4px;
+  }
+
+  &--skew-left {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }

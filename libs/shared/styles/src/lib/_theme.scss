@@ -30,6 +30,10 @@ currently they are used as the color name
   --color-accent: var(--color-muted-400);
   --color-error: #dc3545;
 
+  //Button
+  --color-button-primary: linear-gradient(90deg, #ff0066 0%, #a020f0 100%);
+  --button-padding: 1rem 2rem;
+
   @include generate-spacing-tokens();
 }
 
