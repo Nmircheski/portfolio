@@ -45,7 +45,7 @@
       "@portfolio/crypto-ui-table": ["libs/crypto/ui/table/src/index.ts"],
       "@portfolio/crypto-ui-utils": ["libs/crypto/ui/utils/src/index.ts"],
       "@portfolio/cta": ["libs/my-portfolio/cta/src/index.ts"],
-      "@portfolio/exchange-widget": [
+      "@portfolio/crypto-ui-exchange-widget": [
         "libs/crypto/ui/exchange-widget/src/index.ts"
       ],
       "@portfolio/experience": ["libs/my-portfolio/experience/src/index.ts"],

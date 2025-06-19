@@ -1,1 +1,69 @@
-<p>ExchangeWidget works!</p>
+<section aria-labelledby="exchange">
+  <h2 id="exchange__title">Spot</h2>
+
+  <nav aria-label="Trade Action Tabs">
+    <ul class="exchange__button-list">
+      <li class="exchange__button-list-item">
+        <portfolio-button
+          [bgColor]="'success'"
+          [borderRadius]="'xs'"
+          [skew]="'right'"
+          fullWidth
+          >BUY</portfolio-button
+        >
+      </li>
+      <li class="exchange__button-list-item">
+        <portfolio-button
+          [bgColor]="'critical'"
+          [borderRadius]="'xs'"
+          [skew]="'left'"
+          [active]="false"
+          fullWidth
+          >SELL</portfolio-button
+        >
+      </li>
+    </ul>
+  </nav>
+
+  <div role="tablist" aria-label="Order Type">
+    <button role="tab" aria-selected="false">Limit</button>
+    <button role="tab" aria-selected="true">Market</button>
+    <button role="tab" aria-selected="false">Conditional</button>
+  </div>
+
+  <form aria-label="Market Order Form">
+    <div>
+      <label for="available-balance">Available Balance</label>
+      <output id="available-balance">0 USDT</output>
+    </div>
+
+    <div>
+      <label for="order-price">Order Price</label>
+      <input
+        type="number"
+        id="order-price"
+        placeholder="Order Price"
+        aria-describedby="currency-suffix"
+      />
+      <span id="currency-suffix">USD</span>
+    </div>
+
+    <div aria-label="Amount Slider">
+      <!-- Replace with input[type=range] or custom slider if needed -->
+      <div
+        class="custom-slider"
+        role="slider"
+        aria-valuemin="0"
+        aria-valuemax="100"
+        aria-valuenow="25"
+        tabindex="0"
+      ></div>
+    </div>
+
+    <button type="submit">Buy BTC</button>
+  </form>
+
+  <footer>
+    <a href="#">Spot trading Fees</a>
+  </footer>
+</section>
