@@ -1,6 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { TradingHeaderComponent } from '@portfolio/crypto-feature-trading-ui';
+import {
+  OrdersTableComponent,
+  TradingHeaderComponent,
+} from '@portfolio/crypto-feature-trading-ui';
 import { CurrenciesListComponent } from '@portfolio/crypto-ui-currencies-list';
 import { ExchangeWidgetComponent } from '@portfolio/crypto-ui-exchange-widget';
 @Component({
@@ -8,6 +11,7 @@ import { ExchangeWidgetComponent } from '@portfolio/crypto-ui-exchange-widget';
   imports: [
     CommonModule,
     TradingHeaderComponent,
+    OrdersTableComponent,
     CurrenciesListComponent,
     ExchangeWidgetComponent,
   ],

@@ -5,13 +5,9 @@
   grid-template-columns: 2fr 1fr;
   grid-template-areas:
     'header  header'
-    'chart  exchange' //TODO this is for testing purposes
-    'table  search-list'
+    'chart  search-list'
+    'table  exchange'
     'table  orders';
-  // 'header  header'
-  // 'chart  search-list'
-  // 'table  exchange'
-  // 'table  orders';
 }
 
 .trading__header {

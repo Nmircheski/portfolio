@@ -1,0 +1,12 @@
+.orders {
+  padding: var(--space-md);
+  background-color: var(--color-dark-background);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.orders__quantity-cell,
+.orders__timestamp-cell {
+  color: var(--color-secondary2);
+}

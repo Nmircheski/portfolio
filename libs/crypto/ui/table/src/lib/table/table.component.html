@@ -12,13 +12,14 @@
     <th cdk-header-cell *cdkHeaderCellDef class="table__header-cell">
       <div
         class="table__header-container table__header-container--align-{{
-          tableCell.header.align()
+          tableCell.headerCell.align()
         }}"
       >
         <p class="caption2-normal">
-          <ng-container [ngTemplateOutlet]="tableCell.header.headerTemplate">
+          <ng-container [ngTemplateOutlet]="tableCell.headerCell.templateRef">
           </ng-container>
         </p>
+        @if (tableCell.headerCell.sortable()) {
         <div class="table__sort-icons">
           <portfolio-icon
             [name]="'sort-arrow-up'"
@@ -30,18 +31,19 @@
             [align]="'text-top'"
           ></portfolio-icon>
         </div>
+        }
       </div>
     </th>
-    @if (tableCell.data) {
+    @if (tableCell.dataCell) {
     <td
       cdk-cell
       *cdkCellDef="let element; let i = index"
       class="table__data-cell caption2-normal table__data-cell--align-{{
-        tableCell.data.align()
+        tableCell.dataCell.align()
       }}"
     >
       <ng-container
-        [ngTemplateOutlet]="tableCell.data.dataTemplate"
+        [ngTemplateOutlet]="tableCell.dataCell.templateRef"
         [ngTemplateOutletContext]="{ $implicit: element, index: i }"
       >
       </ng-container>
@@ -153,5 +155,10 @@
   </ng-container> -->
 
   <tr cdk-header-row *cdkHeaderRowDef="displayedColumns()"></tr>
-  <tr cdk-row *cdkRowDef="let row; columns: displayedColumns()"></tr>
+  <tr
+    cdk-row
+    *cdkRowDef="let row; let i = index; columns: displayedColumns()"
+    class="table__row"
+    [ngClass]="row | rowClassList : i : rowClassListFn()"
+  ></tr>
 </table>

@@ -12,12 +12,13 @@
   </div>
 
   <div class="currencies-list__tabs">
-    <!-- TODO tabs should be a component -->
     <crypto-ui-tabs [tabsList]="tabsList()"></crypto-ui-tabs>
   </div>
 
   <crypto-ui-table [data]="coinsList()">
-    <ng-template cryptoHeaderCell="'pair'" [align]="'left'">Pair</ng-template>
+    <ng-template cryptoHeaderCell="'pair'" [align]="'left'" sortable
+      ><p class="currencies-list__header-cell">Pair</p></ng-template
+    >
     <ng-template
       cryptoDataCell="'pair'"
       [selectFrom]="coinsList()"
@@ -25,7 +26,7 @@
       let-item
       let-index="index"
     >
-      <div class="currencies-list__pair-cell">
+      <div class="currencies-list__pair-cell currencies-list__data-cell">
         <portfolio-icon
           [name]="index < 3 ? 'star' : 'empty-star'"
           [iconSize]="'original'"
@@ -36,13 +37,15 @@
       </div>
     </ng-template>
 
-    <ng-template cryptoHeaderCell="'currentPrice'">Current Price</ng-template>
+    <ng-template cryptoHeaderCell="'currentPrice'" sortable
+      ><p class="currencies-list__header-cell">Current Price</p></ng-template
+    >
     <ng-template
       cryptoDataCell="'currentPrice'"
       [selectFrom]="coinsList()"
       let-item
     >
-      <div>
+      <div class="currencies-list__data-cell">
         <p
           cryptoTrendColor
           [value]="item.dayToDayPrice.amount - item.currentPrice"
@@ -52,13 +55,15 @@
       </div>
     </ng-template>
 
-    <ng-template cryptoHeaderCell="'dayToDayPrice'">Day to day</ng-template>
+    <ng-template cryptoHeaderCell="'dayToDayPrice'" sortable
+      ><p class="currencies-list__header-cell">Day to day</p></ng-template
+    >
     <ng-template
       cryptoDataCell="'dayToDayPrice'"
       [selectFrom]="coinsList()"
       let-item
     >
-      <div>
+      <div class="currencies-list__data-cell">
         <p cryptoTrendColor [value]="item.dayToDayPrice.change">
           {{ item.dayToDayPrice.change | cryptoTrendSign }}%
         </p>
@@ -68,15 +73,19 @@
       </div>
     </ng-template>
 
-    <ng-template cryptoHeaderCell="'transactionAmount'"
-      >Transaction amount</ng-template
+    <ng-template cryptoHeaderCell="'transactionAmount'" sortable
+      ><p class="currencies-list__header-cell">
+        Transaction amount
+      </p></ng-template
     >
     <ng-template
       cryptoDataCell="'transactionAmount'"
       [selectFrom]="coinsList()"
       let-item
     >
-      <div class="currencies-list__transactionAmount-cell">
+      <div
+        class="currencies-list__data-cell currencies-list__transactionAmount-cell"
+      >
         <p>
           {{ item.transactionAmount }}
         </p>

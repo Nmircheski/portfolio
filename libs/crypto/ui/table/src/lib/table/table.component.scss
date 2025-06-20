@@ -9,12 +9,10 @@ th {
 }
 
 .table__header-cell {
-  padding: var(--space-xs);
   color: var(--color-secondary);
 }
 
 .table__data-cell {
-  padding: var(--space-xs);
   color: var(--color-text-primary);
 
   &--align-left {
@@ -43,4 +41,8 @@ th {
 .table__sort-icons {
   display: flex;
   flex-direction: column;
+}
+
+.table__row-alternate-color {
+  background-color: var(--color-line-dark);
 }
