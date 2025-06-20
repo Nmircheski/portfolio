@@ -7,7 +7,9 @@ import {
   RowClassFn,
   TableComponent,
 } from '@portfolio/crypto-ui-table';
-import { TrendColorDirective, TrendSignPipe } from '@portfolio/crypto-ui-utils';
+import { Tab, TabsComponent } from '@portfolio/crypto-ui-tabs';
+import { TrendColorDirective } from '@portfolio/crypto-ui-utils';
+import { IconComponent, IconType } from '@portfolio/ui/icon';
 
 @Component({
   selector: 'crypto-trading-orders-table',
@@ -17,28 +19,161 @@ import { TrendColorDirective, TrendSignPipe } from '@portfolio/crypto-ui-utils';
     DataCellDirective,
     HeaderCellDirective,
     TrendColorDirective,
-    TrendSignPipe,
+    IconComponent,
+    TabsComponent,
   ],
   templateUrl: './orders-table.component.html',
   styleUrl: './orders-table.component.scss',
 })
 export class OrdersTableComponent {
+  tabsList = signal<Tab[]>([
+    {
+      label: 'OPEN ORDERS',
+    },
+    {
+      label: 'ORDER HISTORY',
+    },
+    {
+      label: 'TRADE HISTORY',
+    },
+    {
+      label: 'FUNDS',
+    },
+  ]);
+
   ordersList = signal<OrderTableItem[]>([
-    { price: 61408.47, quantity: 0.02, timestamp: 0.02 },
-    { price: 61408.47, quantity: 0.357777, timestamp: 0.357777 },
-    { price: 61408.47, quantity: 1.03408, timestamp: 1.03408 },
-    { price: 61408.47, quantity: 0.02, timestamp: 0.02 },
-    { price: 61408.47, quantity: 0.357777, timestamp: 0.357777 },
-    { price: 61408.47, quantity: 1.03408, timestamp: 1.03408 },
-    { price: 61408.47, quantity: 0.02, timestamp: 0.02 },
-    { price: 61408.47, quantity: 0.357777, timestamp: 0.357777 },
-    { price: 61408.47, quantity: 1.03408, timestamp: 1.03408 },
-    { price: 61408.47, quantity: 0.02, timestamp: 0.02 },
-    { price: 61408.47, quantity: 0.357777, timestamp: 0.357777 },
-    { price: 61408.47, quantity: 1.03408, timestamp: 1.03408 },
-    { price: 61408.47, quantity: 0.02, timestamp: 0.02 },
-    { price: 61408.47, quantity: 0.357777, timestamp: 0.357777 },
-    { price: 61408.47, quantity: 1.03408, timestamp: 1.03408 },
+    {
+      date: '10-02 10:36:42',
+      pair: 'C98/BUSD',
+      type: 'Limit',
+      side: 'Sell',
+      price: 7632,
+      amount: 40.0,
+      filled: '0.00%',
+      total: '305.280 BUSD',
+      triggerConditions: '-',
+      actionIcon: 'delete',
+    },
+    {
+      date: '10-02 10:36:42',
+      pair: 'C98/BUSD',
+      type: 'Limit',
+      side: 'Sell',
+      price: 7632,
+      amount: 40.0,
+      filled: '0.00%',
+      total: '305.280 BUSD',
+      triggerConditions: '-',
+      actionIcon: 'delete',
+    },
+    {
+      date: '10-02 10:36:42',
+      pair: 'NEAR/BUSD',
+      type: 'Limit',
+      side: 'Sell',
+      price: 7632,
+      amount: 40.0,
+      filled: '0.00%',
+      total: '305.280 BUSD',
+      triggerConditions: '-',
+      actionIcon: 'delete',
+    },
+    {
+      date: '10-02 10:36:42',
+      pair: 'ALICE/BUSD',
+      type: 'Limit',
+      side: 'Sell',
+      price: 7632,
+      amount: 40.0,
+      filled: '0.00%',
+      total: '305.280 BUSD',
+      triggerConditions: '-',
+      actionIcon: 'delete',
+    },
+    {
+      date: '10-02 10:36:42',
+      pair: 'C98/BUSD',
+      type: 'Limit',
+      side: 'Sell',
+      price: 7632,
+      amount: 40.0,
+      filled: '0.00%',
+      total: '305.280 BUSD',
+      triggerConditions: '-',
+      actionIcon: 'delete',
+    },
+    {
+      date: '10-02 10:36:42',
+      pair: 'NEAR/BUSD',
+      type: 'Limit',
+      side: 'Sell',
+      price: 7632,
+      amount: 40.0,
+      filled: '0.00%',
+      total: '305.280 BUSD',
+      triggerConditions: '-',
+      actionIcon: 'delete',
+    },
+    {
+      date: '10-02 10:36:42',
+      pair: 'ALICE/BUSD',
+      type: 'Limit',
+      side: 'Sell',
+      price: 7632,
+      amount: 40.0,
+      filled: '0.00%',
+      total: '305.280 BUSD',
+      triggerConditions: '-',
+      actionIcon: 'delete',
+    },
+    {
+      date: '10-02 10:36:42',
+      pair: 'C98/BUSD',
+      type: 'Limit',
+      side: 'Sell',
+      price: 7632,
+      amount: 40.0,
+      filled: '0.00%',
+      total: '305.280 BUSD',
+      triggerConditions: '-',
+      actionIcon: 'delete',
+    },
+    {
+      date: '10-02 10:36:42',
+      pair: 'MBOX/USDT',
+      type: 'Limit',
+      side: 'Sell',
+      price: 7632,
+      amount: 40.0,
+      filled: '0.00%',
+      total: '305.280 BUSD',
+      triggerConditions: '-',
+      actionIcon: 'delete',
+    },
+    {
+      date: '10-02 10:36:42',
+      pair: 'MBOX/USDT',
+      type: 'Limit',
+      side: 'Sell',
+      price: 7632,
+      amount: 40.0,
+      filled: '0.00%',
+      total: '305.280 BUSD',
+      triggerConditions: '-',
+      actionIcon: 'delete',
+    },
+    {
+      date: '10-02 10:36:42',
+      pair: 'MBOX/USDT',
+      type: 'Limit',
+      side: 'Sell',
+      price: 7632,
+      amount: 40.0,
+      filled: '0.00%',
+      total: '305.280 BUSD',
+      triggerConditions: '-',
+      actionIcon: 'delete',
+    },
   ]);
 
   rowClassListFn: RowClassFn<OrderTableItem> = (
@@ -50,7 +185,14 @@ export class OrdersTableComponent {
 }
 
 export interface OrderTableItem {
-  price: number;
-  quantity: number;
-  timestamp: number;
+  date: string; // e.g. '10-02 10:36:42'
+  pair: string; // e.g. 'C98/BUSD'
+  type: 'Limit' | 'Market'; // Based on the table
+  side: 'Buy' | 'Sell';
+  price: number; // e.g. 7632
+  amount: number; // e.g. 40.0
+  filled: string; // e.g. '0.00%'
+  total: string; // e.g. '305.280 BUSD'
+  triggerConditions: string; // e.g. '-'
+  actionIcon: IconType;
 }

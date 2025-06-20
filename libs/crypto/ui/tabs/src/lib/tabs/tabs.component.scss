@@ -13,6 +13,16 @@
   );
 }
 
+.tabs {
+  &--hide-indicator {
+    @include mat.tabs-overrides(
+      (
+        active-indicator-height: 0,
+      )
+    );
+  }
+}
+
 .tabs__label-wrapper {
   display: flex;
   align-items: center;

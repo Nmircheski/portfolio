@@ -40,6 +40,7 @@ export type IconType =
   | 'lookup'
   | 'sort-arrow-up'
   | 'sort-arrow-down'
-  | 'eye';
+  | 'eye'
+  | 'delete';
 
 export type SvgRotation = 0 | -90 | -45 | 45 | 90;

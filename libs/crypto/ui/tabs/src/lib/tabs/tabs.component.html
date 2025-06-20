@@ -1,4 +1,7 @@
-<mat-tab-group>
+<mat-tab-group
+  class="tabs"
+  [class.tabs--hide-indicator]="hideIndicator() || null"
+>
   @for (item of tabsList(); track $index) {
   <mat-tab>
     <ng-template mat-tab-label>

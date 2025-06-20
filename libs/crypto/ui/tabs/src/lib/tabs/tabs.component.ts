@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, input } from '@angular/core';
+import { booleanAttribute, Component, input } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { IconComponent } from '@portfolio/ui/icon';
 import { Tab } from './models';
@@ -12,4 +12,5 @@ import { Tab } from './models';
 })
 export class TabsComponent {
   tabsList = input.required<Tab[]>();
+  hideIndicator = input(false, { transform: booleanAttribute });
 }
