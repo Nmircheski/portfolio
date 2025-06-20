@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { VerticalAlign } from '@portfolio/shared/models';
-import { IconType } from './models';
+import { IconType, SvgRotation } from './models';
 
 @Component({
   selector: 'portfolio-icon',
@@ -15,4 +15,5 @@ export class IconComponent {
   glow = input(false);
   iconSize = input<'sm' | 'md' | 'lg' | 'original'>('sm');
   align = input<VerticalAlign>('text-bottom');
+  rotation = input<SvgRotation>(0);
 }

@@ -1,0 +1,15 @@
+<section class="stepper">
+  @for (step of steps; track step) {
+  <portfolio-button
+    class="step"
+    (clicked)="onClick($index)"
+    [bgColor]="'transparent'"
+  >
+    <div
+      class="stepper-diamond"
+      [class.stepper-diamond--active]="selectedIndex === $index"
+    ></div>
+  </portfolio-button>
+
+  }
+</section>

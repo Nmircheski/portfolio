@@ -4,7 +4,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   @include generate-vertical-align-modifiers();
 
   &.sm {
@@ -31,5 +30,18 @@
     svg {
       filter: drop-shadow(0 0 1px white);
     }
+  }
+
+  &--rotate-45 {
+    transform: rotate(45deg);
+  }
+  &--rotate--45 {
+    transform: rotate(-45deg);
+  }
+  &--rotate-90 {
+    transform: rotate(90deg);
+  }
+  &--rotate--90 {
+    transform: rotate(-90deg);
   }
 }

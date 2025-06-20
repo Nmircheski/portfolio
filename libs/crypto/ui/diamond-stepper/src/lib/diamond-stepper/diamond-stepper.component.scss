@@ -1,0 +1,39 @@
+$diamond-size-active: 0.75rem;
+$diamond-size-inactive: 0.5rem;
+
+.stepper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 0;
+  height: 1.5rem;
+}
+
+.stepper::after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  top: 50%; // vertically center
+  left: 6px;
+  right: 6px;
+  width: calc((100%) - 12px); // full width of parent
+  height: 2px; // thin line
+  background-color: var(--color-line-dark); // or any color
+  transform: translateY(-50%);
+}
+
+.stepper-diamond {
+  width: $diamond-size-inactive;
+  height: $diamond-size-inactive;
+  border: 2px solid var(--color-secondary);
+  transform: rotate(45deg);
+  background-color: var(--color-dark-background);
+}
+
+.stepper-diamond--active {
+  width: $diamond-size-active;
+  height: $diamond-size-active;
+  border-color: #fff;
+}

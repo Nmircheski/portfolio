@@ -41,3 +41,5 @@ export type IconType =
   | 'sort-arrow-up'
   | 'sort-arrow-down'
   | 'eye';
+
+export type SvgRotation = 0 | -90 | -45 | 45 | 90;

@@ -61,23 +61,28 @@
         <span class="exchange__input-suffix caption2-bold">USD</span>
       </div>
 
-      <div aria-label="Amount Slider">
-        <!-- Replace with input[type=range] or custom slider if needed -->
-        <div
-          class="custom-slider"
-          role="slider"
-          aria-valuemin="0"
-          aria-valuemax="100"
-          aria-valuenow="25"
-          tabindex="0"
-        ></div>
-      </div>
+      <crypto-ui-diamond-stepper [linear]="true">
+        <cdk-step>Step 1</cdk-step>
+        <cdk-step>Step 2</cdk-step>
+        <cdk-step>Step 3</cdk-step>
+        <cdk-step>Step 4</cdk-step>
+      </crypto-ui-diamond-stepper>
 
-      <button type="submit">Buy BTC</button>
+      <portfolio-button [bgColor]="'success'" fullWidth [borderRadius]="'xs'"
+        >Buy BTC</portfolio-button
+      >
     </form>
-
-    <footer>
-      <a href="#">Spot trading Fees</a>
+    <footer class="exchange__footer">
+      <a class="exchange__footer-link caption2-normal"
+        >Spot trading Fees
+        <portfolio-icon
+          class="exchange__foter-arrow"
+          [name]="'dropdown-arrow'"
+          [iconSize]="'original'"
+          [rotation]="-90"
+          [align]="'sub'"
+        ></portfolio-icon
+      ></a>
     </footer>
   </div>
 </section>

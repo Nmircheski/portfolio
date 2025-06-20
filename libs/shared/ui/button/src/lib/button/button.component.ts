@@ -22,7 +22,6 @@ export class ButtonComponent {
   fullWidth = input(false, { transform: booleanAttribute });
   borderRadius = input<Radius>('md');
   skew = input<'left' | 'right'>();
-
   active = input(true);
 
   clicked = output<void>();

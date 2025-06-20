@@ -1,5 +1,7 @@
 <span
-  class="icon-container {{ iconSize() }} icon-container--align-{{ align() }}"
+  class="icon-container {{ iconSize() }} icon-container--align-{{
+    align()
+  }} icon-container--rotate-{{ rotation() }}"
   [class.icon-container--glow]="glow()"
 >
   @switch (name()) { @case ('hamburger') {
