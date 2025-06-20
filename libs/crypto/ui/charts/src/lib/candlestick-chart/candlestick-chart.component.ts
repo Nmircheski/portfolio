@@ -1,11 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { ButtonComponent } from '@portfolio/ui/button';
 import { EChartsCoreOption } from 'echarts';
 import { NgxEchartsDirective } from 'ngx-echarts';
-
 @Component({
   selector: 'crypto-ui-candlestick-chart',
-  imports: [CommonModule, NgxEchartsDirective],
+  imports: [CommonModule, NgxEchartsDirective, ButtonComponent],
   templateUrl: './candlestick-chart.component.html',
   styleUrl: './candlestick-chart.component.scss',
 })
@@ -15,6 +15,41 @@ export class CandlestickChartComponent {
     79330000, 89440000, 86160000, 79330000, 89440000, 86160000, 79330000,
     89440000,
   ];
+
+  filtersList = [
+    {
+      label: '1m',
+    },
+    {
+      label: '5m',
+    },
+    {
+      label: '15m',
+      active: true,
+    },
+    {
+      label: '4h',
+    },
+    {
+      label: 'D',
+    },
+    {
+      label: 'W',
+    },
+    {
+      label: 'M',
+    },
+    {
+      label: 'Y',
+    },
+  ];
+
+  filterChanged(label: string) {
+    this.filtersList.forEach((item) => {
+      item.active = label === item.label;
+    });
+  }
+
   values: [number, number, number, number, number][] = [
     [696.73, 774.05, 678.9, 793.1, 622],
     [973.69, 968.72, 963.87, 992.42, 684],
@@ -310,6 +345,13 @@ export class CandlestickChartComponent {
     }
 
     this.options.set({
+      tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+          animation: false,
+          type: 'cross',
+        },
+      },
       xAxis: [
         {
           type: 'category',

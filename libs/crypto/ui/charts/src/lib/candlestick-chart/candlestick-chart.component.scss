@@ -1,3 +1,29 @@
+.chart {
+  background-color: var(--color-dark-background);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.chart__header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: var(--space-md) 1.25rem;
+}
+
+.chart__filters-list {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.chart__filters-item {
+  width: 2rem;
+}
+
 .candlestick-chart {
   height: 100%;
+  width: 100%;
 }

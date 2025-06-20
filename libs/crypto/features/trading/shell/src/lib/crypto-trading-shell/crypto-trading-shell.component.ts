@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import {
+  OrdersTableComponent,
   TradesTableComponent,
   TradingHeaderComponent,
 } from '@portfolio/crypto-feature-trading-ui';
+import { CandlestickChartComponent } from '@portfolio/crypto-ui-charts';
 import { CurrenciesListComponent } from '@portfolio/crypto-ui-currencies-list';
 import { ExchangeWidgetComponent } from '@portfolio/crypto-ui-exchange-widget';
-import { OrdersTableComponent } from '../../../../ui/src/lib/orders-table/orders-table.component';
 @Component({
   selector: 'crypto-crypto-trading-shell',
   imports: [
@@ -16,6 +17,7 @@ import { OrdersTableComponent } from '../../../../ui/src/lib/orders-table/orders
     CurrenciesListComponent,
     ExchangeWidgetComponent,
     OrdersTableComponent,
+    CandlestickChartComponent,
   ],
   templateUrl: './crypto-trading-shell.component.html',
   styleUrl: './crypto-trading-shell.component.scss',
