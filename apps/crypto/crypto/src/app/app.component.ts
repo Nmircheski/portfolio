@@ -14,7 +14,7 @@ import {
   TooltipComponent,
 } from 'echarts/components';
 import * as echarts from 'echarts/core';
-import { CanvasRenderer } from 'echarts/renderers';
+import { SVGRenderer } from 'echarts/renderers';
 import { provideEchartsCore } from 'ngx-echarts';
 echarts.use([
   PieChart,
@@ -24,7 +24,7 @@ echarts.use([
   DataZoomComponent,
   GridComponent,
   TooltipComponent,
-  CanvasRenderer,
+  SVGRenderer,
 ]);
 
 @Component({
