@@ -16,7 +16,11 @@
       <portfolio-card>
         <div class="my-work__card">
           <div class="my-work__img-container">
-            <img [src]="'./dashboard.jpg'" class="my-work__thumbnail" />
+            <img
+              [src]="'./dashboard.jpg'"
+              class="my-work__thumbnail"
+              [alt]="'Crypto Dashboard'"
+            />
           </div>
           <h3 class="title-medium">My Project</h3>
           <p class="my-work__card-description body-normal">
@@ -33,8 +37,8 @@
           </div>
           <div class="my-work__links">
             <portfolio-button> Live Preview </portfolio-button>
-            <portfolio-button [bgColor]="'primary'">
-              <span class="my-work__code">Source Code</span>
+            <portfolio-button [bgColor]="'secondary'">
+              Source Code
             </portfolio-button>
           </div>
         </div>
@@ -42,7 +46,11 @@
       <portfolio-card>
         <div class="my-work__card">
           <div class="my-work__img-container">
-            <img class="my-work__thumbnail" [src]="'./dashboard.jpg'" />
+            <img
+              class="my-work__thumbnail"
+              [src]="'./dashboard.jpg'"
+              [alt]="'Crypto Dashboard'"
+            />
           </div>
           <h3 class="title-medium">My Project</h3>
           <p class="my-work__card-description body-normal">
@@ -59,8 +67,8 @@
           </div>
           <div class="my-work__links">
             <portfolio-button> Live Preview </portfolio-button>
-            <portfolio-button [bgColor]="'primary'">
-              <span class="my-work__code">Source Code</span>
+            <portfolio-button [bgColor]="'secondary'">
+              Source Code
             </portfolio-button>
           </div>
         </div>

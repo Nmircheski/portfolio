@@ -29,6 +29,11 @@
     background: var(--color-primary);
   }
 
+  &--secondary,
+  &--secondary.button--skew-left::before,
+  &--secondary.button--skew-right::after {
+    background: var(--color-secondary);
+  }
   &--success,
   &--success.button--skew-left::before,
   &--success.button--skew-right::after {

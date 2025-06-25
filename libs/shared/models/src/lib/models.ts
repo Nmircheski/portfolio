@@ -21,3 +21,10 @@ export type VerticalAlign =
   | 'text-bottom'
   | 'sub'
   | 'super';
+
+export type BgColor =
+  | 'primary'
+  | 'secondary'
+  | 'success'
+  | 'critical'
+  | 'transparent';

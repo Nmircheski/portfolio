@@ -9,14 +9,14 @@
 
     <div class="hero__actions">
       <portfolio-button> Contact me </portfolio-button>
-      <portfolio-button [bgColor]="'primary'"> Download CV </portfolio-button>
+      <portfolio-button [bgColor]="'secondary'"> Download CV </portfolio-button>
     </div>
 
     <portfolio-card class="hero__card">
       <div class="hero__card-content">
         <h3 class="hero__card-title title-normal-sm">Scalable Technology</h3>
         <portfolio-button class="hero__card-cta" [bgColor]="'transparent'"
-          >Learn More</portfolio-button
+          ><span class="hero__cta-button">Learn More</span></portfolio-button
         >
       </div>
     </portfolio-card>
@@ -24,8 +24,6 @@
     <p class="hero__description body-normal">
       Step into the future with cutting-edge innovation, seamless
     </p>
-    <!-- <div class="hero__img-container"> -->
     <img [src]="'/profile-photo-3.png'" alt="Hero Image" class="hero__img" />
-    <!-- </div> -->
   </div>
 </portfolio-page-section>
