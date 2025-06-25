@@ -31,7 +31,7 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - run: yarn
+      - run: yarn --silent
       - run: npx playwright install --with-deps
       - uses: nrwl/nx-set-shas@v4
 
