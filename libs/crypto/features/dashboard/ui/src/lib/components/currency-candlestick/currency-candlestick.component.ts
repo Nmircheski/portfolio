@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CandlestickChartComponent } from '@portfolio/crypto-ui-charts';
-import { CardComponent } from '../../../../../../../../shared/ui/card/src/lib/card/card.component';
-import { IconComponent } from '../../../../../../../../shared/ui/icon/src/lib/icon/icon.component';
+import { CardComponent } from '@portfolio/ui/card';
+import { IconComponent } from '@portfolio/ui/icon';
 
 @Component({
   selector: 'crypto-dashboard-currency-candlestick',

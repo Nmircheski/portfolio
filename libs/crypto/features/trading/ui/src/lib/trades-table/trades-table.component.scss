@@ -1,0 +1,12 @@
+.trades {
+  padding: var(--space-md);
+  background-color: var(--color-dark-background);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.trades__quantity-cell,
+.trades__timestamp-cell {
+  color: var(--color-secondary2);
+}

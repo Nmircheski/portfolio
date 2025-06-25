@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AboutMeComponent } from '@portfolio/about-me';
-import { CtaComponent } from '@portfolio/cta';
 import { ExperienceComponent } from '@portfolio/experience';
 import { HeroComponent } from '@portfolio/hero';
 import { MyServicesComponent } from '@portfolio/my-services';
@@ -19,7 +18,6 @@ import { NavbarComponent } from '@portfolio/ui/navbar';
     SkillsComponent,
     ExperienceComponent,
     MyWorkComponent,
-    CtaComponent,
     MyServicesComponent,
   ],
   selector: 'app-root',

@@ -69,9 +69,14 @@
   grid-area: d;
 }
 
+.hero__cta-button {
+  opacity: 63%;
+}
+
 .hero__description {
   grid-area: description;
   padding: var(--space-xl);
+  opacity: 63%;
 }
 
 .hero__img {

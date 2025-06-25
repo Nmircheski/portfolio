@@ -3,13 +3,41 @@
 
 html,
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 
 :root {
   --chip-bg-color: rgba(36, 228, 164, 0.2);
   --chip-text-color: #24e4a4;
   --color-surface-low: #1c1c1e;
+  --color-surface-main: #ffffff;
+
+  //text colors
+  --color-text-primary: #ffffff;
+  --color-text-secondary2: #b1b5c3;
+  --color-text-positive: #58bd7d;
+  --color-text-negative: #d33535;
+
+  // COLOR THEME - should match figma colors
+  --color-primary: #3772ff;
+  --color-secondary: #777e90;
+  --color-secondary2: #b1b5c3;
+  --color-success: #58bd7d;
+  --color-warning: #fabe3c;
+  --color-critical: #d33535;
+  --color-dark-hover: #222630;
+
+  --color-line-dark: #23262f;
+
+  //button
+  --button-padding: 6px 6px;
+
+  // tabs
+  --color-tabs-divider-line: #1f2332;
+
+  //DARK
+  --color-dark-background: #18191d;
+  --color-dark-page: #0e0e17;
 }
 
 @include typography($typography);

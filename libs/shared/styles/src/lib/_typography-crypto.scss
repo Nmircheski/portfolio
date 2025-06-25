@@ -2,264 +2,59 @@
 @use 'variables' as *;
 
 $typography: (
-  display: (
-    normal: (
-      sm: (
-        font-size: 85px,
-        line-height: 122px,
-        font-weight: map.get($font-weights, regular),
-        letter-spacing: 0%,
-      ),
-    ),
+  body1: (
     bold: (
       sm: (
-        font-size: 42px,
-        line-height: 42px,
-        font-weight: map.get($font-weights, bold),
-        letter-spacing: 0px,
-      ),
-    ),
-    bold-sm: (
-      sm: (
-        font-size: 38px,
-        line-height: 46px,
-        font-weight: map.get($font-weights, bold),
-        letter-spacing: 0px,
-      ),
-    ),
-    semi-bold: (
-      sm: (
-        font-size: 38px,
-        line-height: 52px,
-        font-weight: map.get($font-weights, semi-bold),
-        letter-spacing: 0.5%,
-      ),
-      lg: (
-        font-size: 50px,
-        line-height: 72px,
-        font-weight: map.get($font-weights, semi-bold),
-        letter-spacing: 0.5%,
-      ),
-    ),
-    semi-bold-sm: (
-      sm: (
-        font-size: 18px,
-        line-height: 30px,
-        font-weight: map.get($font-weights, semi-bold),
-        letter-spacing: 0%,
-      ),
-    ),
-  ),
-  section-heading: (
-    semi-bold: (
-      sm: (
-        font-size: 34px,
-        line-height: 40px,
-        font-weight: map.get($font-weights, semi-bold),
-        letter-spacing: 0.5%,
-      ),
-      lg: (
-        font-size: 44px,
-        line-height: 56px,
-        font-weight: map.get($font-weights, semi-bold),
-        letter-spacing: 0.5%,
-      ),
-    ),
-  ),
-  stat: (
-    light-sm: (
-      sm: (
-        font-size: 48px,
-        line-height: 30px,
-        font-weight: map.get($font-weights, light),
-        letter-spacing: 0%,
-      ),
-    ),
-    light-lg: (
-      sm: (
-        font-size: 64px,
-        line-height: 30px,
-        font-weight: map.get($font-weights, light),
-        letter-spacing: 0%,
-      ),
-    ),
-    semi-bold: (
-      sm: (
-        font-size: 48px,
-        line-height: 56px,
-        font-weight: map.get($font-weights, semi-bold),
-        letter-spacing: 0.5px,
-      ),
-    ),
-  ),
-  label: (
-    medium: (
-      sm: (
-        font-size: 16px,
-        line-height: 24px,
-        font-weight: map.get($font-weights, medium),
-        letter-spacing: 0.5px,
-      ),
-    ),
-    semi-bold-sm: (
-      sm: (
-        font-size: 18px,
-        line-height: 22px,
-        font-weight: map.get($font-weights, semi-bold),
-        letter-spacing: 0px,
-      ),
-    ),
-    semi-bold: (
-      sm: (
         font-size: 20px,
-        line-height: 24px,
-        font-weight: map.get($font-weights, semi-bold),
-        letter-spacing: 0px,
-      ),
-    ),
-    bold: (
-      sm: (
-        font-size: 26px,
-        line-height: 32px,
+        line-height: 28px,
         font-weight: map.get($font-weights, bold),
-        letter-spacing: 0px,
-      ),
-    ),
-  ),
-  title: (
-    normal: (
-      sm: (
-        font-size: 24px,
-        line-height: 30px,
-        font-weight: map.get($font-weights, regular),
-        letter-spacing: 0%,
-      ),
-    ),
-    semi-bold: (
-      sm: (
-        font-size: 20px,
-        line-height: 24px,
-        font-weight: map.get($font-weights, semi-bold),
-        letter-spacing: 0%,
-      ),
-    ),
-    medium: (
-      sm: (
-        font-size: 24px,
-        line-height: 45px,
-        font-weight: map.get($font-weights, medium),
-        letter-spacing: 0%,
-      ),
-    ),
-  ),
-  subtitle: (
-    medium: (
-      sm: (
-        font-size: 16px,
-        line-height: 30px,
-        font-weight: map.get($font-weights, medium),
-        letter-spacing: 26%,
-      ),
-    ),
-    semi-bold: (
-      sm: (
-        font-size: 15px,
-        line-height: 18px,
-        font-weight: map.get($font-weights, semi-bold),
-        letter-spacing: 0px,
-      ),
-    ),
-  ),
-  body: (
-    normal: (
-      //TODO change normal to regular in all file
-      sm:
-        (
-          font-size: 16px,
-          line-height: 30px,
-          font-weight: map.get($font-weights, regular),
-          letter-spacing: 0%,
-        ),
-    ),
-    medium: (
-      sm: (
-        font-size: 16px,
-        line-height: 24px,
-        font-weight: map.get($font-weights, medium),
-        letter-spacing: 0.5px,
-      ),
-    ),
-
-    semi-bold: (
-      sm: (
-        font-size: 16px,
-        line-height: 19px,
-        font-weight: map.get($font-weights, semi-bold),
-        letter-spacing: 0px,
-      ),
-    ),
-  ),
-  body2: (
-    semi-bold: (
-      sm: (
-        font-size: 17px,
-        line-height: 21px,
-        font-weight: map.get($font-weights, semi-bold),
-        letter-spacing: 0px,
+        letter-spacing: 0,
       ),
     ),
   ),
   body3: (
-    semi-bold: (
-      sm: (
-        font-size: 17px,
-        line-height: 21px,
-        font-weight: map.get($font-weights, semi-bold),
-        letter-spacing: 0px,
-      ),
-    ),
-  ),
-  button: (
-    normal: (
+    bold: (
       sm: (
         font-size: 16px,
-        font-weight: map.get($font-weights, regular),
-        line-height: 100%,
-        letter-spacing: 0%,
-      ),
-    ),
-    medium: (
-      sm: (
-        font-size: 14px,
-        font-weight: map.get($font-weights, medium),
-        line-height: 1,
-        letter-spacing: 0.5px,
+        line-height: 24px,
+        font-weight: map.get($font-weights, bold),
+        letter-spacing: 0,
       ),
     ),
   ),
   caption: (
     normal: (
       sm: (
-        font-size: 16px,
-        line-height: 1,
+        font-size: 14px,
+        line-height: 24px,
         font-weight: map.get($font-weights, regular),
-        letter-spacing: 0.5px,
+        letter-spacing: 0,
+      ),
+    ),
+    bold: (
+      sm: (
+        font-size: 14px,
+        line-height: 24px,
+        font-weight: map.get($font-weights, bold),
+        letter-spacing: 0,
       ),
     ),
   ),
-  nav-item: (
+  caption2: (
     normal: (
       sm: (
-        font-size: 13px,
-        line-height: 22px,
+        font-size: 12px,
+        line-height: 20px,
         font-weight: map.get($font-weights, regular),
-        letter-spacing: 1.5px,
+        letter-spacing: 0,
       ),
-      lg: (
-        font-size: 14px,
-        line-height: 22px,
-        font-weight: map.get($font-weights, regular),
-        letter-spacing: 1.5px,
+    ),
+    bold: (
+      sm: (
+        font-size: 12px,
+        line-height: 20px,
+        font-weight: map.get($font-weights, bold),
+        letter-spacing: 10%,
       ),
     ),
   ),

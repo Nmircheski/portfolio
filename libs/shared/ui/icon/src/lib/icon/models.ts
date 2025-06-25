@@ -8,6 +8,8 @@ export type IconType =
   | 'sun'
   | 'moon'
   | 'status'
+  | 'star'
+  | 'empty-star'
   | 'angular'
   | 'typescript'
   | 'javascript'
@@ -33,4 +35,12 @@ export type IconType =
   | 'bitcoin'
   | 'doge'
   | 'tether'
-  | 'arrow';
+  | 'arrow'
+  | 'dropdown-arrow'
+  | 'lookup'
+  | 'sort-arrow-up'
+  | 'sort-arrow-down'
+  | 'eye'
+  | 'delete';
+
+export type SvgRotation = 0 | -90 | -45 | 45 | 90;

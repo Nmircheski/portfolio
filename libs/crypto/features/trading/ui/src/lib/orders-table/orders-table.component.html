@@ -1,0 +1,156 @@
+<section class="orders">
+  <header class="orders__tabs">
+    <crypto-ui-tabs [tabsList]="tabsList()" hideIndicator></crypto-ui-tabs>
+  </header>
+  <crypto-ui-table [data]="ordersList()" [rowClassListFn]="rowClassListFn">
+    <ng-template cryptoHeaderCell="'date'" [align]="'left'"
+      ><p class="orders__header-cell">Date</p></ng-template
+    >
+    <ng-template
+      cryptoDataCell="'date'"
+      [selectFrom]="ordersList()"
+      [align]="'left'"
+      let-item
+      let-index="index"
+    >
+      <div class="orders__data-cell orders_pair-cell">
+        <p class="caption2-normal">
+          {{ item.date }}
+        </p>
+      </div>
+    </ng-template>
+
+    <ng-template cryptoHeaderCell="'pair'" [align]="'left'"
+      ><p class="orders__header-cell">Pair</p></ng-template
+    >
+    <ng-template
+      cryptoDataCell="'pair'"
+      [selectFrom]="ordersList()"
+      let-item
+      [align]="'left'"
+    >
+      <p class="orders__data-cell orders__quantity-cell caption2-normal">
+        {{ item.pair }}
+      </p>
+    </ng-template>
+
+    <ng-template cryptoHeaderCell="'type'" [align]="'left'"
+      ><p class="orders__header-cell">Type</p></ng-template
+    >
+    <ng-template
+      cryptoDataCell="'type'"
+      [selectFrom]="ordersList()"
+      let-item
+      [align]="'left'"
+    >
+      <p class="orders__data-cell orders__timestamp-cell caption2-normal">
+        {{ item.type }}
+      </p>
+    </ng-template>
+
+    <ng-template cryptoHeaderCell="'side'" [align]="'left'"
+      ><p class="orders__header-cell">Side</p></ng-template
+    >
+    <ng-template
+      cryptoDataCell="'side'"
+      [selectFrom]="ordersList()"
+      let-item
+      [align]="'left'"
+    >
+      <p
+        class="orders__data-cell orders__timestamp-cell caption2-normal"
+        cryptoTrendColor
+        [value]="'negative'"
+      >
+        {{ item.side }}
+      </p>
+    </ng-template>
+
+    <ng-template cryptoHeaderCell="'price'" [align]="'left'"
+      ><p class="orders__header-cell">Price</p></ng-template
+    >
+    <ng-template
+      cryptoDataCell="'price'"
+      [selectFrom]="ordersList()"
+      let-item
+      [align]="'left'"
+    >
+      <p class="orders__data-cell orders__timestamp-cell caption2-normal">
+        {{ item.price }}
+      </p>
+    </ng-template>
+
+    <ng-template cryptoHeaderCell="'amount'" [align]="'left'"
+      ><p class="orders__header-cell">Amount</p></ng-template
+    >
+    <ng-template
+      cryptoDataCell="'amount'"
+      [selectFrom]="ordersList()"
+      let-item
+      [align]="'left'"
+    >
+      <p class="orders__data-cell orders__timestamp-cell caption2-normal">
+        {{ item.amount }}
+      </p>
+    </ng-template>
+
+    <ng-template cryptoHeaderCell="'filed'" [align]="'left'"
+      ><p class="orders__header-cell">Filed</p></ng-template
+    >
+    <ng-template
+      cryptoDataCell="'filed'"
+      [selectFrom]="ordersList()"
+      let-item
+      [align]="'left'"
+    >
+      <p class="orders__data-cell orders__timestamp-cell caption2-normal">
+        {{ item.filled }}
+      </p>
+    </ng-template>
+
+    <ng-template cryptoHeaderCell="'total'" [align]="'left'"
+      ><p class="orders__header-cell">Total</p></ng-template
+    >
+    <ng-template
+      cryptoDataCell="'total'"
+      [selectFrom]="ordersList()"
+      let-item
+      [align]="'left'"
+    >
+      <p class="orders__data-cell orders__timestamp-cell caption2-normal">
+        {{ item.total }}
+      </p>
+    </ng-template>
+
+    <ng-template cryptoHeaderCell="'triggerConditions'" [align]="'left'"
+      ><p class="orders__header-cell">Trigger Conditions</p></ng-template
+    >
+    <ng-template
+      cryptoDataCell="'triggerConditions'"
+      [selectFrom]="ordersList()"
+      let-item
+      [align]="'left'"
+    >
+      <p class="orders__data-cell orders__timestamp-cell caption2-normal">
+        {{ item.triggerConditions }}
+      </p>
+    </ng-template>
+
+    <ng-template cryptoHeaderCell="'actionIcon'" [align]="'right'"
+      ><p class="orders__header-cell">Cancell all</p></ng-template
+    >
+    <ng-template
+      cryptoDataCell="'actionIcon'"
+      [selectFrom]="ordersList()"
+      let-item
+      [align]="'right'"
+    >
+      <portfolio-icon
+        class="orders__data-cell"
+        [name]="'delete'"
+        [iconSize]="'original'"
+        [align]="'sub'"
+      ></portfolio-icon>
+    </ng-template>
+  </crypto-ui-table>
+</section>

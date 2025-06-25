@@ -8,9 +8,13 @@ import {
   LineChart,
   PieChart,
 } from 'echarts/charts';
-import { DataZoomComponent, GridComponent } from 'echarts/components';
+import {
+  DataZoomComponent,
+  GridComponent,
+  TooltipComponent,
+} from 'echarts/components';
 import * as echarts from 'echarts/core';
-import { CanvasRenderer } from 'echarts/renderers';
+import { SVGRenderer } from 'echarts/renderers';
 import { provideEchartsCore } from 'ngx-echarts';
 echarts.use([
   PieChart,
@@ -19,7 +23,8 @@ echarts.use([
   LineChart,
   DataZoomComponent,
   GridComponent,
-  CanvasRenderer,
+  TooltipComponent,
+  SVGRenderer,
 ]);
 
 @Component({

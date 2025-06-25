@@ -1,0 +1,22 @@
+<mat-tab-group
+  class="tabs"
+  [class.tabs--hide-indicator]="hideIndicator() || null"
+>
+  @for (item of tabsList(); track $index) {
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <div class="tabs__label-wrapper caption2-bold">
+        @if (item.icon) {
+        <portfolio-icon
+          [name]="item.icon"
+          [iconSize]="'original'"
+          [align]="'text-top'"
+        >
+        </portfolio-icon>
+        }
+        <p class="tabs__text">{{ item.label }}</p>
+      </div>
+    </ng-template></mat-tab
+  >
+  }
+</mat-tab-group>

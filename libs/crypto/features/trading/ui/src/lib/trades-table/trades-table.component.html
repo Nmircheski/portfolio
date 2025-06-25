@@ -1,0 +1,41 @@
+<section class="trades">
+  <h2 class="caption2-bold">RECENT TRADES</h2>
+  <crypto-ui-table [data]="tradesList()" [rowClassListFn]="rowClassListFn">
+    <ng-template cryptoHeaderCell="'price'" [align]="'left'"
+      >Price(USDT)</ng-template
+    >
+    <ng-template
+      cryptoDataCell="'price'"
+      [selectFrom]="tradesList()"
+      [align]="'left'"
+      let-item
+      let-index="index"
+    >
+      <div class="currencies-list__pair-cell">
+        <p class="caption2-normal" cryptoTrendColor [value]="'negative'">
+          {{ item.price }}
+        </p>
+      </div>
+    </ng-template>
+
+    <ng-template cryptoHeaderCell="'quantity'">Quantity(BTC)</ng-template>
+    <ng-template
+      cryptoDataCell="'quantity'"
+      [selectFrom]="tradesList()"
+      let-item
+    >
+      <p class="trades__quantity-cell caption2-normal">
+        {{ item.quantity }}
+      </p>
+    </ng-template>
+
+    <ng-template cryptoHeaderCell="'timestamp'">Timestamp</ng-template>
+    <ng-template
+      cryptoDataCell="'timestamp'"
+      [selectFrom]="tradesList()"
+      let-item
+    >
+      <p class="trades__timestamp-cell caption2-normal">{{ item.timestamp }}</p>
+    </ng-template>
+  </crypto-ui-table>
+</section>

@@ -1,10 +1,14 @@
 <button
   class="button button--{{ bgColor() }} button--{{ type() }} button--radius-{{
     borderRadius()
-  }} button-normal "
-  [class.full-width]="fullWidth() || null"
+  }} caption-bold"
+  [class.button--full-width]="fullWidth() || null"
+  [class.button--skew-right]="skew() === 'right' || null"
+  [class.button--skew-left]="skew() === 'left' || null"
+  [class.button--inactive]="!active()"
   (click)="clicked.emit()"
+  type="button"
 >
   <ng-content select="portfolio-icon"></ng-content>
-  <span><ng-content></ng-content></span>
+  <ng-content></ng-content>
 </button>

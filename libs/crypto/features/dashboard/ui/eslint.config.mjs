@@ -20,7 +20,7 @@ export default [
         'error',
         {
           type: 'element',
-          prefix: 'lib',
+          prefix: 'crypto-dashboard',
           style: 'kebab-case',
         },
       ],

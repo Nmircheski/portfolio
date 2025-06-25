@@ -1,0 +1,17 @@
+.orders {
+  padding: var(--space-md) 0;
+  background-color: var(--color-dark-background);
+}
+
+.orders__tabs {
+  width: min-content;
+}
+
+.orders__header-cell,
+.orders__data-cell {
+  padding: 0 var(--space-md);
+}
+
+.orders__data-cell {
+  color: var(--color-secondary2);
+}

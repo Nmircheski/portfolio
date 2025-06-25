@@ -9,5 +9,5 @@ import { IconComponent, IconType } from '@portfolio/ui/icon';
   styleUrl: './coin-info.component.scss',
 })
 export class CoinInfoComponent {
-  name = input<IconType>();
+  iconName = input<IconType>();
 }

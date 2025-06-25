@@ -1,0 +1,30 @@
+@use '@angular/material' as mat;
+
+:host {
+  @include mat.tabs-overrides(
+    (
+      active-indicator-color: var(--color-primary),
+      active-focus-indicator-color: var(--color-primary),
+      divider-color: var(--color-tabs-divider-line),
+      active-label-text-color: var(--color-text-primary),
+      inactive-label-text-color: var(--color-secondary),
+      divider-height: 0,
+    )
+  );
+}
+
+.tabs {
+  &--hide-indicator {
+    @include mat.tabs-overrides(
+      (
+        active-indicator-height: 0,
+      )
+    );
+  }
+}
+
+.tabs__label-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

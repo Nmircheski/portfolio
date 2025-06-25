@@ -1,0 +1,18 @@
+.coin-select {
+  display: flex;
+  gap: 40px;
+}
+
+.coin-select__info {
+  display: flex;
+  gap: 1rem;
+}
+
+.coin-select__label {
+  display: flex;
+  flex-direction: column;
+}
+
+.coin-select__subtitle {
+  color: var(--color-secondary);
+}

@@ -1,1 +1,23 @@
-<div echarts [options]="options()" class="candlestick-chart"></div>
+<div class="chart">
+  <header class="chart__header">
+    <h2 class="caption2-bold">CHART</h2>
+    <nav>
+      <ul class="chart__filters-list">
+        @for (item of filtersList; track $index) {
+        <li class="chart__filters-item">
+          <portfolio-button
+            fullWidth
+            [borderRadius]="'sm'"
+            [bgColor]="item.active ? 'primary' : 'transparent'"
+            (clicked)="filterChanged(item.label)"
+            ><span class="caption2-normal">
+              {{ item.label }}
+            </span>
+          </portfolio-button>
+        </li>
+        }
+      </ul>
+    </nav>
+  </header>
+  <div echarts [options]="options()" class="candlestick-chart"></div>
+</div>

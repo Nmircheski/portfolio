@@ -1,0 +1,88 @@
+<section class="exchange">
+  <header class="exchange__header">
+    <h2 class="caption2-bold">{{ 'Spot' | uppercase }}</h2>
+  </header>
+
+  <div class="exchange__content">
+    <div class="exchange__navigation">
+      <div class="exchange__navigation-content">
+        <nav aria-label="Trade Action Tabs">
+          <ul class="exchange__button-list">
+            <li class="exchange__button-list-item">
+              <portfolio-button
+                [bgColor]="'success'"
+                [borderRadius]="'xs'"
+                [skew]="'right'"
+                fullWidth
+                >BUY</portfolio-button
+              >
+            </li>
+            <li class="exchange__button-list-item">
+              <portfolio-button
+                [bgColor]="'critical'"
+                [borderRadius]="'xs'"
+                [skew]="'left'"
+                [active]="false"
+                fullWidth
+                >SELL</portfolio-button
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="exchange__tabs">
+          <crypto-ui-tabs [tabsList]="tabsList()"> </crypto-ui-tabs>
+        </div>
+      </div>
+    </div>
+
+    <form aria-label="Market Order Form" class="exchange__form">
+      <div class="exchange__balance">
+        <label
+          for="available-balance"
+          class="exchange__balance-label caption2-normal"
+          >Available Balance
+          <portfolio-icon
+            [name]="'eye'"
+            [iconSize]="'original'"
+            [align]="'sub'"
+          ></portfolio-icon
+        ></label>
+        <output id="available-balance" class="caption2-bold">0 USDT</output>
+      </div>
+
+      <div class="exchange__input-wrapper">
+        <input
+          type="text"
+          id="order-price"
+          class="exchange__input caption2-normal"
+          placeholder="Order Price"
+          aria-describedby="currency-suffix"
+        />
+        <span class="exchange__input-suffix caption2-bold">USD</span>
+      </div>
+
+      <crypto-ui-diamond-stepper [linear]="true">
+        <cdk-step>Step 1</cdk-step>
+        <cdk-step>Step 2</cdk-step>
+        <cdk-step>Step 3</cdk-step>
+        <cdk-step>Step 4</cdk-step>
+      </crypto-ui-diamond-stepper>
+
+      <portfolio-button [bgColor]="'success'" fullWidth [borderRadius]="'xs'"
+        >Buy BTC</portfolio-button
+      >
+    </form>
+    <footer class="exchange__footer">
+      <a class="exchange__footer-link caption2-normal"
+        >Spot trading Fees
+        <portfolio-icon
+          class="exchange__foter-arrow"
+          [name]="'dropdown-arrow'"
+          [iconSize]="'original'"
+          [rotation]="-90"
+          [align]="'sub'"
+        ></portfolio-icon
+      ></a>
+    </footer>
+  </div>
+</section>
