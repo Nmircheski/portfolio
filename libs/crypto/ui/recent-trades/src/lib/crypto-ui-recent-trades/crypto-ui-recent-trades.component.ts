@@ -10,7 +10,7 @@ import {
 import { TrendColorDirective } from '@portfolio/crypto-ui-utils';
 
 @Component({
-  selector: 'crypto-trading-trades-table',
+  selector: 'crypto-ui-recent-trades',
   imports: [
     CommonModule,
     TableComponent,
@@ -18,10 +18,10 @@ import { TrendColorDirective } from '@portfolio/crypto-ui-utils';
     HeaderCellDirective,
     TrendColorDirective,
   ],
-  templateUrl: './trades-table.component.html',
-  styleUrl: './trades-table.component.scss',
+  templateUrl: './crypto-ui-recent-trades.component.html',
+  styleUrl: './crypto-ui-recent-trades.component.scss',
 })
-export class TradesTableComponent {
+export class CryptoUiRecentTradesComponent {
   tradesList = signal<TradeTableItem[]>([
     { price: 61408.47, quantity: 0.02, timestamp: 0.02 },
     { price: 61408.47, quantity: 0.357777, timestamp: 0.357777 },
@@ -47,6 +47,7 @@ export class TradesTableComponent {
     return index % 2 === 0 ? ['table__row-alternate-color'] : [];
   };
 }
+
 export interface TradeTableItem {
   price: number;
   quantity: number;

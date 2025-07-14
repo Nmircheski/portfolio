@@ -30,6 +30,12 @@
       "@portfolio/crypto-feature-trading-ui": [
         "libs/crypto/features/trading/ui/src/index.ts"
       ],
+      "@portfolio/crypto-feature-wallet-shell": [
+        "libs/crypto/features/wallet/shell/src/index.ts"
+      ],
+      "@portfolio/crypto-feature-wallet-ui": [
+        "libs/crypto/features/wallet/ui/src/index.ts"
+      ],
       "@portfolio/crypto-ui-charts": ["libs/crypto/ui/charts/src/index.ts"],
       "@portfolio/crypto-ui-coin-info": [
         "libs/crypto/ui/coin-info/src/index.ts"
@@ -47,13 +53,13 @@
         "libs/crypto/ui/exchange-widget/src/index.ts"
       ],
       "@portfolio/crypto-ui-navbar": ["libs/crypto/ui/navbar/src/index.ts"],
+      "@portfolio/crypto-ui-recent-trades": [
+        "libs/crypto/ui/recent-trades/src/index.ts"
+      ],
       "@portfolio/crypto-ui-sidenav": ["libs/crypto/ui/sidenav/src/index.ts"],
       "@portfolio/crypto-ui-table": ["libs/crypto/ui/table/src/index.ts"],
       "@portfolio/crypto-ui-tabs": ["libs/crypto/ui/tabs/src/index.ts"],
       "@portfolio/crypto-ui-utils": ["libs/crypto/ui/utils/src/index.ts"],
-      "@portfolio/crypto-feature-wallet-shell": [
-        "libs/crypto/features/wallet/shell/src/index.ts"
-      ],
       "@portfolio/cta": ["libs/my-portfolio/cta/src/index.ts"],
       "@portfolio/experience": ["libs/my-portfolio/experience/src/index.ts"],
       "@portfolio/experience-legacy": ["libs/legacy/experience/src/index.ts"],
@@ -67,9 +73,6 @@
       "@portfolio/styles": ["libs/shared/styles/src/index.ts"],
       "@portfolio/trades-table": [
         "libs/crypto/features/trading/ui/src/lib/trades-table/trades-table/src/index.ts"
-      ],
-      "@portfolio/crypto-feature-wallet-ui": [
-        "libs/crypto/features/wallet/ui/src/index.ts"
       ],
       "@portfolio/ui/button": ["libs/shared/ui/button/src/index.ts"],
       "@portfolio/ui/card": ["libs/shared/ui/card/src/index.ts"],
