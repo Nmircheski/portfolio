@@ -1,1 +1,24 @@
-<aside></aside>
+<aside class="sidenav">
+  <div class="sidenav__content">
+    <h2 class="sidenav__title">Crypto Wallet</h2>
+    <p class="sidenav__subtitle">Manage your crypto assets</p>
+    <ul class="sidenav__menu">
+      <li class="sidenav__item">
+        <a routerLink="/crypto/wallet/balance" class="sidenav__link"
+          >Overview</a
+        >
+      </li>
+      <li class="sidenav__item">
+        <a routerLink="/crypto/wallet/assets" class="sidenav__link">Spot</a>
+      </li>
+      <li class="sidenav__item">
+        <a routerLink="/crypto/wallet/orders" class="sidenav__link">Futures</a>
+      </li>
+    </ul>
+    <div class="sidenav__footer">
+      <button class="sidenav__button" routerLink="/crypto/wallet/settings">
+        Settings
+      </button>
+    </div>
+  </div>
+</aside>

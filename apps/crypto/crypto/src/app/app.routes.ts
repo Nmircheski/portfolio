@@ -15,4 +15,11 @@ export const appRoutes: Route[] = [
         (m) => m.cryptoTradingRoutes
       ),
   },
+  {
+    path: 'wallet',
+    loadChildren: () =>
+      import('@portfolio/crypto-feature-wallet-shell').then(
+        (m) => m.cryptoWalletRoutes
+      ),
+  },
 ];

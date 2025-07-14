@@ -1,0 +1,18 @@
+<section class="balance-card">
+  <div class="balance-card__container">
+    <div class="balance-card__header">
+      <h2 class="balance-card__title">Balance</h2>
+      <p class="balance-card__subtitle">Total balance across all assets</p>
+    </div>
+    <div class="balance-card__content">
+      <p class="balance-card__amount">{{ totalBalance | currency }}</p>
+      <p class="balance-card__currency">USD</p>
+    </div>
+    <div class="balance-card__footer">
+      <button class="balance-card__button" (click)="viewDetails()">
+        View Details
+      </button>
+    </div>
+  </div>
+  <crypto-ui-line-chart></crypto-ui-line-chart>
+</section>
